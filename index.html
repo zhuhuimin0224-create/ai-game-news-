@@ -1,99 +1,386 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>游戏 × AI 资讯 - 每日追踪游戏行业 AI 动态</title>
-  <meta name="description" content="游戏行业 AI 资讯聚合，每日追踪游戏 AI 动态。覆盖 AI 游戏生成、游戏内 AI 体验、开发工具、运营实践、行业动态、前沿研究六大方向。">
-  <meta property="og:title" content="游戏 × AI 资讯">
-  <meta property="og:description" content="每日追踪游戏行业 AI 动态 | 24 个专业信源 + 150+ AI 信源">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="zh_CN">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="游戏 × AI 资讯">
-  <meta name="twitter:description" content="每日追踪游戏行业 AI 动态 | 24 个专业信源 + 150+ AI 信源">
-  <!-- Favicon: 抽象游戏手柄 + AI 图形 -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a1a1a'/%3E%3Cpath d='M8 14h4v-4h2v4h4v2h-4v4h-2v-4H8v-2z' fill='%238b5cf6'/%3E%3Ccircle cx='24' cy='12' r='2' fill='%23059669'/%3E%3Ccircle cx='24' cy='20' r='2' fill='%232563eb'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>游戏 x AI 资讯</title>
+<meta name="description" content="每日追踪游戏行业 AI 动态，覆盖 AI 游戏生成、游戏内 AI 体验、开发工具、运营实践、行业动态、前沿研究六大方向。">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a1a1a'/%3E%3Cpath d='M8 14h4v-4h2v4h4v2h-4v4h-2v-4H8v-2z' fill='%238b5cf6'/%3E%3Ccircle cx='24' cy='12' r='2' fill='%23059669'/%3E%3Ccircle cx='24' cy='20' r='2' fill='%232563eb'/%3E%3C/svg%3E">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:15px;line-height:1.6;color:#1a1a1a;background:#fff;-webkit-font-smoothing:antialiased}
+a{color:#0066cc;text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Layout */
+.wrap{max-width:780px;margin:0 auto;padding:0 24px}
+
+/* Header */
+.header{padding:48px 0 32px;border-bottom:1px solid #f0f0f0}
+.header-top{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.site-title{font-size:26px;font-weight:700;letter-spacing:-0.5px}
+.site-subtitle{font-size:13px;color:#888;margin-top:4px}
+.header-controls{display:flex;align-items:center;gap:12px;margin-top:16px;flex-wrap:wrap}
+.date-nav{display:flex;align-items:center;gap:8px}
+.date-btn{width:28px;height:28px;border:1px solid #e0e0e0;border-radius:4px;background:#fff;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:14px;color:#666;transition:all 0.15s}
+.date-btn:hover{border-color:#999;color:#1a1a1a}
+.date-display{font-size:14px;font-weight:600;min-width:100px;text-align:center}
+.search-box{position:relative;flex:1;min-width:180px;max-width:280px}
+.search-input{width:100%;height:32px;padding:0 12px 0 32px;border:1px solid #e0e0e0;border-radius:6px;font-size:13px;color:#1a1a1a;background:#fafafa;outline:none;transition:border-color 0.15s,background 0.15s}
+.search-input:focus{border-color:#999;background:#fff}
+.search-icon{position:absolute;left:10px;top:50%;transform:translateY(-50%);width:14px;height:14px;color:#999}
+
+/* Stats */
+.stats-bar{display:flex;align-items:center;gap:12px;padding:16px 0 0;font-size:12px;color:#999}
+.stats-bar strong{color:#1a1a1a}
+
+/* Featured */
+.featured{padding:28px 0 20px}
+.featured-label{font-size:12px;font-weight:600;color:#999;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.featured-list{display:flex;flex-direction:column;gap:12px}
+.featured-card{display:block;padding:18px 20px;border-radius:8px;background:#fafafa;border-left:3px solid #1a1a1a;transition:background 0.15s;cursor:pointer}
+.featured-card:hover{background:#f5f5f5;text-decoration:none}
+.featured-card .fc-cat{display:inline-block;font-size:11px;font-weight:600;padding:2px 7px;border-radius:3px;color:#fff;margin-bottom:8px}
+.featured-card .fc-title{font-size:17px;font-weight:600;color:#1a1a1a;line-height:1.5;margin-bottom:6px}
+.featured-card .fc-summary{font-size:13px;color:#666;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.featured-card .fc-meta{display:flex;align-items:center;gap:10px;margin-top:10px;font-size:12px;color:#999}
+
+/* Filter tabs */
+.filter-section{padding:20px 0;border-bottom:1px solid #f0f0f0;position:sticky;top:0;background:#fff;z-index:10}
+.filter-tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;-ms-overflow-style:none;scrollbar-width:none}
+.filter-tabs::-webkit-scrollbar{display:none}
+.filter-tab{display:inline-flex;align-items:center;gap:5px;padding:6px 14px;border:1px solid #e8e8e8;border-radius:20px;font-size:13px;color:#555;cursor:pointer;white-space:nowrap;transition:all 0.15s;background:#fff}
+.filter-tab:hover{border-color:#ccc;background:#fafafa}
+.filter-tab.active{background:#1a1a1a;border-color:#1a1a1a;color:#fff}
+.filter-tab .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.filter-tab.active .dot{background:#fff !important}
+.filter-tab .count{font-size:11px;color:#aaa;margin-left:2px}
+.filter-tab.active .count{color:rgba(255,255,255,0.6)}
+
+/* News list */
+.news-section{padding:16px 0 60px}
+.news-card{border-bottom:1px solid #f5f5f5;padding:16px 0;cursor:pointer;transition:background 0.1s}
+.news-card:hover{background:#fafafa;margin:0 -12px;padding-left:12px;padding-right:12px;border-radius:6px}
+.news-card:last-child{border-bottom:none}
+.nc-header{display:flex;align-items:flex-start;gap:12px}
+.nc-dot{width:6px;height:6px;border-radius:50%;margin-top:8px;flex-shrink:0}
+.nc-body{flex:1;min-width:0}
+.nc-title-row{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.nc-title{font-size:15px;font-weight:500;color:#1a1a1a;line-height:1.5}
+.nc-title a{color:inherit}
+.nc-title a:hover{color:#0066cc}
+.nc-repost{font-size:10px;color:#aaa;border:1px solid #e8e8e8;border-radius:3px;padding:0px 4px;white-space:nowrap}
+.nc-meta{display:flex;align-items:center;gap:8px;margin-top:3px;font-size:12px;color:#aaa;flex-wrap:wrap}
+.nc-source{color:#666}
+.nc-cat-tag{font-size:10px;font-weight:500;padding:1px 6px;border-radius:3px;color:#fff}
+.nc-expand{flex-shrink:0;width:20px;height:20px;color:#ccc;transition:transform 0.2s;margin-top:4px}
+.news-card.expanded .nc-expand{transform:rotate(90deg);color:#666}
+
+/* Detail */
+.nc-detail{display:none;padding:10px 0 4px 18px;font-size:13px;color:#444;line-height:1.7}
+.news-card.expanded .nc-detail{display:block}
+.nc-detail-block{margin-bottom:10px}
+.nc-detail-label{font-size:11px;font-weight:600;color:#999;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px}
+.nc-detail-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.nc-detail-tags span{font-size:11px;padding:2px 8px;background:#f5f5f5;border-radius:10px;color:#666}
+
+/* Empty & loading */
+.loading-state,.error-state,.empty-state{text-align:center;padding:60px 0;color:#999;font-size:14px}
+.spinner{width:20px;height:20px;border:2px solid #e5e5e5;border-top-color:#1a1a1a;border-radius:50%;animation:spin 0.7s linear infinite;margin:0 auto 12px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.error-state{color:#dc2626}
+
+/* Footer */
+.footer{border-top:1px solid #f0f0f0;padding:24px 0;font-size:12px;color:#aaa;text-align:center}
+.footer a{color:#888}
+
+/* Category colors */
+[data-cat="creation"]{background:#8b5cf6}
+[data-cat="in-game"]{background:#059669}
+[data-cat="dev-tools"]{background:#2563eb}
+[data-cat="ops"]{background:#d97706}
+[data-cat="industry"]{background:#dc2626}
+[data-cat="research"]{background:#6366f1}
+.border-creation{border-left-color:#8b5cf6}
+.border-in-game{border-left-color:#059669}
+.border-dev-tools{border-left-color:#2563eb}
+.border-ops{border-left-color:#d97706}
+.border-industry{border-left-color:#dc2626}
+.border-research{border-left-color:#6366f1}
+.dot-creation{background:#8b5cf6}
+.dot-in-game{background:#059669}
+.dot-dev-tools{background:#2563eb}
+.dot-ops{background:#d97706}
+.dot-industry{background:#dc2626}
+.dot-research{background:#6366f1}
+
+/* Responsive */
+@media(max-width:640px){
+  .wrap{padding:0 16px}
+  .header{padding:32px 0 20px}
+  .site-title{font-size:22px}
+  .header-controls{flex-direction:column;align-items:stretch}
+  .search-box{max-width:none}
+  .featured-card .fc-title{font-size:15px}
+  .filter-tab{padding:5px 10px;font-size:12px}
+  .nc-title{font-size:14px}
+}
+</style>
 </head>
 <body>
+
+<div class="wrap">
+  <!-- Header -->
   <header class="header">
-    <div class="container">
-      <h1 class="site-title">游戏 &times; AI 资讯</h1>
-      <p class="site-subtitle">每日追踪游戏行业 AI 动态 | 24 个专业信源 + 150+ AI 信源</p>
+    <div class="header-top">
+      <div>
+        <h1 class="site-title">游戏 &times; AI 资讯</h1>
+        <p class="site-subtitle">每日追踪游戏行业 AI 动态 | 24 个专业信源 + 150+ AI 信源</p>
+      </div>
     </div>
+    <div class="header-controls">
+      <nav class="date-nav">
+        <button class="date-btn" id="btn-prev" title="前一天">&larr;</button>
+        <span class="date-display" id="date-display">--</span>
+        <button class="date-btn" id="btn-next" title="后一天">&rarr;</button>
+      </nav>
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6.5" cy="6.5" r="5"/><line x1="10" y1="10" x2="15" y2="15"/></svg>
+        <input class="search-input" id="search" type="text" placeholder="搜索标题、摘要...">
+      </div>
+    </div>
+    <div class="stats-bar" id="stats">共 <strong id="s-total">0</strong> 条 | 当前显示 <strong id="s-filtered">0</strong> 条</div>
   </header>
 
-  <main class="container">
-    <!-- 日期导航 -->
-    <nav class="date-nav">
-      <button class="date-btn" id="prev-date" title="前一天">&larr;</button>
-      <span class="date-display" id="current-date">加载中...</span>
-      <button class="date-btn" id="next-date" title="后一天">&rarr;</button>
-    </nav>
+  <!-- Featured -->
+  <section class="featured" id="featured-section">
+    <div class="featured-label">精选推荐</div>
+    <div class="featured-list" id="featured-list"></div>
+  </section>
 
-    <!-- 统计信息 -->
-    <div class="stats" id="stats">
-      <span class="stats-total">共 <strong id="stats-total">0</strong> 条</span>
-      <span class="stats-filtered">当前显示 <strong id="stats-filtered">0</strong> 条</span>
+  <!-- Filter tabs -->
+  <nav class="filter-section">
+    <div class="filter-tabs" id="filter-tabs">
+      <button class="filter-tab active" data-cat="all">全部</button>
+      <button class="filter-tab" data-cat="creation"><span class="dot dot-creation"></span>AI 游戏生成<span class="count" id="c-creation"></span></button>
+      <button class="filter-tab" data-cat="in-game"><span class="dot dot-in-game"></span>游戏内 AI<span class="count" id="c-in-game"></span></button>
+      <button class="filter-tab" data-cat="dev-tools"><span class="dot dot-dev-tools"></span>开发工具<span class="count" id="c-dev-tools"></span></button>
+      <button class="filter-tab" data-cat="ops"><span class="dot dot-ops"></span>运营商业化<span class="count" id="c-ops"></span></button>
+      <button class="filter-tab" data-cat="industry"><span class="dot dot-industry"></span>行业动态<span class="count" id="c-industry"></span></button>
+      <button class="filter-tab" data-cat="research"><span class="dot dot-research"></span>前沿研究<span class="count" id="c-research"></span></button>
     </div>
+  </nav>
 
-    <!-- 分类筛选 -->
-    <nav class="filter-bar" id="filter-bar">
-      <button class="filter-tag active" data-category="all">全部</button>
-      <button class="filter-tag" data-category="creation">
-        <span class="tag-dot" style="background:#8b5cf6"></span>
-        AI 游戏生成与创作
-        <span class="tag-count" data-count="creation"></span>
-      </button>
-      <button class="filter-tag" data-category="in-game">
-        <span class="tag-dot" style="background:#059669"></span>
-        游戏内 AI 体验
-        <span class="tag-count" data-count="in-game"></span>
-      </button>
-      <button class="filter-tag" data-category="dev-tools">
-        <span class="tag-dot" style="background:#2563eb"></span>
-        游戏开发 AI 工具
-        <span class="tag-count" data-count="dev-tools"></span>
-      </button>
-      <button class="filter-tag" data-category="ops">
-        <span class="tag-dot" style="background:#d97706"></span>
-        游戏运营&amp;商业化 AI 实践
-        <span class="tag-count" data-count="ops"></span>
-      </button>
-      <button class="filter-tag" data-category="industry">
-        <span class="tag-dot" style="background:#dc2626"></span>
-        游戏行业&amp;公司 AI 动态
-        <span class="tag-count" data-count="industry"></span>
-      </button>
-      <button class="filter-tag" data-category="research">
-        <span class="tag-dot" style="background:#6366f1"></span>
-        游戏 AI 应用前沿研究
-        <span class="tag-count" data-count="research"></span>
-      </button>
-    </nav>
+  <!-- News list -->
+  <section class="news-section">
+    <div id="loading" class="loading-state"><div class="spinner"></div>正在加载...</div>
+    <div id="error" class="error-state" style="display:none"></div>
+    <div id="news-list"></div>
+    <div id="empty" class="empty-state" style="display:none">暂无匹配内容</div>
+  </section>
+</div>
 
-    <!-- 加载状态 -->
-    <div class="loading" id="loading">
-      <div class="loading-spinner"></div>
-      <p>正在加载资讯数据...</p>
-    </div>
+<footer class="footer">
+  <div class="wrap">数据来源：24 个游戏/AI 专业信源 RSS + 150+ AI HOT 信源 | 每日自动更新</div>
+</footer>
 
-    <!-- 错误状态 -->
-    <div class="error" id="error" style="display:none">
-      <p id="error-message">数据加载失败</p>
-    </div>
+<script>
+(function(){
+'use strict';
 
-    <!-- 资讯列表 -->
-    <ul class="news-list" id="news-list"></ul>
-  </main>
+const CATS={
+  creation:'AI 游戏生成与创作',
+  'in-game':'游戏内 AI 体验',
+  'dev-tools':'游戏开发 AI 工具',
+  ops:'游戏运营&商业化 AI 实践',
+  industry:'游戏行业&公司 AI 动态',
+  research:'游戏 AI 应用前沿研究'
+};
 
-  <footer class="footer">
-    <div class="container">
-      <p>数据来源：24 个游戏/AI 专业信源 RSS + 150+ AI 信源 | 项目地址：<a href="https://github.com" target="_blank" rel="noopener">GitHub</a></p>
-    </div>
-  </footer>
+let data=null,currentDate=null,filter='all',query='';
 
-  <script src="js/app.js"></script>
+// DOM
+const $dateDisplay=document.getElementById('date-display');
+const $featuredList=document.getElementById('featured-list');
+const $featuredSection=document.getElementById('featured-section');
+const $newsList=document.getElementById('news-list');
+const $loading=document.getElementById('loading');
+const $error=document.getElementById('error');
+const $empty=document.getElementById('empty');
+const $sTotal=document.getElementById('s-total');
+const $sFiltered=document.getElementById('s-filtered');
+const $search=document.getElementById('search');
+
+// Load data
+async function loadData(date){
+  $loading.style.display='block';
+  $error.style.display='none';
+  $empty.style.display='none';
+  $newsList.innerHTML='';
+  $featuredList.innerHTML='';
+
+  const file=date?`data/${date}.json`:'data/latest.json';
+  try{
+    const r=await fetch(file);
+    if(!r.ok)throw new Error(r.status===404?`${date||'latest'} 暂无数据`:`加载失败 (${r.status})`);
+    data=await r.json();
+    currentDate=data.date||date;
+    if(currentDate)history.replaceState(null,'','#'+currentDate);
+    $loading.style.display='none';
+    render();
+  }catch(e){
+    $loading.style.display='none';
+    $error.textContent=e.message;
+    $error.style.display='block';
+  }
+}
+
+// Render all
+function render(){
+  if(!data)return;
+  $dateDisplay.textContent=currentDate||'--';
+  renderCounts();
+  renderFeatured();
+  renderList();
+}
+
+// Category counts
+function renderCounts(){
+  const s=data.stats&&data.stats.by_category?data.stats.by_category:{};
+  Object.keys(CATS).forEach(k=>{
+    const el=document.getElementById('c-'+k);
+    if(el)el.textContent=s[k]||'';
+  });
+  $sTotal.textContent=data.items?data.items.length:0;
+}
+
+// Featured (primary source, top 3)
+function renderFeatured(){
+  if(!data.items||data.items.length===0){$featuredSection.style.display='none';return;}
+  const featured=data.items.filter(i=>i.source_type==='primary').slice(0,3);
+  if(featured.length===0){$featuredSection.style.display='none';return;}
+  $featuredSection.style.display='block';
+  $featuredList.innerHTML=featured.map(item=>{
+    const cat=item.category||'industry';
+    const catName=CATS[cat]||cat;
+    const summary=item.summary?item.summary.replace(/\n/g,' ').slice(0,120)+'...':'';
+    const time=fmtDate(item.published_at);
+    return `<a class="featured-card border-${cat}" href="${esc(item.url)}" target="_blank" rel="noopener">
+      <span class="fc-cat" data-cat="${cat}">${esc(catName)}</span>
+      <div class="fc-title">${esc(item.title)}</div>
+      <div class="fc-summary">${esc(summary)}</div>
+      <div class="fc-meta"><span class="nc-source">${esc(item.source)}</span><span>${time}</span></div>
+    </a>`;
+  }).join('');
+}
+
+// List
+function renderList(){
+  const items=getFiltered();
+  $sFiltered.textContent=items.length;
+  if(items.length===0){$newsList.innerHTML='';$empty.style.display='block';return;}
+  $empty.style.display='none';
+  $newsList.innerHTML=items.map((item,i)=>{
+    const cat=item.category||'industry';
+    const catName=CATS[cat]||cat;
+    const time=fmtDate(item.published_at);
+    const repost=item.source_type==='secondary'?'<span class="nc-repost">转载</span>':'';
+    return `<div class="news-card" data-idx="${i}">
+      <div class="nc-header">
+        <span class="nc-dot dot-${cat}"></span>
+        <div class="nc-body">
+          <div class="nc-title-row">
+            <span class="nc-title"><a href="${esc(item.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${esc(item.title)}</a></span>
+            ${repost}
+          </div>
+          <div class="nc-meta">
+            <span class="nc-source">${esc(item.source)}</span>
+            <span>${time}</span>
+            <span class="nc-cat-tag" data-cat="${cat}">${esc(catName)}</span>
+          </div>
+        </div>
+        <svg class="nc-expand" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,3 11,8 6,13"/></svg>
+      </div>
+      <div class="nc-detail">
+        ${item.summary?`<div class="nc-detail-block"><div class="nc-detail-label">摘要</div><div>${esc(item.summary)}</div></div>`:''}
+        ${item.recommendation?`<div class="nc-detail-block"><div class="nc-detail-label">推荐原因</div><div>${esc(item.recommendation)}</div></div>`:''}
+        ${item.tags&&item.tags.length?`<div class="nc-detail-tags">${item.tags.map(t=>'<span>'+esc(t)+'</span>').join('')}</div>`:''}
+        ${item.trace_note?`<div class="nc-detail-block" style="color:#999;font-size:12px;margin-top:6px">${esc(item.trace_note)}</div>`:''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// Filter logic
+function getFiltered(){
+  if(!data||!data.items)return[];
+  let items=[...data.items];
+  items.sort((a,b)=>{
+    const ta=a.published_at?new Date(a.published_at).getTime():0;
+    const tb=b.published_at?new Date(b.published_at).getTime():0;
+    return tb-ta;
+  });
+  if(filter!=='all')items=items.filter(i=>i.category===filter);
+  if(query){
+    const q=query.toLowerCase();
+    items=items.filter(i=>(i.title&&i.title.toLowerCase().includes(q))||(i.summary&&i.summary.toLowerCase().includes(q)));
+  }
+  return items;
+}
+
+// Utilities
+function fmtDate(iso){
+  if(!iso)return'';
+  try{const d=new Date(iso);return`${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`}catch(e){return''}
+}
+function esc(s){if(!s)return'';const d=document.createElement('div');d.textContent=s;return d.innerHTML}
+function toISO(d){return`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
+
+// Events
+document.getElementById('btn-prev').addEventListener('click',()=>{
+  if(!currentDate)return;const d=new Date(currentDate);d.setDate(d.getDate()-1);loadData(toISO(d));
+});
+document.getElementById('btn-next').addEventListener('click',()=>{
+  if(!currentDate)return;const d=new Date(currentDate);d.setDate(d.getDate()+1);loadData(toISO(d));
+});
+
+document.getElementById('filter-tabs').addEventListener('click',e=>{
+  const btn=e.target.closest('.filter-tab');
+  if(!btn)return;
+  filter=btn.getAttribute('data-cat');
+  document.querySelectorAll('.filter-tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderList();
+});
+
+$search.addEventListener('input',e=>{
+  query=e.target.value.trim();
+  renderList();
+});
+
+document.getElementById('news-list').addEventListener('click',e=>{
+  const card=e.target.closest('.news-card');
+  if(!card)return;
+  if(e.target.closest('a'))return;
+  card.classList.toggle('expanded');
+});
+
+window.addEventListener('hashchange',()=>{
+  const h=location.hash.slice(1);
+  if(/^\d{4}-\d{2}-\d{2}$/.test(h)&&h!==currentDate){filter='all';query='';$search.value='';document.querySelectorAll('.filter-tab').forEach(b=>b.classList.toggle('active',b.getAttribute('data-cat')==='all'));loadData(h)}
+});
+
+document.addEventListener('keydown',e=>{
+  if(e.target.tagName==='INPUT')return;
+  if(e.key==='ArrowLeft')document.getElementById('btn-prev').click();
+  if(e.key==='ArrowRight')document.getElementById('btn-next').click();
+});
+
+// Init
+const hashDate=location.hash.slice(1);
+loadData(/^\d{4}-\d{2}-\d{2}$/.test(hashDate)?hashDate:null);
+
+})();
+</script>
 </body>
 </html>
