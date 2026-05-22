@@ -12,7 +12,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hira
 a{color:#58a6ff;text-decoration:none}
 a:hover{text-decoration:underline}
 
-/* Layout */
 .app{display:flex;height:100vh}
 
 /* Sidebar */
@@ -29,91 +28,95 @@ a:hover{text-decoration:underline}
 
 /* Main */
 .main{flex:1;overflow-y:auto;display:flex;flex-direction:column}
-.main-header{padding:28px 32px 0;flex-shrink:0}
-.main-title{font-size:24px;font-weight:700;color:#fff}
-.main-subtitle{font-size:13px;color:#8b949e;margin-top:4px}
 
-/* Controls */
-.controls{display:flex;align-items:center;gap:12px;padding:20px 32px 16px;flex-wrap:wrap;flex-shrink:0}
-.tabs{display:flex;gap:4px}
-.tab{padding:6px 16px;border-radius:4px;font-size:13px;color:#8b949e;cursor:pointer;transition:all 0.15s;border:1px solid transparent}
-.tab:hover{color:#c9d1d9;background:#161b22}
-.tab.active{color:#fff;background:#00bfa5;border-color:#00bfa5}
-.controls-right{margin-left:auto;display:flex;align-items:center;gap:8px}
-.search-wrap{position:relative}
-.search-input{width:220px;height:34px;padding:0 12px;border:1px solid #30363d;border-radius:6px;background:#0d1117;color:#c9d1d9;font-size:13px;outline:none;transition:border-color 0.15s}
+/* Top bar with date + search */
+.topbar{display:flex;align-items:center;gap:12px;padding:16px 32px;border-bottom:1px solid #21262d;flex-shrink:0;flex-wrap:wrap}
+.topbar-left{display:flex;align-items:center;gap:8px}
+.date-nav-btn{width:26px;height:26px;border:1px solid #30363d;border-radius:4px;background:transparent;color:#8b949e;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:12px;transition:all 0.15s}
+.date-nav-btn:hover{border-color:#8b949e;color:#fff}
+.date-text{font-size:14px;font-weight:600;color:#e6edf3;min-width:80px;text-align:center}
+.topbar-right{margin-left:auto;display:flex;align-items:center;gap:8px}
+.search-input{width:200px;height:32px;padding:0 12px;border:1px solid #30363d;border-radius:6px;background:#0d1117;color:#c9d1d9;font-size:13px;outline:none;transition:border-color 0.15s}
 .search-input:focus{border-color:#00bfa5}
 .search-input::placeholder{color:#484f58}
-.search-btn{height:34px;padding:0 16px;border:none;border-radius:6px;background:#00bfa5;color:#fff;font-size:13px;font-weight:500;cursor:pointer;transition:opacity 0.15s}
+.search-btn{height:32px;padding:0 14px;border:none;border-radius:6px;background:#00bfa5;color:#fff;font-size:12px;font-weight:500;cursor:pointer}
 .search-btn:hover{opacity:0.85}
 
-/* Date header */
-.date-header{display:flex;align-items:center;gap:12px;padding:12px 32px;flex-shrink:0}
-.date-text{font-size:13px;color:#8b949e}
-.date-nav-btn{width:24px;height:24px;border:1px solid #30363d;border-radius:4px;background:transparent;color:#8b949e;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:12px;transition:all 0.15s}
-.date-nav-btn:hover{border-color:#8b949e;color:#fff}
+/* Coverage stats banner */
+.coverage{padding:20px 32px;flex-shrink:0}
+.coverage-inner{display:flex;align-items:center;gap:24px;padding:14px 20px;background:#161b22;border:1px solid #21262d;border-radius:8px}
+.coverage-stat{display:flex;flex-direction:column;align-items:center}
+.coverage-stat .num{font-size:20px;font-weight:700;color:#00bfa5}
+.coverage-stat .label{font-size:11px;color:#8b949e;margin-top:2px}
+.coverage-divider{width:1px;height:28px;background:#21262d}
+.coverage-text{font-size:12px;color:#8b949e;flex:1}
+.coverage-text strong{color:#c9d1d9}
+
+/* Category tabs */
+.tabs-bar{padding:0 32px 16px;flex-shrink:0;display:flex;gap:4px;overflow-x:auto}
+.tab{padding:5px 14px;border-radius:4px;font-size:12px;color:#8b949e;cursor:pointer;transition:all 0.15s;border:1px solid transparent;white-space:nowrap}
+.tab:hover{color:#c9d1d9;background:#161b22}
+.tab.active{color:#fff;background:#00bfa5;border-color:#00bfa5}
 
 /* Feed */
-.feed{padding:0 32px 40px;flex:1}
-.feed-item{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid #161b22}
-.feed-item:last-child{border-bottom:none}
-.feed-time{flex-shrink:0;width:70px;text-align:right;padding-top:4px}
-.feed-time .time{font-size:15px;font-weight:600;color:#e6edf3}
-.feed-time .dot{width:8px;height:8px;border-radius:50%;background:#00bfa5;margin:8px 0 0 auto}
-.feed-card{flex:1;background:#161b22;border:1px solid #21262d;border-radius:8px;padding:18px 20px;transition:border-color 0.2s}
-.feed-card:hover{border-color:#30363d}
+.feed{padding:0 32px 60px;flex:1}
 
-/* Card internals */
-.card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
-.card-source{display:flex;align-items:center;gap:8px;font-size:12px;color:#8b949e}
-.card-source-icon{width:18px;height:18px;border-radius:4px;background:#21262d;display:flex;align-items:center;justify-content:center;font-size:9px;color:#8b949e}
-.card-badges{display:flex;align-items:center;gap:6px}
-.badge-featured{font-size:11px;padding:2px 8px;border-radius:3px;background:rgba(0,191,165,0.15);color:#00bfa5;font-weight:500}
-.badge-score{font-size:11px;padding:2px 6px;border-radius:3px;background:#21262d;color:#8b949e;font-weight:600}
+/* Headline card (top story) */
+.headline{background:#161b22;border:1px solid #21262d;border-radius:10px;padding:24px;margin-bottom:20px;border-left:4px solid #00bfa5}
+.headline .hl-badge{display:inline-block;font-size:11px;padding:3px 10px;border-radius:4px;background:rgba(0,191,165,0.15);color:#00bfa5;font-weight:600;margin-bottom:10px}
+.headline .hl-title{font-size:20px;font-weight:700;color:#fff;line-height:1.5;margin-bottom:8px}
+.headline .hl-title a{color:inherit}
+.headline .hl-title a:hover{color:#58a6ff}
+.headline .hl-reason{font-size:13px;color:#00bfa5;line-height:1.6;margin-bottom:12px;padding:8px 12px;background:rgba(0,191,165,0.05);border-radius:6px}
+.headline .hl-summary{font-size:13px;color:#8b949e;line-height:1.7;margin-bottom:12px}
+.headline .hl-meta{display:flex;align-items:center;gap:12px;font-size:12px;color:#484f58}
+.headline .hl-tags{display:flex;gap:6px;margin-top:10px}
+.headline .hl-tags span{font-size:11px;padding:2px 8px;background:#21262d;border-radius:4px;color:#8b949e}
 
-.card-title{font-size:16px;font-weight:600;color:#e6edf3;line-height:1.5;margin-bottom:8px}
+/* Regular cards */
+.card{background:#161b22;border:1px solid #21262d;border-radius:8px;padding:18px 20px;margin-bottom:10px;transition:border-color 0.2s}
+.card:hover{border-color:#30363d}
+.card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:6px}
+.card-title{font-size:15px;font-weight:600;color:#e6edf3;line-height:1.5;flex:1}
 .card-title a{color:inherit}
 .card-title a:hover{color:#58a6ff}
+.card-cat{flex-shrink:0;font-size:10px;padding:3px 8px;border-radius:3px;color:#fff;font-weight:500;white-space:nowrap}
+.cat-creation{background:#8b5cf6}
+.cat-in-game{background:#059669}
+.cat-dev-tools{background:#2563eb}
+.cat-ops{background:#d97706}
+.cat-industry{background:#dc2626}
+.cat-research{background:#6366f1}
 
-.card-summary{font-size:13px;color:#8b949e;line-height:1.7;margin-bottom:12px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.card-summary.expanded{-webkit-line-clamp:unset}
+.card-reason{font-size:12px;color:#00bfa5;margin-bottom:8px;padding-left:10px;border-left:2px solid rgba(0,191,165,0.4)}
+.card-summary{font-size:13px;color:#8b949e;line-height:1.7;margin-bottom:10px}
+.card-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.card-meta{display:flex;align-items:center;gap:10px;font-size:12px;color:#484f58}
+.card-meta .source{color:#8b949e}
+.card-tags{display:flex;gap:5px;flex-wrap:wrap}
+.card-tags span{font-size:10px;padding:2px 7px;background:#21262d;border-radius:3px;color:#8b949e}
+.card-repost{font-size:11px;color:#484f58;margin-top:6px}
 
-.card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
-.card-tag{font-size:11px;padding:3px 10px;border-radius:4px;background:#21262d;color:#8b949e;border:1px solid #30363d}
-
-.card-reason{padding:10px 14px;border-radius:6px;background:rgba(0,191,165,0.06);border-left:3px solid #00bfa5;font-size:12px;color:#00bfa5;line-height:1.6}
-.card-reason-label{font-weight:600;margin-right:4px}
-
-.card-repost{font-size:11px;color:#484f58;margin-top:8px;padding-top:8px;border-top:1px solid #21262d}
-
-/* Category dot colors */
-.cat-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
-.cat-dot-creation{background:#8b5cf6}
-.cat-dot-in-game{background:#059669}
-.cat-dot-dev-tools{background:#2563eb}
-.cat-dot-ops{background:#d97706}
-.cat-dot-industry{background:#dc2626}
-.cat-dot-research{background:#6366f1}
+/* Section divider */
+.section-label{font-size:12px;font-weight:600;color:#484f58;text-transform:uppercase;letter-spacing:1px;padding:20px 0 12px;border-top:1px solid #21262d;margin-top:12px}
 
 /* States */
 .loading-state{text-align:center;padding:60px 0;color:#8b949e}
 .spinner{width:20px;height:20px;border:2px solid #21262d;border-top-color:#00bfa5;border-radius:50%;animation:spin 0.7s linear infinite;margin:0 auto 12px}
 @keyframes spin{to{transform:rotate(360deg)}}
-.empty-state{text-align:center;padding:60px 0;color:#484f58;font-size:14px}
+.empty-state{text-align:center;padding:60px 0;color:#484f58}
 
 /* Responsive */
 @media(max-width:768px){
   .sidebar{display:none}
-  .main-header{padding:20px 16px 0}
-  .controls{padding:16px 16px 12px}
-  .date-header{padding:8px 16px}
+  .topbar{padding:12px 16px}
+  .coverage{padding:12px 16px}
+  .tabs-bar{padding:0 16px 12px}
   .feed{padding:0 16px 40px}
-  .feed-time{width:50px}
-  .feed-time .time{font-size:13px}
-  .card-title{font-size:14px}
-  .search-input{width:140px}
-  .controls-right{margin-left:0;margin-top:8px;width:100%}
-  .search-input{flex:1;width:auto}
+  .headline{padding:16px}
+  .headline .hl-title{font-size:16px}
+  .search-input{width:120px}
+  .coverage-inner{flex-wrap:wrap;gap:12px}
 }
 </style>
 </head>
@@ -124,13 +127,9 @@ a:hover{text-decoration:underline}
 <aside class="sidebar">
   <div class="sidebar-brand">Game<span>AI</span></div>
   <nav class="sidebar-nav">
-    <div class="nav-item active" data-nav="featured">
+    <div class="nav-item active" data-nav="all">
       <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg>
-      精选
-    </div>
-    <div class="nav-item" data-nav="all">
-      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M1.5 3.25a.75.75 0 000 1.5h13a.75.75 0 000-1.5h-13zm0 4a.75.75 0 000 1.5h13a.75.75 0 000-1.5h-13zm0 4a.75.75 0 000 1.5h13a.75.75 0 000-1.5h-13z"/></svg>
-      全部 AI 动态
+      全部精选
     </div>
     <div class="nav-divider"></div>
     <div class="nav-item" data-nav="creation">
@@ -138,7 +137,7 @@ a:hover{text-decoration:underline}
       AI 游戏生成
     </div>
     <div class="nav-item" data-nav="in-game">
-      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"/><path d="M6.5 7.5A.75.75 0 007.25 6.75v-2a.75.75 0 00-1.5 0v2A.75.75 0 006.5 7.5zm3 0A.75.75 0 0010.25 6.75v-2a.75.75 0 00-1.5 0v2A.75.75 0 009.5 7.5z"/></svg>
+      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"/></svg>
       游戏内 AI
     </div>
     <div class="nav-item" data-nav="dev-tools">
@@ -146,7 +145,7 @@ a:hover{text-decoration:underline}
       开发工具
     </div>
     <div class="nav-item" data-nav="ops">
-      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9-3a1 1 0 11-2 0 1 1 0 012 0zM6.92 6.085h.001a.749.749 0 11-.001 1.5H6.75a.75.75 0 01-.75-.75V7.5h.209a2.25 2.25 0 001.07-.602A.75.75 0 017.5 6.5h1A.75.75 0 019.25 7.5v.085h.001a.749.749 0 11-.001 1.5z"/></svg>
+      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"/></svg>
       运营商业化
     </div>
     <div class="nav-item" data-nav="industry">
@@ -162,35 +161,44 @@ a:hover{text-decoration:underline}
 
 <!-- Main -->
 <div class="main" id="main-scroll">
-  <div class="main-header">
-    <h1 class="main-title" id="page-title">精选</h1>
-    <p class="main-subtitle" id="page-subtitle">AI 自动挑选的高价值内容</p>
-  </div>
-
-  <div class="controls">
-    <div class="tabs" id="tabs">
-      <div class="tab active" data-tab="all">全部</div>
-      <div class="tab" data-tab="creation">生成</div>
-      <div class="tab" data-tab="in-game">体验</div>
-      <div class="tab" data-tab="dev-tools">工具</div>
-      <div class="tab" data-tab="ops">运营</div>
-      <div class="tab" data-tab="industry">行业</div>
-      <div class="tab" data-tab="research">研究</div>
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <button class="date-nav-btn" id="btn-prev">&larr;</button>
+      <span class="date-text" id="date-display">--</span>
+      <button class="date-nav-btn" id="btn-next">&rarr;</button>
     </div>
-    <div class="controls-right">
-      <div class="search-wrap">
-        <input class="search-input" id="search" type="text" placeholder="搜索标题/摘要...">
-      </div>
+    <div class="topbar-right">
+      <input class="search-input" id="search" type="text" placeholder="搜索标题/摘要...">
       <button class="search-btn" onclick="doSearch()">搜索</button>
     </div>
   </div>
 
-  <div class="date-header">
-    <button class="date-nav-btn" id="btn-prev">&larr;</button>
-    <span class="date-text" id="date-display">--</span>
-    <button class="date-nav-btn" id="btn-next">&rarr;</button>
+  <!-- Coverage stats -->
+  <div class="coverage">
+    <div class="coverage-inner">
+      <div class="coverage-stat"><span class="num" id="ct-total">--</span><span class="label">今日精选</span></div>
+      <div class="coverage-divider"></div>
+      <div class="coverage-stat"><span class="num" id="ct-primary">--</span><span class="label">一手信源</span></div>
+      <div class="coverage-divider"></div>
+      <div class="coverage-stat"><span class="num">174+</span><span class="label">扫描信源数</span></div>
+      <div class="coverage-divider"></div>
+      <div class="coverage-text">从 <strong>24 个游戏/AI 专业信源</strong> + <strong>150+ AI 热点信源</strong>中筛选，仅保留与游戏行业 AI 应用直接相关的内容。</div>
+    </div>
   </div>
 
+  <!-- Tabs -->
+  <div class="tabs-bar" id="tabs">
+    <div class="tab active" data-tab="all">全部</div>
+    <div class="tab" data-tab="creation">生成与创作</div>
+    <div class="tab" data-tab="in-game">游戏内AI</div>
+    <div class="tab" data-tab="dev-tools">开发工具</div>
+    <div class="tab" data-tab="ops">运营商业化</div>
+    <div class="tab" data-tab="industry">行业动态</div>
+    <div class="tab" data-tab="research">前沿研究</div>
+  </div>
+
+  <!-- Feed -->
   <div class="feed" id="feed">
     <div class="loading-state" id="loading"><div class="spinner"></div>正在加载...</div>
   </div>
@@ -202,22 +210,21 @@ a:hover{text-decoration:underline}
 (function(){
 'use strict';
 
-const CATS={creation:'AI 游戏生成与创作','in-game':'游戏内 AI 体验','dev-tools':'游戏开发 AI 工具',ops:'游戏运营&商业化',industry:'游戏行业&公司动态',research:'游戏 AI 前沿研究'};
-const CAT_SHORT={creation:'生成','in-game':'体验','dev-tools':'工具',ops:'运营',industry:'行业',research:'研究'};
+const CATS={creation:'AI 游戏生成与创作','in-game':'游戏内 AI 体验','dev-tools':'游戏开发 AI 工具',ops:'运营商业化',industry:'行业动态',research:'前沿研究'};
+const CAT_SHORT={creation:'生成与创作','in-game':'游戏内AI','dev-tools':'开发工具',ops:'运营商业化',industry:'行业动态',research:'前沿研究'};
 
-let data=null,currentDate=null,navMode='featured',tabFilter='all',query='';
+let data=null,currentDate=null,navFilter='all',tabFilter='all',query='';
 
 const $feed=document.getElementById('feed');
 const $loading=document.getElementById('loading');
 const $dateDisplay=document.getElementById('date-display');
-const $pageTitle=document.getElementById('page-title');
-const $pageSubtitle=document.getElementById('page-subtitle');
 const $search=document.getElementById('search');
+const $ctTotal=document.getElementById('ct-total');
+const $ctPrimary=document.getElementById('ct-primary');
 
-// Load
 async function loadData(date){
   $loading.style.display='block';
-  $feed.querySelectorAll('.feed-item').forEach(e=>e.remove());
+  $feed.querySelectorAll('.headline,.card,.section-label,.empty-state').forEach(e=>e.remove());
   const file=date?`data/${date}.json`:'data/latest.json';
   try{
     const r=await fetch(file);
@@ -233,69 +240,98 @@ async function loadData(date){
   }
 }
 
-// Render
 function render(){
-  if(!data)return;
-  // Date display
+  if(!data||!data.items)return;
+  // Date
   const d=new Date(currentDate);
-  $dateDisplay.textContent=`${d.getMonth()+1}月${d.getDate()}日`;
+  $dateDisplay.textContent=`${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日`;
+  // Stats
+  const primaryCount=data.items.filter(i=>i.source_type==='primary').length;
+  $ctTotal.textContent=data.items.length;
+  $ctPrimary.textContent=primaryCount;
 
+  // Get filtered items
   const items=getItems();
   if(items.length===0){
     $feed.innerHTML='<div class="empty-state">暂无匹配内容</div>';
     return;
   }
 
-  let html='';
-  items.forEach((item,idx)=>{
-    const cat=item.category||'industry';
-    const time=fmtTime(item.published_at);
-    const isPrimary=item.source_type==='primary';
-    const score=Math.floor(60+Math.random()*30); // visual score
+  // Split: headline (first primary) + rest
+  let headline=null;
+  let rest=[];
+  if(!query && tabFilter==='all' && navFilter==='all'){
+    const primaryItems=items.filter(i=>i.source_type==='primary');
+    if(primaryItems.length>0){
+      headline=primaryItems[0];
+      rest=items.filter(i=>i!==headline);
+    }else{
+      rest=items;
+    }
+  }else{
+    rest=items;
+  }
 
-    html+=`<div class="feed-item">
-      <div class="feed-time">
-        <div class="time">${time}</div>
-        <div class="dot" style="${isPrimary?'':'background:#30363d'}"></div>
-      </div>
-      <div class="feed-card" onclick="toggleCard(this)">
-        <div class="card-top">
-          <div class="card-source">
-            <span class="card-source-icon">${esc(item.source?item.source[0]:'')}</span>
-            <span>${esc(item.source||'')}${item.source_type==='secondary'?' (转载)':''}</span>
-          </div>
-          <div class="card-badges">
-            ${isPrimary?'<span class="badge-featured">精选</span>':''}
-            <span class="badge-score">${score}</span>
-          </div>
-        </div>
-        <div class="card-title"><a href="${esc(item.url||'#')}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${esc(item.title)}</a></div>
-        <div class="card-summary">${esc(item.summary||'')}</div>
-        ${item.tags&&item.tags.length?`<div class="card-tags">${item.tags.map(t=>`<span class="card-tag">${esc(t)}</span>`).join('')}${`<span class="card-tag">${esc(CAT_SHORT[cat]||cat)}</span>`}</div>`:`<div class="card-tags"><span class="card-tag">${esc(CAT_SHORT[cat]||cat)}</span></div>`}
-        ${item.recommendation?`<div class="card-reason"><span class="card-reason-label">推荐理由：</span>${esc(item.recommendation)}</div>`:''}
-        ${item.trace_note?`<div class="card-repost">${esc(item.trace_note)}</div>`:''}
-      </div>
+  let html='';
+
+  // Headline card
+  if(headline){
+    const cat=headline.category||'industry';
+    html+=`<div class="headline">
+      <span class="hl-badge">头条</span>
+      <div class="hl-title"><a href="${esc(headline.url||'#')}" target="_blank" rel="noopener">${esc(headline.title)}</a></div>
+      ${headline.recommendation?`<div class="hl-reason">${esc(headline.recommendation)}</div>`:''}
+      <div class="hl-summary">${esc(headline.summary||'')}</div>
+      <div class="hl-meta"><span class="source">${esc(headline.source||'')}</span><span>${fmtDate(headline.published_at)}</span><span class="card-cat cat-${cat}">${esc(CAT_SHORT[cat]||cat)}</span></div>
+      ${headline.tags&&headline.tags.length?`<div class="hl-tags">${headline.tags.map(t=>`<span>${esc(t)}</span>`).join('')}</div>`:''}
     </div>`;
-  });
+  }
+
+  // Section: important (primary)
+  const important=rest.filter(i=>i.source_type==='primary');
+  const others=rest.filter(i=>i.source_type!=='primary');
+
+  if(important.length>0 && others.length>0){
+    html+=renderCards(important);
+    html+=`<div class="section-label">其他相关</div>`;
+    html+=renderCards(others);
+  }else{
+    html+=renderCards(rest);
+  }
+
   $feed.innerHTML=html;
+}
+
+function renderCards(items){
+  return items.map(item=>{
+    const cat=item.category||'industry';
+    return `<div class="card">
+      <div class="card-head">
+        <div class="card-title"><a href="${esc(item.url||'#')}" target="_blank" rel="noopener">${esc(item.title)}</a></div>
+        <span class="card-cat cat-${cat}">${esc(CAT_SHORT[cat]||cat)}</span>
+      </div>
+      ${item.recommendation?`<div class="card-reason">${esc(item.recommendation)}</div>`:''}
+      <div class="card-summary">${esc(item.summary||'')}</div>
+      <div class="card-bottom">
+        <div class="card-meta"><span class="source">${esc(item.source||'')}</span><span>${fmtDate(item.published_at)}</span></div>
+        ${item.tags&&item.tags.length?`<div class="card-tags">${item.tags.map(t=>`<span>${esc(t)}</span>`).join('')}</div>`:''}
+      </div>
+      ${item.trace_note?`<div class="card-repost">${esc(item.trace_note)}</div>`:''}
+    </div>`;
+  }).join('');
 }
 
 function getItems(){
   if(!data||!data.items)return[];
   let items=[...data.items];
-  // Sort by time desc
-  items.sort((a,b)=>(b.published_at?new Date(b.published_at).getTime():0)-(a.published_at?new Date(a.published_at).getTime():0));
-  // Nav mode filter
-  if(navMode==='featured'){
-    items=items.filter(i=>i.source_type==='primary');
-  }else if(navMode!=='all'&&navMode!=='featured'){
-    items=items.filter(i=>i.category===navMode);
-  }
-  // Tab filter
-  if(tabFilter!=='all'){
-    items=items.filter(i=>i.category===tabFilter);
-  }
-  // Search
+  items.sort((a,b)=>{
+    // Primary first, then by time
+    if(a.source_type==='primary'&&b.source_type!=='primary')return -1;
+    if(b.source_type==='primary'&&a.source_type!=='primary')return 1;
+    return (b.published_at?new Date(b.published_at).getTime():0)-(a.published_at?new Date(a.published_at).getTime():0);
+  });
+  if(navFilter!=='all')items=items.filter(i=>i.category===navFilter);
+  if(tabFilter!=='all')items=items.filter(i=>i.category===tabFilter);
   if(query){
     const q=query.toLowerCase();
     items=items.filter(i=>(i.title&&i.title.toLowerCase().includes(q))||(i.summary&&i.summary.toLowerCase().includes(q)));
@@ -303,25 +339,14 @@ function getItems(){
   return items;
 }
 
-// Utils
-function fmtTime(iso){
-  if(!iso)return'--:--';
-  try{const d=new Date(iso);return`${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`}catch(e){return'--:--'}
+function fmtDate(iso){
+  if(!iso)return'';
+  try{const d=new Date(iso);return`${d.getMonth()+1}/${d.getDate()} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`}catch(e){return''}
 }
 function esc(s){if(!s)return'';const d=document.createElement('div');d.textContent=s;return d.innerHTML}
 function toISO(d){return`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
 
-// Toggle card expand
-window.toggleCard=function(card){
-  const summary=card.querySelector('.card-summary');
-  if(summary)summary.classList.toggle('expanded');
-};
-
-// Search
-window.doSearch=function(){
-  query=$search.value.trim();
-  render();
-};
+window.doSearch=function(){query=$search.value.trim();render()};
 $search.addEventListener('keydown',e=>{if(e.key==='Enter')doSearch()});
 
 // Date nav
@@ -347,21 +372,9 @@ document.querySelectorAll('.nav-item[data-nav]').forEach(item=>{
   item.addEventListener('click',()=>{
     document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
     item.classList.add('active');
-    navMode=item.getAttribute('data-nav');
+    navFilter=item.getAttribute('data-nav');
     tabFilter='all';
     document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.getAttribute('data-tab')==='all'));
-
-    // Update header
-    if(navMode==='featured'){
-      $pageTitle.textContent='精选';
-      $pageSubtitle.textContent='AI 自动挑选的高价值内容';
-    }else if(navMode==='all'){
-      $pageTitle.textContent='全部 AI 动态';
-      $pageSubtitle.textContent='所有游戏 x AI 资讯流';
-    }else{
-      $pageTitle.textContent=CATS[navMode]||navMode;
-      $pageSubtitle.textContent=`${CATS[navMode]||''} 方向的最新动态`;
-    }
     render();
     document.getElementById('main-scroll').scrollTop=0;
   });
@@ -383,7 +396,6 @@ window.addEventListener('hashchange',()=>{
 // Init
 const hash=location.hash.slice(1);
 loadData(/^\d{4}-\d{2}-\d{2}$/.test(hash)?hash:null);
-
 })();
 </script>
 </body>
