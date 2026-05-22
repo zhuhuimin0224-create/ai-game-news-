@@ -41,7 +41,10 @@ a:hover{color:#79c0ff}
 .hl-section{padding:20px 36px;border-bottom:1px solid #21262d}
 .hl-label{font-size:12px;font-weight:600;color:#00bfa5;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
 .hl-list{list-style:none;counter-reset:hl}
-.hl-item{counter-increment:hl;padding:8px 0;font-size:14px;color:#e6edf3;line-height:1.6;display:flex;gap:10px}
+.hl-item{counter-increment:hl;padding:8px 0;font-size:14px;color:#e6edf3;line-height:1.6;display:flex;gap:10px;cursor:pointer;border-radius:4px;transition:background 0.15s}
+.hl-item:hover{background:#161b22}
+.hl-item a{color:#e6edf3;text-decoration:none}
+.hl-item a:hover{color:#58a6ff}
 .hl-item::before{content:counter(hl);flex-shrink:0;width:22px;height:22px;background:#21262d;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#00bfa5}
 
 /* Cards */
@@ -52,13 +55,7 @@ a:hover{color:#79c0ff}
 .card-title{font-size:15px;font-weight:600;color:#e6edf3;line-height:1.5;flex:1}
 .card-title a{color:inherit}
 .card-title a:hover{color:#58a6ff}
-.card-cat{flex-shrink:0;font-size:10px;padding:3px 8px;border-radius:3px;color:#fff;font-weight:500}
-.cat-creation{background:#8b5cf6}
-.cat-in-game{background:#059669}
-.cat-dev-tools{background:#2563eb}
-.cat-ops{background:#d97706}
-.cat-industry{background:#dc2626}
-.cat-research{background:#6366f1}
+.card-cat{flex-shrink:0;font-size:10px;padding:3px 8px;border-radius:3px;color:#8b949e;font-weight:500;background:#21262d;border:1px solid #30363d}
 
 .card-body{padding:10px 14px;background:rgba(0,191,165,0.03);border:1px solid #21262d;border-radius:6px;margin-bottom:10px}
 .card-row{display:flex;gap:0;margin-bottom:4px;font-size:13px;line-height:1.7}
@@ -126,7 +123,7 @@ const CAT_SHORT={creation:'生成与创作','in-game':'游戏内AI','dev-tools':
 const WEEKS=['2026-05-19','2026-05-12','2026-05-05'];
 const DAILY_DATES=['2026-05-22','2026-05-21','2026-05-20','2026-05-19','2026-05-18','2026-05-17','2026-05-16','2026-05-15'];
 
-let weekData={},dailyData={},currentView='weekly',currentWeek=WEEKS[0],currentDaily=DAILY_DATES[0],currentCat='',query='';
+let weekData={},dailyData={},currentView='weekly',currentWeek=WEEKS[0],currentDaily=DAILY_DATES[0],currentCat='',dailyCat='all',query='';
 const $main=document.getElementById('main');
 
 // ====== Load weekly data ======
@@ -149,12 +146,17 @@ async function renderWeekly(){
 
   let weekBtns=WEEKS.map(w=>`<button class="wk-btn ${w===currentWeek?'active':''}" data-week="${w}">${fmtWeekLabel(w)}</button>`).join('');
 
-  let highlights=d.highlights.map(h=>`<li class="hl-item">${esc(h)}</li>`).join('');
+  // Link highlights to items by matching text
+  let highlights=d.highlights.map((h,i)=>{
+    const matchItem=d.items[i];
+    const url=matchItem?matchItem.url:'#';
+    return `<li class="hl-item"><a href="${esc(url)}" target="_blank" rel="noopener">${esc(h)}</a></li>`;
+  }).join('');
 
   let cards=d.items.map(item=>renderCard(item)).join('');
 
   $main.innerHTML=`
-    <div class="mn-hd"><h1 class="mn-title">${esc(d.title)}</h1><p class="mn-sub">每周精选最重要的游戏 x AI 动态</p></div>
+    <div class="mn-hd"><h1 class="mn-title">${esc(d.title)}</h1><p class="mn-sub">覆盖 24 个游戏/AI 专业信源 + 150+ 实时热点源，经算法筛选与人工复核，提炼本周最具行业判断价值的信息</p></div>
     <div class="wk-sel">${weekBtns}</div>
     <div class="hl-section"><div class="hl-label">本周速递</div><ol class="hl-list">${highlights}</ol></div>
     <div class="cards">${cards}</div>
@@ -179,22 +181,35 @@ async function renderDaily(){
 
   let items=d.items||[];
   items.sort((a,b)=>(a.source_type==='primary'?0:1)-(b.source_type==='primary'?0:1));
+  if(dailyCat!=='all')items=items.filter(i=>i.category===dailyCat);
 
   let dateBtns=DAILY_DATES.map(dt=>{
     const dd=new Date(dt);
     return `<button class="wk-btn ${dt===currentDaily?'active':''}" data-date="${dt}">${dd.getMonth()+1}/${dd.getDate()}</button>`;
   }).join('');
 
+  let catBtns=`<button class="wk-btn ${dailyCat==='all'?'active':''}" data-dcat="all">全部</button>`;
+  Object.keys(CAT_SHORT).forEach(k=>{
+    catBtns+=`<button class="wk-btn ${dailyCat===k?'active':''}" data-dcat="${k}">${CAT_SHORT[k]}</button>`;
+  });
+
   let cards=items.map(item=>renderDailyCard(item)).join('');
+  if(items.length===0)cards='<div class="state">该分类当日暂无内容</div>';
 
   $main.innerHTML=`
-    <div class="mn-hd"><h1 class="mn-title">每日资讯 - ${d.date||''}</h1><p class="mn-sub">当日共 ${items.length} 条，从 174+ 信源扫描筛选</p></div>
+    <div class="mn-hd"><h1 class="mn-title">每日资讯 - ${d.date||''}</h1><p class="mn-sub">当日共 ${(d.items||[]).length} 条，从 174+ 信源中筛选与游戏行业 AI 直接相关的内容</p></div>
     <div class="wk-sel">${dateBtns}</div>
+    <div class="wk-sel" style="padding-top:0;border-bottom:1px solid #21262d">${catBtns}</div>
     <div class="search-bar"><input class="search-input" id="search" placeholder="搜索标题..." onkeydown="if(event.key==='Enter')filterDaily()"><button class="search-btn" onclick="filterDaily()">搜索</button></div>
     <div class="cards" id="daily-cards">${cards}</div>
   `;
-  $main.querySelectorAll('.wk-btn').forEach(btn=>{
+  // Bind date buttons
+  $main.querySelectorAll('[data-date]').forEach(btn=>{
     btn.addEventListener('click',()=>{currentDaily=btn.dataset.date;renderDaily();});
+  });
+  // Bind category buttons
+  $main.querySelectorAll('[data-dcat]').forEach(btn=>{
+    btn.addEventListener('click',()=>{dailyCat=btn.dataset.dcat;renderDaily();});
   });
 }
 
