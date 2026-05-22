@@ -22,6 +22,8 @@ a:hover{color:#89c4ff}
 .ni:hover{color:#d1d5db;background:#1c2530}
 .ni.active{color:#fff;background:#00bfa5;font-weight:500}
 .ni .ic{width:16px;text-align:center;font-size:14px;flex-shrink:0}
+.ni .ni-desc{font-size:10px;color:#6b7280;margin-top:1px;white-space:normal;line-height:1.4}
+.ni.active .ni-desc{color:rgba(255,255,255,0.7)}
 .sb-div{height:1px;background:#253040;margin:12px 14px}
 .sb-label{padding:4px 24px;font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:1px}
 
@@ -146,12 +148,12 @@ a:hover{color:#89c4ff}
     <div class="ni" data-view="daily"><span class="ic">D</span>每日全量</div>
     <div class="sb-div"></div>
     <div class="sb-label">按分类</div>
-    <div class="ni" data-view="cat" data-cat="in-game"><span class="ic" style="color:#059669">*</span>游戏内 AI</div>
-    <div class="ni" data-view="cat" data-cat="creation"><span class="ic" style="color:#8b5cf6">*</span>AI 游戏生成</div>
-    <div class="ni" data-view="cat" data-cat="dev-tools"><span class="ic" style="color:#2563eb">*</span>开发工具</div>
-    <div class="ni" data-view="cat" data-cat="ops"><span class="ic" style="color:#d97706">*</span>运营商业化</div>
-    <div class="ni" data-view="cat" data-cat="industry"><span class="ic" style="color:#dc2626">*</span>行业动态</div>
-    <div class="ni" data-view="cat" data-cat="research"><span class="ic" style="color:#6366f1">*</span>前沿研究</div>
+    <div class="ni" data-view="cat" data-cat="in-game"><span class="ic" style="color:#059669">*</span><div>游戏内 AI<div class="ni-desc">NPC、AI玩法、个性化体验</div></div></div>
+    <div class="ni" data-view="cat" data-cat="creation"><span class="ic" style="color:#8b5cf6">*</span><div>AI 游戏生成<div class="ni-desc">AIGC资产、3D/音频/剧情</div></div></div>
+    <div class="ni" data-view="cat" data-cat="dev-tools"><span class="ic" style="color:#2563eb">*</span><div>开发工具<div class="ni-desc">AI编程、引擎功能、自动测试</div></div></div>
+    <div class="ni" data-view="cat" data-cat="ops"><span class="ic" style="color:#d97706">*</span><div>运营商业化<div class="ni-desc">推荐分发、买量素材、反作弊</div></div></div>
+    <div class="ni" data-view="cat" data-cat="industry"><span class="ic" style="color:#dc2626">*</span><div>行业动态<div class="ni-desc">大厂战略、投融资、人事</div></div></div>
+    <div class="ni" data-view="cat" data-cat="research"><span class="ic" style="color:#6366f1">*</span><div>前沿研究<div class="ni-desc">论文、世界模型、GDC</div></div></div>
   </nav>
 </aside>
 
@@ -166,8 +168,16 @@ a:hover{color:#89c4ff}
 const CAT_SHORT={creation:'生成与创作','in-game':'游戏内AI','dev-tools':'开发工具',ops:'运营商业化',industry:'行业动态',research:'前沿研究'};
 const WEEKS=['2026-05-19','2026-05-12','2026-05-05'];
 const DAILY_DATES=['2026-05-22','2026-05-21','2026-05-20','2026-05-19','2026-05-18','2026-05-17','2026-05-16','2026-05-15'];
+const CAT_DESC={
+  'in-game':'智能NPC、AI驱动玩法、个性化体验、AI原生游戏',
+  creation:'AIGC资产生成、3D/音频/剧情生成、AI UGC、玩家创作工具',
+  'dev-tools':'AI编程辅助、引擎AI功能、自动测试、工作流提效',
+  ops:'智能推荐与分发、买量素材AI生成、玩家分群、反作弊',
+  industry:'大厂AI战略、投融资、政策法规、市场数据、人事变动',
+  research:'学术论文、GDC/SIGGRAPH、世界模型、游戏作为AI研究平台'
+};
 
-let weekData={},dailyData={},currentView='weekly',currentWeek=WEEKS[0],currentDaily=DAILY_DATES[0],currentCat='',dailyCat='all',query='';
+let weekData={},dailyData={},currentView='weekly',currentWeek=WEEKS[1],currentDaily=DAILY_DATES[0],currentCat='',dailyCat='all',query='';
 const $main=document.getElementById('main');
 
 // ====== Load weekly data ======
@@ -282,8 +292,9 @@ async function renderCategory(cat){
     if(item.key_point)return renderCard(item);
     return renderDailyCard(item);
   }).join('');
+  const catDesc=CAT_DESC[cat]||'';
   $main.innerHTML=`
-    <div class="mn-hd"><h1 class="mn-title">${esc(CAT_SHORT[cat]||cat)}</h1><p class="mn-sub">该方向近期所有动态（共 ${allItems.length} 条）</p></div>
+    <div class="mn-hd"><h1 class="mn-title">${esc(CAT_SHORT[cat]||cat)}</h1><p class="mn-sub">${esc(catDesc)}</p></div>
     <div class="cards">${cards}</div>
   `;
 }
