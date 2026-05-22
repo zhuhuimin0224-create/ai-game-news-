@@ -210,7 +210,7 @@ async function renderWeekly(){
   let cards=d.items.map(item=>renderCard(item)).join('');
 
   $main.innerHTML=`
-    <div class="mn-hd"><h1 class="mn-title">${esc(d.title)}</h1><p class="mn-sub">覆盖 24 个游戏/AI 专业信源 + 150+ 实时热点源，经算法筛选与人工复核，提炼本周最具行业判断价值的信息</p></div>
+    <div class="mn-hd"><h1 class="mn-title">${esc(d.title)}</h1><p class="mn-sub">覆盖 24 个游戏/AI 专业信源 + 150+ 实时热点源，经算法筛选与人工复核，提炼本周高价值信息</p></div>
     <div class="wk-sel">${weekBtns}</div>
     <div class="hl-section"><div class="hl-label">本周速递</div><ol class="hl-list">${highlights}</ol></div>
     <div class="cards">${cards}</div>
@@ -251,7 +251,7 @@ async function renderDaily(){
   if(items.length===0)cards='<div class="state">该分类当日暂无内容</div>';
 
   $main.innerHTML=`
-    <div class="mn-hd"><h1 class="mn-title">每日资讯 - ${d.date||''}</h1><p class="mn-sub">当日共 ${(d.items||[]).length} 条，从 174+ 信源中筛选与游戏行业 AI 直接相关的内容</p></div>
+    <div class="mn-hd"><h1 class="mn-title">每日资讯 - ${d.date||''}</h1><p class="mn-sub">覆盖 24 个游戏/AI 专业信源 + 150+ 实时热点源，经算法筛选与人工复核，提炼当日高价值信息</p></div>
     <div class="wk-sel">${dateBtns}</div>
     <div class="wk-sel" style="padding-top:0;border-bottom:1px solid #21262d">${catBtns}</div>
     <div class="search-bar"><input class="search-input" id="search" placeholder="搜索标题..." onkeydown="if(event.key==='Enter')filterDaily()"><button class="search-btn" onclick="filterDaily()">搜索</button></div>
