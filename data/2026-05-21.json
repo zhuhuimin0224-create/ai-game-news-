@@ -1,0 +1,14 @@
+{
+  "date": "2026-05-21",
+  "generated_at": "2026-05-21T23:00:00Z",
+  "total_count": 6,
+  "items": [
+    {"title": "NVIDIA GTC Taipei at COMPUTEX: Live Updates on What's Next in AI", "url": "https://blogs.nvidia.com/blog/nvidia-gtc-taipei-computex-2026-news/", "summary": "NVIDIA GTC台北大会在COMPUTEX上召开，全球开发者和行业领袖齐聚，展示AI基础设施和物理AI等方向的最新突破。Jensen Huang发表主题演讲，重点介绍AI工厂、Agent基础设施和游戏渲染技术进展。", "source": "NVIDIA Blog", "published_at": "2026-05-21T16:00:17Z", "category": "research", "tags": ["NVIDIA", "GTC", "COMPUTEX"], "recommendation": "NVIDIA持续巩固AI基础设施地位，游戏渲染AI化已成标配方向", "source_type": "primary"},
+    {"title": "Google掀桌子，AI游戏规则真的变了", "url": "https://x.com/AYi_AInotes", "summary": "Google在I/O大会发布Gemini 3.5 Flash与Antigravity平台，标志着AI竞争从模型性能转向构建Agent基础设施。Flash以4倍于顶级模型的速度解决了复杂Agent的延迟瓶颈，使24/7自主Agent成为可能。Antigravity提供桌面端、CLI、SDK等全栈开发工具。", "source": "X：阿易 AI Notes", "published_at": "2026-05-21T12:00:00Z", "category": "dev-tools", "tags": ["Google", "Gemini", "Agent"], "recommendation": "Agent基础设施成熟意味着游戏AI助手、自动化测试等场景即将可落地", "source_type": "primary"},
+    {"title": "谷歌推出 Ask Play：连续对话 AI 筛选应用与游戏", "url": "https://www.ithome.com/0/952/539.htm", "summary": "谷歌在2026年I/O开发者大会上推出Ask Play功能。用户可通过多轮对话逐步细化需求（如先找\"无广告科幻策略游戏\"再补充\"支持离线\"），系统综合上下文语义进行精准推荐。取代传统分类浏览和搜索的游戏发现方式。", "source": "IT之家（RSS）", "published_at": "2026-05-21T10:00:00Z", "category": "ops", "tags": ["Google", "Ask Play", "分发"], "recommendation": "AI对话式推荐改变用户发现游戏的路径，直接影响应用商店分发和社区导流逻辑", "source_type": "secondary"},
+    {"title": "Gemini 3.5 Flash快速构建互动游戏", "url": "https://x.com/GeminiApp", "summary": "使用Gemini 3.5 Flash构建你的第一款游戏。无需复杂3D建模，即可将日常物品直接转化为互动数字体验。从一个提示开始，在Canvas中将图像变成游戏。", "source": "X：Gemini", "published_at": "2026-05-21T08:00:00Z", "category": "creation", "tags": ["Google", "Gemini", "游戏生成"], "recommendation": "大模型直接生成可玩游戏的能力持续进化，UGC游戏创作门槛进一步降低", "source_type": "primary"},
+    {"title": "小黑盒v1.3.387更新：新增Zelda互动地图+黑盒语音PC端AI降噪", "url": "https://www.wandoujia.com/apps/7627178", "summary": "5月21日iOS更新。新增Zelda互动地图、无畏契约每日商店、原神抽卡分析。黑盒语音PC端v1.55增AI降噪+游戏主题语音房。", "source": "豌豆荚", "published_at": "2026-05-21T06:00:00Z", "category": "in-game", "tags": ["小黑盒", "语音AI"], "recommendation": "游戏社区平台将AI降噪等功能融入语音社交场景，提升开黑体验", "source_type": "secondary"},
+    {"title": "Xbox announces hire of veteran analyst Matthew Ball as chief strategy officer", "url": "https://www.gamesindustry.biz", "summary": "Xbox CEO Asha Sharma任命游戏行业分析师Matthew Ball为首席战略官，同时聘请Amazon和AI领域资深人士担任CTO，重组领导层以应对AI时代。", "source": "GamesIndustry.biz", "published_at": "2026-05-21T14:00:00Z", "category": "industry", "tags": ["Xbox", "人事"], "recommendation": "Xbox重组管理层引入AI+战略人才，说明微软游戏业务正在AI方向重新布局", "source_type": "primary"}
+  ],
+  "stats": {"by_category": {"in-game": 1, "dev-tools": 1, "ops": 1, "creation": 1, "industry": 1, "research": 1}}
+}

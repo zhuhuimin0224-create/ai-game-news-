@@ -1,0 +1,12 @@
+{
+  "date": "2026-05-18",
+  "generated_at": "2026-05-18T23:00:00Z",
+  "total_count": 4,
+  "items": [
+    {"title": "【索尼】SIE总裁表态：AI的使命是增强能力边界，绝非取代", "url": "https://www.youxituoluo.com/534491.html", "summary": "索尼互娱总裁明确AI定位是增强工作室能力而非替代人力。同日恺英网络投入1亿布局AI漫剧，把AI能力从游戏延伸到内容产业。", "source": "游戏陀螺", "published_at": "2026-05-18T10:00:00Z", "category": "industry", "tags": ["索尼", "恺英", "AI定位"], "recommendation": "主机三巨头之一首次详细披露AI实战定位——\"增强不替代\"。恺英代表AI能力外溢到非游戏内容形态", "source_type": "primary"},
+    {"title": "【Far Far West】发行商Fireshine声明：不与使用生成式AI美术的开发者合作", "url": "https://www.gamesindustry.biz", "summary": "Steam热门游戏Far Far West的发行商Fireshine Games明确表态不接受使用AI生成美术的合作方。这是首个明确反AI立场的主流发行商。", "source": "GamesIndustry.biz", "published_at": "2026-05-18T14:00:00Z", "category": "creation", "tags": ["AI伦理", "发行商", "美术"], "recommendation": "发行商层面的反AI美术声明——市场开始分化为\"亲AI\"和\"拒AI\"两个阵营，游戏社区舆论风向标", "source_type": "primary"},
+    {"title": "【AMD】游戏引擎专利公示：画草图AI生成游戏场景", "url": "https://www.ithome.com/0/951/524.htm", "summary": "AMD申请游戏引擎专利，描述通过简单草图输入由AI生成完整游戏场景。硬件厂商开始往游戏开发工具链上游走，从GPU供应商变为创作工具提供者。", "source": "IT之家", "published_at": "2026-05-17T08:00:00Z", "category": "dev-tools", "tags": ["AMD", "专利", "场景生成"], "recommendation": "如果实现，关卡设计门槛大幅降低——策划画个草图就能出场景原型，不再等美术排期", "source_type": "secondary"},
+    {"title": "【米游社】旅行笔记：自动生成月度游戏时间报告", "url": "https://www.bilibili.com", "summary": "米游社新增\"旅行笔记\"功能，自动生成用户月度游戏时间报告，包含游戏时长、成就进度、角色使用数据等可视化内容。", "source": "米游社", "published_at": "2026-05-18T06:00:00Z", "category": "in-game", "tags": ["米游社", "数据报告", "个性化"], "recommendation": "游戏社区自动为用户生成个性化数据报告——天然的社交分享素材，与微信游戏社区\"AI战报\"方向高度一致", "source_type": "secondary"}
+  ],
+  "stats": {"by_category": {"industry": 1, "creation": 1, "dev-tools": 1, "in-game": 1}}
+}

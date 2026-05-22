@@ -1,0 +1,12 @@
+{
+  "date": "2026-05-19",
+  "generated_at": "2026-05-19T23:00:00Z",
+  "total_count": 4,
+  "items": [
+    {"title": "Discord游戏服务器托管+服务器内购/送礼上线", "url": "https://digitalgroundmedia.com/?p=105462", "summary": "Discord Server Boost可转化为游戏专属服务器。玩家在社区内直接购买/赠送游戏物品（Marvel Rivals已接入）。统一语音+游玩体验，将社区和游戏内购打通。", "source": "Digital Ground Media", "published_at": "2026-05-19T10:00:00Z", "category": "ops", "tags": ["Discord", "内购", "社区变现"], "recommendation": "Discord把游戏内购搬进社区——社区不再只是讨论场所，而是交易场所。对微信游戏社区的商业化路径有直接参考价值", "source_type": "primary"},
+    {"title": "Discord AI Co-Pilot+游戏内Overlay改版+VR语音房", "url": "https://www.techbloat.com/?p=904241", "summary": "Discord AI助手可总结消息/提供游戏tips；Overlay改版后可在游戏内聊天/语音/视频；Meta Quest VR原生应用上线。Social SDK 1.6支持免账号语音。", "source": "TechBloat", "published_at": "2026-05-19T08:00:00Z", "category": "in-game", "tags": ["Discord", "AI助手", "Overlay"], "recommendation": "Discord用AI做消息摘要/游戏提示，是\"AI增强社区体验\"的直接案例，对微信游戏社区AI功能规划有参考", "source_type": "primary"},
+    {"title": "心动Q4财报：TapTap利润增长89.2%，PC版上线", "url": "https://news.qq.com/rain/a/20260327A07O5W00", "summary": "TapTap平台收入达19.7亿。PC版正式发布维持\"不联运不分成\"政策。TapTap小游戏能力上线，简化创作分发。", "source": "腾讯新闻", "published_at": "2026-05-19T06:00:00Z", "category": "industry", "tags": ["TapTap", "心动", "财报"], "recommendation": "TapTap利润近翻倍验证了\"游戏社区+分发\"模式的商业可行性，其PC版和小游戏能力是直接竞品动态", "source_type": "secondary"},
+    {"title": "闪现一下\"心动星球\"：每日30人兴趣匹配+跨游戏社交", "url": "https://m.x54zw.com/soft/27194", "summary": "腾讯游戏社区\"闪现一下\"推出兴趣匹配功能，每日推荐30位兴趣相投的玩家互动。整合跨游戏奖励/资讯/组队，探索泛游戏社交。", "source": "华天软件站", "published_at": "2026-05-19T12:00:00Z", "category": "in-game", "tags": ["腾讯", "闪现一下", "匹配社交"], "recommendation": "腾讯自家游戏社区产品在探索兴趣匹配社交——与微信游戏社区的\"定向社交\"方向互补", "source_type": "secondary"}
+  ],
+  "stats": {"by_category": {"ops": 1, "in-game": 2, "industry": 1}}
+}

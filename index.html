@@ -124,8 +124,9 @@ a:hover{color:#79c0ff}
 
 const CAT_SHORT={creation:'生成与创作','in-game':'游戏内AI','dev-tools':'开发工具',ops:'运营商业化',industry:'行业动态',research:'前沿研究'};
 const WEEKS=['2026-05-19','2026-05-12','2026-05-05'];
+const DAILY_DATES=['2026-05-22','2026-05-21','2026-05-20','2026-05-19','2026-05-18','2026-05-17','2026-05-16','2026-05-15'];
 
-let weekData={},dailyData=null,currentView='weekly',currentWeek=WEEKS[0],currentCat='',query='';
+let weekData={},dailyData={},currentView='weekly',currentWeek=WEEKS[0],currentDaily=DAILY_DATES[0],currentCat='',query='';
 const $main=document.getElementById('main');
 
 // ====== Load weekly data ======
@@ -176,34 +177,63 @@ async function renderWeekly(){
 
 async function renderDaily(){
   $main.innerHTML='<div class="state"><div class="spinner"></div></div>';
-  if(!dailyData)await loadDaily();
-  if(!dailyData){$main.innerHTML='<div class="state">暂无数据</div>';return;}
+  let d=dailyData[currentDaily];
+  if(!d){
+    try{
+      const r=await fetch(`data/${currentDaily}.json`);
+      if(r.ok){d=await r.json();dailyData[currentDaily]=d;}
+    }catch(e){}
+  }
+  if(!d){$main.innerHTML='<div class="state">暂无当日数据</div>';return;}
 
-  let items=dailyData.items||[];
+  let items=d.items||[];
   items.sort((a,b)=>(a.source_type==='primary'?0:1)-(b.source_type==='primary'?0:1));
+
+  let dateBtns=DAILY_DATES.map(dt=>{
+    const dd=new Date(dt);
+    return `<button class="wk-btn ${dt===currentDaily?'active':''}" data-date="${dt}">${dd.getMonth()+1}/${dd.getDate()}</button>`;
+  }).join('');
 
   let cards=items.map(item=>renderDailyCard(item)).join('');
 
   $main.innerHTML=`
-    <div class="mn-hd"><h1 class="mn-title">每日全量 - ${dailyData.date||''}</h1><p class="mn-sub">今日共 ${items.length} 条，来自 174+ 信源扫描筛选</p></div>
+    <div class="mn-hd"><h1 class="mn-title">每日资讯 - ${d.date||''}</h1><p class="mn-sub">当日共 ${items.length} 条，从 174+ 信源扫描筛选</p></div>
+    <div class="wk-sel">${dateBtns}</div>
     <div class="search-bar"><input class="search-input" id="search" placeholder="搜索标题..." onkeydown="if(event.key==='Enter')filterDaily()"><button class="search-btn" onclick="filterDaily()">搜索</button></div>
     <div class="cards" id="daily-cards">${cards}</div>
   `;
+  $main.querySelectorAll('.wk-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{currentDaily=btn.dataset.date;renderDaily();});
+  });
 }
 
 async function renderCategory(cat){
   $main.innerHTML='<div class="state"><div class="spinner"></div></div>';
-  // Collect from all weeks
+  // Collect from all weeks + daily
   let allItems=[];
   for(const w of WEEKS){
     const d=await loadWeek(w);
     if(d&&d.items)allItems.push(...d.items.filter(i=>i.category===cat));
   }
+  // Also load daily data for more coverage
+  for(const dt of DAILY_DATES){
+    let d=dailyData[dt];
+    if(!d){try{const r=await fetch(`data/${dt}.json`);if(r.ok){d=await r.json();dailyData[dt]=d;}}catch(e){}}
+    if(d&&d.items){
+      d.items.filter(i=>i.category===cat).forEach(item=>{
+        if(!allItems.find(a=>a.url===item.url))allItems.push(item);
+      });
+    }
+  }
   if(allItems.length===0){$main.innerHTML='<div class="state">暂无该分类内容</div>';return;}
 
-  let cards=allItems.map(item=>renderCard(item)).join('');
+  // Render: weekly items have key_point, daily items have summary
+  let cards=allItems.map(item=>{
+    if(item.key_point)return renderCard(item);
+    return renderDailyCard(item);
+  }).join('');
   $main.innerHTML=`
-    <div class="mn-hd"><h1 class="mn-title">${esc(CAT_SHORT[cat]||cat)}</h1><p class="mn-sub">过去三周该方向的所有动态</p></div>
+    <div class="mn-hd"><h1 class="mn-title">${esc(CAT_SHORT[cat]||cat)}</h1><p class="mn-sub">该方向近期所有动态（共 ${allItems.length} 条）</p></div>
     <div class="cards">${cards}</div>
   `;
 }
@@ -235,7 +265,7 @@ function renderCard(item){
 // Daily card (from raw JSON)
 function renderDailyCard(item){
   const cat=item.category||'industry';
-  const summary=(item.summary||'').replace(/\n/g,' ').slice(0,150);
+  const summary=(item.summary||'').replace(/\n/g,' ').slice(0,200);
   const title=makeTitle(item);
   return `<div class="card" data-title="${esc(item.title)}">
     <div class="card-hd">
@@ -245,7 +275,12 @@ function renderDailyCard(item){
     <div class="card-body">
       <div class="card-row"><span class="lb">核心:</span><span class="vl">${esc(summary)}</span></div>
     </div>
-    <div class="card-ft"><span>${esc(item.source||'')} | ${fmtDate(item.published_at)}</span></div>
+    ${item.recommendation?`<div class="card-rec">${esc(item.recommendation)}</div>`:''}
+    <div class="card-ft"><span>${esc(item.source||'')} | ${fmtDate(item.published_at)}</span>
+      ${item.tags&&item.tags.length?`<div class="tags">${item.tags.map(t=>`<span>${esc(t)}</span>`).join('')}</div>`:''}
+    </div>
+  </div>`;
+}
   </div>`;
 }
 

@@ -1,0 +1,13 @@
+{
+  "date": "2026-05-20",
+  "generated_at": "2026-05-20T23:00:00Z",
+  "total_count": 5,
+  "items": [
+    {"title": "米游社PC v2.1.0：新增\"创作声明\"保护创作者权益", "url": "https://www.duote.com/android/1154116.html", "summary": "米游社PC版5月20日更新，新增\"创作声明\"功能保护创作者权益，优化经验任务系统。手机端v2.106.2修复BUG+账号价值评估+抽卡记录分析。", "source": "多特软件站", "published_at": "2026-05-20T10:00:00Z", "category": "in-game", "tags": ["米游社", "创作者保护"], "recommendation": "游戏社区开始用产品功能保护UGC创作者，\"创作声明\"可能成为AI生成内容时代的标配", "source_type": "secondary"},
+    {"title": "TapTap\"一起玩\"社区板块上线：组队开黑+活动召集", "url": "https://www.wandoujia.com/apps/7060083", "summary": "TapTap v2.96新增\"一起玩\"社区板块，包含组队开黑和活动召集功能。游戏工具集含互动地图、抽卡分析器。云游戏扩展至199款。", "source": "豌豆荚", "published_at": "2026-05-19T08:00:00Z", "category": "in-game", "tags": ["TapTap", "社交", "组队"], "recommendation": "TapTap强化社交功能，从\"找游戏\"平台向\"玩游戏\"社区转型，与微信游戏社区形成直接竞争", "source_type": "secondary"},
+    {"title": "好游快爆v1.5.8：AI文字生成图片笔记+社交DNA标签", "url": "https://m.bbs.3839.com/thread-8730743.htm", "summary": "5月3日更新。编辑器支持AI文字生成图片笔记功能；新增社交DNA标签可定制个人社交身份；云玩战令任务换时长/会员。", "source": "好游快爆BBS", "published_at": "2026-05-20T06:00:00Z", "category": "creation", "tags": ["好游快爆", "AIGC", "社交"], "recommendation": "游戏社区将AI生图直接做进编辑器，降低用户创作门槛——图文内容生产效率大幅提升", "source_type": "secondary"},
+    {"title": "腾讯重注UGC：Delta Action/和平精英编辑器全面开放", "url": "https://news.qq.com/rain/a/20260520A06FE500", "summary": "腾讯2026年战略性投入玩家创作内容生态。Delta Action和和平精英相继开放地图编辑器，引导玩家从消费者变为创造者。UGC内容可获分成+流量曝光+官方认证。", "source": "腾讯新闻", "published_at": "2026-05-20T12:00:00Z", "category": "creation", "tags": ["腾讯", "UGC", "和平精英"], "recommendation": "腾讯自家游戏开放编辑器+分成激励，直接利好微信游戏社区的UGC内容供给和创作者生态", "source_type": "primary"},
+    {"title": "Epic启动器重建：跨平台社交+语音聊天+头像系统", "url": "https://wap.gamersky.com/news/Content-2086781.html", "summary": "Epic从1月开始重建启动器。已上线跨平台文字聊天（私聊/群聊）。Q2计划语音聊天和组队功能。秋季移动端-PC游戏库同步。加载速度提升50%。", "source": "游民星空", "published_at": "2026-05-20T14:00:00Z", "category": "industry", "tags": ["Epic", "社交", "跨平台"], "recommendation": "Epic从商店向社交平台转型，游戏平台社交化是行业共识——所有平台都在抢玩家社交关系", "source_type": "secondary"}
+  ],
+  "stats": {"by_category": {"in-game": 2, "creation": 2, "industry": 1}}
+}

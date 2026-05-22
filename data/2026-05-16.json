@@ -1,0 +1,13 @@
+{
+  "date": "2026-05-16",
+  "generated_at": "2026-05-16T23:00:00Z",
+  "total_count": 5,
+  "items": [
+    {"title": "【荣耀】Magic8推出\"AI脚步声增强\"，适配和平精英等9款FPS", "url": "https://www.ithome.com/0/950/025.htm", "summary": "荣耀Magic8手机推出硬件级AI功能：实时增强FPS游戏中敌人脚步声，适配和平精英、使命召唤手游等9款游戏。本质是AI音频分析+实时增强特定声音频段。", "source": "IT之家", "published_at": "2026-05-13T10:00:00Z", "category": "in-game", "tags": ["荣耀", "硬件AI", "和平精英"], "recommendation": "AI进入游戏的方式不只是NPC/内容生成——硬件厂商用AI重新定义\"游戏外设\"。适配和平精英说明腾讯系产品已被纳入", "source_type": "secondary"},
+    {"title": "【阿里云】AI角色实现长期记忆、情感共情与主动交互", "url": "https://x.com/alibaba_cloud/status/2054653031472414864", "summary": "阿里云展示AI角色具备长期记忆、情感共情和主动发起互动的能力。不只问答，AI会主动找玩家聊天。跨对话记忆——记得之前说过什么。", "source": "X: 阿里云", "published_at": "2026-05-13T08:00:00Z", "category": "in-game", "tags": ["阿里云", "NPC", "记忆", "共情"], "recommendation": "解决AI NPC三大痛点（无记忆/无情感/被动），对游戏社区AI伴侣、AI客服有直接技术参考价值", "source_type": "primary"},
+    {"title": "【阶跃星辰】Step 3.5 Flash助编程新手构建完整游戏循环", "url": "https://x.com/StepFun_ai/status/2054687939540525174", "summary": "国产大模型帮编程新手快速构建可玩游戏循环demo。自然语言描述就能出可运行的游戏原型，策划验证想法不再依赖开发排期。", "source": "X: 阶跃星辰", "published_at": "2026-05-13T06:00:00Z", "category": "dev-tools", "tags": ["阶跃星辰", "游戏原型", "零代码"], "recommendation": "非程序员也能出游戏demo——快速验证玩法的成本趋近于零，利好产品策划独立验证想法", "source_type": "primary"},
+    {"title": "【国产AI游戏】《历史模拟器：崇祯》\"词元收费\"引争议后妥协", "url": "https://www.ithome.com/0/949/477.htm", "summary": "国内首个公开采用\"本体买断+词元收费\"的AI游戏。玩家吐槽买了游戏还要为AI对话额外付费，官方妥协开放玩家自行接入模型（用自己的API key）。", "source": "IT之家", "published_at": "2026-05-12T12:00:00Z", "category": "ops", "tags": ["商业模式", "AI原生游戏", "收费"], "recommendation": "AI原生游戏商业模式第一次被市场检验——\"词元收费\"失败+\"开放接入\"折中，后来者定价时必看案例", "source_type": "secondary"},
+    {"title": "【GitHub】官方演示Copilot CLI从零写出完整Roguelike游戏", "url": "https://github.blog/ai-and-ml/github-copilot/dungeons-desktops-building-a-procedurally-generated-roguelike-with-github-copilot-cli", "summary": "GitHub官方演示用Copilot CLI从零构建一款完整的程序化生成Roguelike游戏\"Dungeons & Desktops\"。不是demo片段，是完整可玩游戏，官方背书。", "source": "GitHub Blog", "published_at": "2026-05-12T14:00:00Z", "category": "dev-tools", "tags": ["GitHub", "Copilot", "完整游戏"], "recommendation": "大厂官方的\"AI从零写完整游戏\"端到端案例——对独立开发者和小团队有直接参考价值", "source_type": "primary"}
+  ],
+  "stats": {"by_category": {"in-game": 2, "dev-tools": 2, "ops": 1}}
+}

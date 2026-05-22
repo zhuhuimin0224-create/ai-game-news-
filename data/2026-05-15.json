@@ -1,0 +1,12 @@
+{
+  "date": "2026-05-15",
+  "generated_at": "2026-05-15T23:00:00Z",
+  "total_count": 4,
+  "items": [
+    {"title": "【Neowiz】《匹诺曹的谎言》工作室招聘\"AI创意设计师\"", "url": "https://www.ithome.com/0/949/307.htm", "summary": "韩国一线工作室正式招聘\"AI创意设计师\"岗位。注意岗位不是\"AI工程\"而是\"创意设计师\"——AI进入创意核心环节。Neowiz凭《匹诺曹的谎言》获全球口碑后做出的战略布局。", "source": "IT之家", "published_at": "2026-05-12T08:00:00Z", "category": "industry", "tags": ["Neowiz", "招聘", "AI创意"], "recommendation": "一线工作室从\"AI做效率\"走向\"AI做创意\"——岗位命名本身就是行业风向标", "source_type": "secondary"},
+    {"title": "【MiniMax】启动\"10x Team\"计划：无限Token补贴游戏引擎方向", "url": "https://www.ithome.com/0/949/029.htm", "summary": "MiniMax提供无限Token和研发资源，面向全球垂直领域专家合作。游戏引擎是首批落地方向（已有合作验证），不是\"未来计划\"。", "source": "IT之家", "published_at": "2026-05-11T10:00:00Z", "category": "dev-tools", "tags": ["MiniMax", "游戏引擎", "Token补贴"], "recommendation": "大模型厂拿真金白银补贴游戏方向——资本和技术方共同看好这个方向", "source_type": "secondary"},
+    {"title": "【开源】Claude Code Game Studios：48个AI智能体复刻完整游戏工作室", "url": "https://x.com/AYi_AInotes/status/2053709074466824688", "summary": "MIT协议开源，适配Godot/Unity/Unreal三大引擎，GitHub 1.8万stars。48个Agent分别扮演策划/美术/程序/QA角色。关键设计：AI只提方案不做决策，决策权归用户。", "source": "X: @AYi_AInotes", "published_at": "2026-05-11T14:00:00Z", "category": "dev-tools", "tags": ["开源", "多智能体", "游戏工作室"], "recommendation": "可直接clone试用的AI游戏开发框架——48个Agent覆盖全流程，开源1.8万stars说明社区高度认可", "source_type": "primary"},
+    {"title": "【字节/豆包】Doubao-Seed-2.0-Lite接入AI电竞教练场景", "url": "https://x.com/karminski3/status/2052156563029385600", "summary": "豆包模型轻量版接入电竞教练场景。国内大模型厂切入游戏垂直场景，字节在电竞方向先落子。", "source": "X: @karminski3", "published_at": "2026-05-15T06:00:00Z", "category": "ops", "tags": ["字节", "豆包", "电竞教练"], "recommendation": "字节游戏+AI第一个公开落地场景——电竞教练是离变现最近的AI游戏应用之一", "source_type": "primary"}
+  ],
+  "stats": {"by_category": {"industry": 1, "dev-tools": 2, "ops": 1}}
+}

@@ -1,0 +1,12 @@
+{
+  "date": "2026-05-17",
+  "generated_at": "2026-05-17T23:00:00Z",
+  "total_count": 4,
+  "items": [
+    {"title": "【米哈游】刘伟：AI投入\"3年最多1000亿\"，目标千人千面个性化游戏", "url": "https://www.ithome.com/0/951/364.htm", "summary": "米哈游创始人刘伟在内部AI校招分享会上透露，未来三年AI投入规模最多1000亿元，目标做出千人千面的个性化游戏。\"任何团队没有坚定地去搞算力、scale，是绝不可能把模型做到顶级的\"。如果失败，\"也认了，算是做一个大的烟花\"。", "source": "IT之家 / 竞核", "published_at": "2026-05-16T10:00:00Z", "category": "industry", "tags": ["米哈游", "1000亿", "千人千面"], "recommendation": "国内游戏厂商首次公开千亿级AI投入数字，把AI从辅助工具提升到主战略级别。直接对标竞品投入规模", "source_type": "primary"},
+    {"title": "【开源】单张图片构建可交互3D世界", "url": "https://x.com/berryxia/status/2055086814009180316", "summary": "开源项目发布，从一张图片快速生成可交互的3D环境。完全开源可直接clone试用，对游戏场景快速原型搭建有直接价值。", "source": "X: Berry Xia", "published_at": "2026-05-15T12:00:00Z", "category": "dev-tools", "tags": ["开源", "3D生成", "场景"], "recommendation": "开源可白嫖的场景生成工具——美术和关卡设计师用来加速原型阶段，成本趋近于零", "source_type": "primary"},
+    {"title": "【论文】ReactiveGWM：反应式游戏世界模型引导NPC行为", "url": "https://arxiv.org/abs/2605.15256", "summary": "论文提出在反应式游戏世界模型中引导NPC行为的新方法。直接聚焦\"游戏世界模型+NPC引导\"核心课题，世界模型是当前AI游戏研究最热方向。", "source": "arXiv", "published_at": "2026-05-14T08:00:00Z", "category": "research", "tags": ["世界模型", "NPC", "论文"], "recommendation": "世界模型成熟意味着AI可自主运行游戏世界不用手写规则——离落地最近的前沿方向之一", "source_type": "primary"},
+    {"title": "【TapTap制造】上线：AI零代码创作游戏并一键发布", "url": "https://news.qq.com/rain/a/20260130A07KV700", "summary": "TapTap制造平台正式上线。自研AI引擎支持3D/物理/多人联机，用户零代码用自然语言描述→5分钟出原型→一键发布到社区。首周产出200+游戏，免费无分成。", "source": "腾讯新闻 / 36氪", "published_at": "2026-05-17T06:00:00Z", "category": "creation", "tags": ["TapTap", "AI创作", "UGC"], "recommendation": "竞品TapTap把AI游戏创作+社区分发做成闭环——玩家创作的游戏直接进社区被玩/被评价", "source_type": "secondary"}
+  ],
+  "stats": {"by_category": {"industry": 1, "dev-tools": 1, "research": 1, "creation": 1}}
+}
