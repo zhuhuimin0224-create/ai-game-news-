@@ -67,9 +67,12 @@ a:hover{text-decoration:underline}
 .headline .hl-title{font-size:20px;font-weight:700;color:#fff;line-height:1.5;margin-bottom:8px}
 .headline .hl-title a{color:inherit}
 .headline .hl-title a:hover{color:#58a6ff}
-.headline .hl-reason{font-size:13px;color:#c9d1d9;line-height:1.7;margin-bottom:12px;padding:12px 14px;background:rgba(0,191,165,0.05);border:1px solid rgba(0,191,165,0.15);border-radius:8px}
-.headline .hl-reason .reason-label{color:#00bfa5;font-weight:600;margin-right:4px}
-.headline .hl-reason .reason-detail{color:#8b949e}
+.headline .hl-reason{font-size:13px;color:#c9d1d9;line-height:1.8;margin-bottom:12px;padding:12px 14px;background:rgba(0,191,165,0.05);border:1px solid rgba(0,191,165,0.15);border-radius:8px}
+.headline .hl-reason .rl{color:#00bfa5;font-weight:600;margin-right:4px;white-space:nowrap}
+.headline .hl-reason .rv{color:#e6edf3}
+.headline .hl-reason .rd{color:#8b949e}
+.headline .hl-reason .row{display:flex;gap:0;margin-bottom:3px}
+.headline .hl-reason .row:last-child{margin-bottom:0}
 .headline .hl-summary{font-size:13px;color:#8b949e;line-height:1.7;margin-bottom:12px}
 .headline .hl-meta{display:flex;align-items:center;gap:12px;font-size:12px;color:#484f58}
 .headline .hl-tags{display:flex;gap:6px;margin-top:10px}
@@ -90,9 +93,12 @@ a:hover{text-decoration:underline}
 .cat-industry{background:#dc2626}
 .cat-research{background:#6366f1}
 
-.card-reason{font-size:12px;color:#c9d1d9;margin-bottom:10px;padding:10px 12px;background:rgba(0,191,165,0.04);border:1px solid rgba(0,191,165,0.12);border-radius:6px;line-height:1.7}
-.card-reason .reason-label{color:#00bfa5;font-weight:600;margin-right:4px}
-.card-reason .reason-detail{color:#8b949e}
+.card-reason{font-size:12px;color:#c9d1d9;margin-bottom:10px;padding:10px 14px;background:rgba(0,191,165,0.04);border:1px solid rgba(0,191,165,0.12);border-radius:6px;line-height:1.8}
+.card-reason .rl{color:#00bfa5;font-weight:600;margin-right:4px;white-space:nowrap}
+.card-reason .rv{color:#c9d1d9}
+.card-reason .rd{color:#8b949e}
+.card-reason .row{display:flex;gap:0;margin-bottom:2px}
+.card-reason .row:last-child{margin-bottom:0}
 .card-summary{display:none}
 .card-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
 .card-meta{display:flex;align-items:center;gap:10px;font-size:12px;color:#484f58}
@@ -282,9 +288,10 @@ function render(){
   if(headline){
     const cat=headline.category||'industry';
     const digest=makeDigest(headline);
+    const title=makeTitle(headline);
     html+=`<div class="headline">
       <span class="hl-badge">头条</span>
-      <div class="hl-title"><a href="${esc(headline.url||'#')}" target="_blank" rel="noopener">${esc(headline.title)}</a></div>
+      <div class="hl-title"><a href="${esc(headline.url||'#')}" target="_blank" rel="noopener">${title}</a></div>
       <div class="hl-reason">${digest}</div>
       <div class="hl-meta"><span class="source">${esc(headline.source||'')}</span><span>${fmtDate(headline.published_at)}</span><span class="card-cat cat-${cat}">${esc(CAT_SHORT[cat]||cat)}</span></div>
       ${headline.tags&&headline.tags.length?`<div class="hl-tags">${headline.tags.map(t=>`<span>${esc(t)}</span>`).join('')}</div>`:''}
@@ -310,9 +317,10 @@ function renderCards(items){
   return items.map(item=>{
     const cat=item.category||'industry';
     const digest=makeDigest(item);
+    const title=makeTitle(item);
     return `<div class="card">
       <div class="card-head">
-        <div class="card-title"><a href="${esc(item.url||'#')}" target="_blank" rel="noopener">${esc(item.title)}</a></div>
+        <div class="card-title"><a href="${esc(item.url||'#')}" target="_blank" rel="noopener">${title}</a></div>
         <span class="card-cat cat-${cat}">${esc(CAT_SHORT[cat]||cat)}</span>
       </div>
       <div class="card-reason">${digest}</div>
@@ -320,7 +328,6 @@ function renderCards(items){
         <div class="card-meta"><span class="source">${esc(item.source||'')}</span><span>${fmtDate(item.published_at)}</span></div>
         ${item.tags&&item.tags.length?`<div class="card-tags">${item.tags.map(t=>`<span>${esc(t)}</span>`).join('')}</div>`:''}
       </div>
-      ${item.trace_note?`<div class="card-repost">${esc(item.trace_note)}</div>`:''}
     </div>`;
   }).join('');
 }
@@ -343,64 +350,150 @@ function getItems(){
   return items;
 }
 
-function fmtDate(iso){
-  if(!iso)return'';
-  try{const d=new Date(iso);return`${d.getMonth()+1}/${d.getDate()} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`}catch(e){return''}
+/**
+ * makeTitle: 标题清晰化
+ * 1. 英文标题 → 用source + 中文摘要第一句改写
+ * 2. 中文标题不含公司名 → 前缀source
+ */
+function makeTitle(item){
+  const title=item.title||'';
+  const source=item.source||'';
+  const summary=item.summary||'';
+
+  // Detect English title (>50% ASCII)
+  const asciiRatio=title.replace(/[^\x00-\x7F]/g,'').length/Math.max(title.length,1);
+  if(asciiRatio>0.5){
+    // English title: use Chinese summary first sentence as title
+    if(summary){
+      const firstSentence=summary.split(/[。！？\n]/)[0].replace(/^\s*\S+\s*\d+\s*月\s*\d+\s*日[消息，]*/, '').trim();
+      if(firstSentence.length>8 && firstSentence.length<80){
+        // Extract company from source
+        const company=extractCompany(source,summary,title);
+        return esc(company?`【${company}】${firstSentence}`:`【${source}】${firstSentence}`);
+      }
+    }
+    // Fallback: prefix source
+    const company=extractCompany(source,summary,title);
+    return esc(`【${company||source}】${title}`);
+  }
+
+  // Chinese title: check if company name already present
+  const company=extractCompany(source,summary,title);
+  if(company && !title.includes(company) && title.length<60){
+    return esc(`【${company}】${title}`);
+  }
+  return esc(title);
 }
 
 /**
- * makeDigest: 从 summary 中提取"重点"和"细节"
- * 重点 = 第一句话（核心事实）
- * 细节 = 关键数字、公司名、产品名等具体信息
+ * extractCompany: 从source/summary/title中提取核心公司/平台名
  */
-function makeDigest(item){
-  const summary=item.summary||'';
-  if(!summary)return item.recommendation?`<span class="reason-label">重点：</span>${esc(item.recommendation)}`:'';
+function extractCompany(source,summary,title){
+  // Known mappings
+  const known={'NVIDIA Blog':'NVIDIA','GamesIndustry.biz':'','TechCrunch':'','Unity Blog':'Unity','Unreal Engine Blog':'Epic/Unreal','DeepMind Blog':'Google DeepMind','Google Developers Blog':'Google','The Decoder':'','Hacker News':'','游戏陀螺':'','IT之家':'','IT之家（RSS）':'','游戏葡萄':'','36Kr':'','机器之心':''};
+  if(source in known && known[source])return known[source];
 
-  // Split into sentences
-  const text=summary.replace(/\n+/g,' ').replace(/\s+/g,' ').trim();
-  // Split on Chinese/English sentence boundaries
-  const sentences=text.split(/(?<=[。！？.!?])\s*/).filter(s=>s.length>4);
-
-  let keyPoint='';
-  let details='';
-
-  if(sentences.length>=2){
-    // First sentence = key point
-    keyPoint=sentences[0].replace(/[。.]+$/,'');
-    // Extract detail: find sentences with numbers, percentages, money, company names
-    const detailSentences=sentences.slice(1);
-    // Pick the sentence with most concrete info (numbers, %, $, etc)
-    const scored=detailSentences.map(s=>{
-      let score=0;
-      if(/\d+/.test(s))score+=2;
-      if(/%|亿|万|美元|倍/.test(s))score+=3;
-      if(/发布|上线|推出|支持|新增|开放/.test(s))score+=1;
-      return{s,score};
-    }).sort((a,b)=>b.score-a.score);
-
-    if(scored.length>0&&scored[0].score>0){
-      details=scored[0].s.replace(/[。.]+$/,'');
-      // Truncate if too long
-      if(details.length>100)details=details.slice(0,100)+'...';
-    }else{
-      // Just take second sentence
-      details=detailSentences[0].replace(/[。.]+$/,'');
-      if(details.length>100)details=details.slice(0,100)+'...';
-    }
-  }else{
-    // Single sentence or short text, use as key point
-    keyPoint=text.replace(/[。.]+$/,'');
-    if(keyPoint.length>120)keyPoint=keyPoint.slice(0,120)+'...';
+  // Try to find company in title/summary
+  const companies=['Google','NVIDIA','Unity','Epic','育碧','腾讯','网易','米哈游','百度','微软','Xbox','PlayStation','Steam','Valve','EA','Take-Two','Riot','暴雪','任天堂','Nintendo','Meta','OpenAI','DeepSeek','Gemini'];
+  const combined=title+' '+summary.slice(0,200);
+  for(const c of companies){
+    if(combined.includes(c))return c;
   }
 
-  let html=`<span class="reason-label">重点：</span>${esc(keyPoint)}`;
-  if(details){
-    html+=`<br><span class="reason-detail"><span class="reason-label">细节：</span>${esc(details)}</span>`;
+  // Use source's main entity
+  if(source.startsWith('X：')){
+    const match=source.match(/X：(.+?)[\s(（@]/);
+    return match?match[1]:source.replace('X：','');
+  }
+  return '';
+}
+
+/**
+ * makeDigest: 板块化推荐理由
+ * - 核心：一句话说清楚发生了什么（最短的事实陈述）
+ * - 关注：对微信游戏社区可能的价值/启示
+ * - 数据：关键数字（如有）
+ */
+function makeDigest(item){
+  const summary=(item.summary||'').replace(/\n+/g,' ').replace(/\s+/g,' ').trim();
+  if(!summary)return item.recommendation?`<div class="row"><span class="rl">核心：</span><span class="rv">${esc(item.recommendation)}</span></div>`:'';
+
+  // Extract first factual sentence (skip "IT之家X月X日消息" prefix)
+  let cleaned=summary.replace(/^(IT之家|IT之家了解到|据.*?报道)[^，。]*[，,]\s*/,'');
+  const sentences=cleaned.split(/(?<=[。！？])\s*/).filter(s=>s.length>6);
+
+  // Core fact: first sentence, trimmed
+  let core=sentences[0]||cleaned.slice(0,100);
+  core=core.replace(/[。！？]+$/,'');
+  if(core.length>80)core=core.slice(0,80)+'...';
+
+  // Key numbers/data
+  let dataPoint='';
+  const allText=summary;
+  const numMatches=allText.match(/\d[\d,.]*\s*[%％亿万美元倍人次条款个家]+/g);
+  if(numMatches&&numMatches.length>0){
+    dataPoint=numMatches.slice(0,3).join('、');
+  }
+
+  // Relevance to WeChat Game Community
+  const relevance=getRelevance(item);
+
+  let html=`<div class="row"><span class="rl">核心：</span><span class="rv">${esc(core)}</span></div>`;
+  if(relevance){
+    html+=`<div class="row"><span class="rl">关注：</span><span class="rd">${esc(relevance)}</span></div>`;
+  }
+  if(dataPoint){
+    html+=`<div class="row"><span class="rl">数据：</span><span class="rd">${esc(dataPoint)}</span></div>`;
   }
   return html;
 }
 
+/**
+ * getRelevance: 根据分类和内容，生成对微信游戏社区的关联说明
+ */
+function getRelevance(item){
+  const cat=item.category;
+  const text=(item.title+' '+(item.summary||'')).toLowerCase();
+
+  // Category-specific relevance
+  if(cat==='in-game'){
+    if(text.includes('npc'))return'智能NPC技术可提升社区内游戏讨论深度和UGC创作素材';
+    if(text.includes('ugc')||text.includes('创作'))return'玩家创作工具降低内容生产门槛，直接利好社区UGC生态';
+    if(text.includes('ai生成')||text.includes('世界模型'))return'AI生成游戏内容意味着更多可分享的独特体验，利好社区话题';
+    return'AI改变游戏体验方式，可能催生新的社区讨论热点和内容形态';
+  }
+  if(cat==='creation'){
+    if(text.includes('art')||text.includes('美术'))return'AI美术降本增效，关注是否影响社区原创内容价值判定';
+    return'AI创作工具迭代可能改变社区内容生产模式';
+  }
+  if(cat==='dev-tools'){
+    if(text.includes('dlss')||text.includes('画质'))return'画质技术影响玩家游戏体验，可作为社区科普/讨论内容方向';
+    if(text.includes('引擎')||text.includes('engine'))return'引擎能力升级意味着更多高质量游戏产出，间接影响社区内容供给';
+    return'开发工具进展影响游戏品质和产出效率';
+  }
+  if(cat==='ops'){
+    if(text.includes('推荐')||text.includes('分发'))return'AI分发逻辑直接影响社区内容曝光机制，值得参考';
+    if(text.includes('play')||text.includes('商店'))return'应用商店AI化改变用户发现游戏的路径，影响社区导流价值';
+    return'运营侧AI实践可为社区智能推荐和用户分层提供参考';
+  }
+  if(cat==='industry'){
+    if(text.includes('融资')||text.includes('invest'))return'资本动向预示行业未来重点方向';
+    if(text.includes('裁员')||text.includes('layoff'))return'行业人力结构变化反映AI对游戏生产模式的实质冲击';
+    if(text.includes('战略')||text.includes('strategy'))return'大厂AI战略调整可能影响合作生态和平台竞争格局';
+    return'行业格局变化可能影响社区生态和合作方向';
+  }
+  if(cat==='research'){
+    if(text.includes('图灵')||text.includes('turing')||text.includes('对话'))return'对话AI突破直接影响社区智能客服、AI陪伴等场景可行性';
+    if(text.includes('多智能体')||text.includes('multi-agent'))return'多智能体技术可能催生新型多人互动游戏形态，影响社区玩法';
+    return'前沿研究预示1-2年后可落地的社区/游戏能力';
+  }
+  return'';
+}
+
+function fmtDate(iso){
+  if(!iso)return'';
+  try{const d=new Date(iso);return`${d.getMonth()+1}/${d.getDate()} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`}catch(e){return''}
+}
 function esc(s){if(!s)return'';const d=document.createElement('div');d.textContent=s;return d.innerHTML}
 function toISO(d){return`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
 
