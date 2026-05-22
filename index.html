@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>游戏 × AI 资讯 - 每日追踪游戏行业 AI 动态</title>
+  <meta name="description" content="游戏行业 AI 资讯聚合，每日追踪游戏 AI 动态。覆盖 AI 游戏生成、游戏内 AI 体验、开发工具、运营实践、行业动态、前沿研究六大方向。">
+  <meta property="og:title" content="游戏 × AI 资讯">
+  <meta property="og:description" content="每日追踪游戏行业 AI 动态 | 24 个专业信源 + 150+ AI 信源">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="游戏 × AI 资讯">
+  <meta name="twitter:description" content="每日追踪游戏行业 AI 动态 | 24 个专业信源 + 150+ AI 信源">
+  <!-- Favicon: 抽象游戏手柄 + AI 图形 -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a1a1a'/%3E%3Cpath d='M8 14h4v-4h2v4h4v2h-4v4h-2v-4H8v-2z' fill='%238b5cf6'/%3E%3Ccircle cx='24' cy='12' r='2' fill='%23059669'/%3E%3Ccircle cx='24' cy='20' r='2' fill='%232563eb'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="site-title">游戏 &times; AI 资讯</h1>
+      <p class="site-subtitle">每日追踪游戏行业 AI 动态 | 24 个专业信源 + 150+ AI 信源</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- 日期导航 -->
+    <nav class="date-nav">
+      <button class="date-btn" id="prev-date" title="前一天">&larr;</button>
+      <span class="date-display" id="current-date">加载中...</span>
+      <button class="date-btn" id="next-date" title="后一天">&rarr;</button>
+    </nav>
+
+    <!-- 统计信息 -->
+    <div class="stats" id="stats">
+      <span class="stats-total">共 <strong id="stats-total">0</strong> 条</span>
+      <span class="stats-filtered">当前显示 <strong id="stats-filtered">0</strong> 条</span>
+    </div>
+
+    <!-- 分类筛选 -->
+    <nav class="filter-bar" id="filter-bar">
+      <button class="filter-tag active" data-category="all">全部</button>
+      <button class="filter-tag" data-category="creation">
+        <span class="tag-dot" style="background:#8b5cf6"></span>
+        AI 游戏生成与创作
+        <span class="tag-count" data-count="creation"></span>
+      </button>
+      <button class="filter-tag" data-category="in-game">
+        <span class="tag-dot" style="background:#059669"></span>
+        游戏内 AI 体验
+        <span class="tag-count" data-count="in-game"></span>
+      </button>
+      <button class="filter-tag" data-category="dev-tools">
+        <span class="tag-dot" style="background:#2563eb"></span>
+        游戏开发 AI 工具
+        <span class="tag-count" data-count="dev-tools"></span>
+      </button>
+      <button class="filter-tag" data-category="ops">
+        <span class="tag-dot" style="background:#d97706"></span>
+        游戏运营&amp;商业化 AI 实践
+        <span class="tag-count" data-count="ops"></span>
+      </button>
+      <button class="filter-tag" data-category="industry">
+        <span class="tag-dot" style="background:#dc2626"></span>
+        游戏行业&amp;公司 AI 动态
+        <span class="tag-count" data-count="industry"></span>
+      </button>
+      <button class="filter-tag" data-category="research">
+        <span class="tag-dot" style="background:#6366f1"></span>
+        游戏 AI 应用前沿研究
+        <span class="tag-count" data-count="research"></span>
+      </button>
+    </nav>
+
+    <!-- 加载状态 -->
+    <div class="loading" id="loading">
+      <div class="loading-spinner"></div>
+      <p>正在加载资讯数据...</p>
+    </div>
+
+    <!-- 错误状态 -->
+    <div class="error" id="error" style="display:none">
+      <p id="error-message">数据加载失败</p>
+    </div>
+
+    <!-- 资讯列表 -->
+    <ul class="news-list" id="news-list"></ul>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>数据来源：24 个游戏/AI 专业信源 RSS + 150+ AI 信源 | 项目地址：<a href="https://github.com" target="_blank" rel="noopener">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

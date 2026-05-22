@@ -1,0 +1,374 @@
+{
+  "date": "2026-05-22",
+  "generated_at": "2026-05-22T02:30:50Z",
+  "total_count": 25,
+  "items": [
+    {
+      "title": "让每个人成为“超级个体”，AI+游戏开始重新定义工业化",
+      "url": "https://www.youxituoluo.com/534504.html",
+      "summary": "这两年，游戏圈聊起AI，总让人觉得有种强烈的割裂感。\n有人拿大模型当高级搜索，有人纯靠它跑几张美术素材。但一波实操下来大家才发现：单点的效率确实提了，可这些零散的工具，根本塞不进公司现有的工业化研发管线里。\n尤其进入2026年，大家对拥有一个智能体早就不觉得新鲜。行业真正的痛点，变成了如何用好智能体。从业者都在焦虑，怎么让AI搞懂具体的业务逻辑，怎么让它在复杂的研发和运营环节里真正跑通闭环。\n5月14日，Create 2026百度AI开发者大会的&ldquo;AI+游戏&rdquo;专场释放了一个明确的信号。AI在游戏行业的应用，已经正式跨过了单点试错阶段，开始作为一种基础设施，去重塑整条产业",
+      "source": "游戏陀螺",
+      "published_at": "2026-05-22T10:15:25Z",
+      "category": "in-game",
+      "category_secondary": null,
+      "tags": [
+        "大模型"
+      ],
+      "recommendation": "AI 正在重塑玩家的游戏体验",
+      "source_type": "primary"
+    },
+    {
+      "title": "图灵测试 76 年后首现 AI 通过实证：GPT-4.5 以 73% 判定率超越真人，聊天 15 分钟难辨人机",
+      "url": "https://www.ithome.com/0/953/705.htm",
+      "summary": "IT之家 5 月 22 日消息，加州大学圣地亚哥分校的最新研究首次提供了实证数据，可证明现代 AI 系统能够通过经典的图灵测试。在该测试中，机器需要学习人类并模仿人类对话，使人们无法稳定分辨人类与先进大语言模型之间的差异。这项发表在《美国国家科学院院刊》上的研究，首次采用英国数学家、“计算机科学之父”艾伦 · 图灵于 1950 年设计的方法对大语言模型进行了严格测试。这也是首次有研究发现，在图灵测试的框架下，AI 模型被判定为人类的概率 / 频率与真人相当。通讯作者卡梅伦 · 琼斯（Cameron Jones）表示：“我们发现，如果给出恰当的提示，先进的大语言模型可以表现出与人类相同的语气、直",
+      "source": "IT之家",
+      "published_at": "2026-05-22T01:22:11Z",
+      "category": "research",
+      "category_secondary": null,
+      "tags": [
+        "GPT"
+      ],
+      "recommendation": "学术前沿，预示技术走向",
+      "source_type": "secondary",
+      "trace_note": "此条来自聚合/转载媒体，建议追溯原始来源后再展示"
+    },
+    {
+      "title": "《绝地潜兵 2》将适配 DLSS、PSSR 技术，5 月 27 日实装",
+      "url": "https://www.ithome.com/0/953/684.htm",
+      "summary": "IT之家 5 月 22 日消息，箭头社（Arrowhead Game Studios）官方昨天发布博文，宣布《绝地潜兵 2》将适配 DLSS 4.5、PSSR 等技术，提升帧率表现和画面清晰度，5 月 27 日实装。IT之家了解到，《绝地潜兵 2》使用较旧的游戏引擎，所以此前仅内置类似 FSR 1.0 的原生超分技术，游戏画质一直存在问题，例如快速移动时存在明显闪烁现象。这些问题不仅影响 PC 玩家，也影响 PS5、Xbox 版本。根据 Steam 公告，箭头社将此次优化工作归功于 Nixxes 工作室。更新上线后，N 卡、A 卡玩家可选择 FSR 4.03、FSR 3.1.5 和 DLSS ",
+      "source": "IT之家",
+      "published_at": "2026-05-21T23:58:16Z",
+      "category": "dev-tools",
+      "category_secondary": null,
+      "tags": [
+        "Steam",
+        "DLSS"
+      ],
+      "recommendation": "新产品/功能发布，可能影响行业格局",
+      "source_type": "secondary",
+      "trace_note": "此条来自聚合/转载媒体，建议追溯原始来源后再展示"
+    },
+    {
+      "title": "《007 初露锋芒》官方预告片发布，5 月 27 日正式发售",
+      "url": "https://www.ithome.com/0/953/669.htm",
+      "summary": "IT之家 5 月 22 日消息，IO Interactive 与亚马逊米高梅影业今日联合发布了《007 初露锋芒》的发布预告片。本作将于 2026 年 5 月 27 日登陆 PS5、Xbox Series X|S 和 PC 平台，并于 2026 年夏季登陆 Nintendo Switch 2 平台。 这款由 IO Interactive 打造的独立游戏，重新演绎了詹姆斯 · 邦德的起源故事。游戏现已开启预购，预购玩家可免费升级至豪华版，获得 24 小时抢先体验资格，以及专属游戏内皮肤和服装。在桌面平台，本作首发支持 DLSS 4.5，实现 4K 极致体验需 RTX 5080 高端显卡，IT之家",
+      "source": "IT之家",
+      "published_at": "2026-05-21T22:42:49Z",
+      "category": "industry",
+      "category_secondary": null,
+      "tags": [
+        "DLSS"
+      ],
+      "recommendation": "新产品/功能发布，可能影响行业格局",
+      "source_type": "secondary",
+      "trace_note": "此条来自聚合/转载媒体，建议追溯原始来源后再展示"
+    },
+    {
+      "title": "NVIDIA GTC Taipei at COMPUTEX: Live Updates on What’s Next in AI",
+      "url": "https://blogs.nvidia.com/blog/nvidia-gtc-taipei-computex-2026-news/",
+      "summary": "At NVIDIA GTC Taipei at COMPUTEX, the world’s developers, researchers and industry leaders are converging to dive into the latest breakthroughs shaping every industry, covering topics spanning AI factories and scaling infrastructure to agentic and physical AI and more.",
+      "source": "NVIDIA Blog",
+      "published_at": "2026-05-21T16:00:17Z",
+      "category": "research",
+      "category_secondary": null,
+      "tags": [
+        "NVIDIA"
+      ],
+      "recommendation": "前沿研究可能影响未来游戏形态",
+      "source_type": "primary"
+    },
+    {
+      "title": "Epic 喜加二：《逃出百慕大》《古墓丽影 1-3 复刻版》游戏免费领",
+      "url": "https://www.ithome.com/0/953/665.htm",
+      "summary": "IT之家 5 月 21 日消息，Epic 本周送出的游戏是《逃出百慕大》《古墓丽影 1-3 复刻版》，下周送出的游戏待公布。领取链接：《逃出百慕大》，《古墓丽影 1-3 复刻版》IT之家附《逃出百慕大》游戏简介：《逃出百慕大》是一场奇特的冒险之旅，途中布满了亟待解决的谜题和等候揭开的奥秘。我们富有冒险精神的飞行员米尔顿，发现自己被困在百慕大群岛地底深处的时间泡泡中，需要你的帮助才能逃脱。破解密码，解开谜题，收集魔法球，逃离六个独特，但在寻找回家之路途中环环相扣的岛屿。风格独具的秘密特工冒险游戏《Agent A：伪装游戏》开发工作室最新力作。IT之家附《古墓丽影 1-3 复刻版》游戏简介：劳拉 ",
+      "source": "IT之家",
+      "published_at": "2026-05-21T15:08:42Z",
+      "category": "industry",
+      "category_secondary": null,
+      "tags": [],
+      "recommendation": "游戏行业 AI 战略动向",
+      "source_type": "secondary",
+      "trace_note": "此条来自聚合/转载媒体，建议追溯原始来源后再展示"
+    },
+    {
+      "title": "摩根大通未来将扩招 AI 专家、缩招传统银行家，迎战人工智能时代",
+      "url": "https://www.ithome.com/0/953/664.htm",
+      "summary": "IT之家 5 月 21 日消息，据彭博社 21 日（今天）报道，摩根大通 CEO 杰米 · 戴蒙明确指出，公司未来有望增加 AI 专家的招聘比例，同时缩减传统银行家的岗位规模，以应对 AI 技术的加速应用。“长远来看，AI 技术肯定会削减摩根大通的整体用工需求。未来金融圈会涌现出各种全新岗位，我们将在某些特定业务线上招募更多 AI 专员，并逐步减少银行家数量，AI 也将大幅提升现有员工的工作效率。”此前，渣打银行 CEO 比尔 · 温特斯曾发表过 AI 将取代“低附加值人力资本”的言论并引发巨大争议。针对舆论风波，戴蒙回应道：“温特斯的用词确实有欠妥当。AI 技术将对金融圈所有岗位产生深远影响",
+      "source": "IT之家",
+      "published_at": "2026-05-21T15:04:55Z",
+      "category": "industry",
+      "category_secondary": null,
+      "tags": [],
+      "recommendation": "游戏行业 AI 战略动向",
+      "source_type": "secondary",
+      "trace_note": "此条来自聚合/转载媒体，建议追溯原始来源后再展示"
+    },
+    {
+      "title": "The big Strauss Zelnick interview: GTA, AI, Roblox and building the biggest entertainment company in the world",
+      "url": "https://www.gamesindustry.biz/the-big-strauss-zelnick-interview-gta-ai-roblox-and-building-the-biggest-entertainment-company-in-the-world",
+      "summary": "Strauss Zelnick is not going to say anything substantial about GTA 6. This is something he has a great deal of practice at. Every journalist and analyst presses him on the topic whenever he makes himself available, which has been increasingly often; our conversation is taking place in a side room at",
+      "source": "GamesIndustry.biz",
+      "published_at": "2026-05-21T15:03:29Z",
+      "category": "industry",
+      "category_secondary": null,
+      "tags": [],
+      "recommendation": "游戏行业 AI 战略动向",
+      "source_type": "primary"
+    },
+    {
+      "title": "Google is pitching an AI agent ecosystem to consumers who may not buy it",
+      "url": "https://techcrunch.com/2026/05/21/google-is-pitching-an-ai-agent-ecosystem-to-consumers-who-may-not-buy-it/",
+      "summary": "One of the most promising introductions at Google’s I/O developer conference on Tuesday was a new way for consumers to use the web: AI agents. Unfortunately, it was also the most confusing.",
+      "source": "TechCrunch",
+      "published_at": "2026-05-21T13:52:23Z",
+      "category": "industry",
+      "category_secondary": null,
+      "tags": [],
+      "recommendation": "游戏行业 AI 战略动向",
+      "source_type": "primary"
+    },
+    {
+      "title": "育碧确认《刺客信条》《孤岛惊魂》《幽灵行动》新作开发中，2029 年 3 月前推出",
+      "url": "https://www.ithome.com/0/953/634.htm",
+      "summary": "育碧在最新财报中确认，计划在2029年3月前推出更多《刺客信条》系列新作，并带来全新的《孤岛惊魂》与《幽灵行动》游戏。公司预计在2027-2029财年期间，核心品牌内容产出将显著增加。其中，《刺客信条：Hexe》为重点作品，预计2027年发售。此外，育碧正开发首个\"可游玩的生成式AI体验\"，以提升玩家体验与开发效率。公司同时宣布，《刺客信条：黑旗重制版》将于今年7月9日发售。",
+      "source": "IT之家（RSS）",
+      "source_via": "AI HOT",
+      "published_at": "2026-05-21T13:02:09.000Z",
+      "category": "industry",
+      "category_secondary": null,
+      "tags": [],
+      "recommendation": "游戏行业 AI 战略动向",
+      "source_type": "secondary",
+      "trace_note": "此条来自聚合/转载媒体，建议追溯原始来源后再展示"
+    },
+    {
+      "title": "一年裁掉千名开发者，育碧全力拥抱 AI 优化游戏研发",
+      "url": "https://www.ithome.com/0/953/460.htm",
+      "summary": "育碧在过去一年的业务重组中裁员超过1000名游戏开发人员。为扭转经营困境，该公司正全面转向利用人工智能优化游戏研发流程，包括推进自研生成式AI项目\"育碧同伴\"，并开发辅助质检、高智能NPC等智能工具。育碧计划借助AI精简开发环节、提升玩家体验，预计到2029年推出丰富的新作阵容，其当前重点作品《刺客信条：黑旗重制版》将于今年7月发售。",
+      "source": "IT之家（RSS）",
+      "source_via": "AI HOT",
+      "published_at": "2026-05-21T07:22:59.000Z",
+      "category": "in-game",
+      "category_secondary": null,
+      "tags": [],
+      "recommendation": "行业人事变动，反映 AI 对就业的实际影响",
+      "source_type": "secondary",
+      "trace_note": "此条来自聚合/转载媒体，建议追溯原始来源后再展示"
+    },
+    {
+      "title": "Xbox announces hire of veteran analyst Matthew Ball as chief strategy officer, and AI and Amazon veteran as CTO",
+      "url": "https://www.gamesindustry.biz/xbox-announces-hire-of-veteran-analyst-matthew-ball-as-chief-strategy-officer-and-ai-and-amazon-veteran-as-cto",
+      "summary": "Xbox CEO Asha Sharma has made further changes to the brand's leadership team, appointing industry analyst Matthew Ball as chief strategy officer and Scott Van Vliet as chief technology officer. Ball is a venture partner, advisor and investor who has become well-known for his annual industry reports ",
+      "source": "GamesIndustry.biz",
+      "published_at": "2026-05-20T18:00:44Z",
+      "category": "industry",
+      "category_secondary": null,
+      "tags": [],
+      "recommendation": "游戏行业 AI 战略动向",
+      "source_type": "primary"
+    },
+    {
+      "title": "NVIDIA and Google Cloud Empower the Next Wave of AI Builders",
+      "url": "https://blogs.nvidia.com/blog/google-cloud-developer-community-ai-builders/",
+      "summary": "At this year’s Google I/O conference, NVIDIA and Google Cloud are accelerating the work of more than 100,000 developers in the companies’ joint developer community, which provides curated learning paths, hands-on labs and events that help them build using the full-stack NVIDIA AI platform on Google ",
+      "source": "NVIDIA Blog",
+      "published_at": "2026-05-19T20:30:09Z",
+      "category": "industry",
+      "category_secondary": null,
+      "tags": [
+        "Unity",
+        "NVIDIA"
+      ],
+      "recommendation": "游戏行业 AI 战略动向",
+      "source_type": "primary"
+    },
+    {
+      "title": "Gemini 3.5 Flash快速构建互动游戏",
+      "url": "https://x.com/GeminiApp/status/2056829734181585038",
+      "summary": "使用 Gemini 3.5 Flash 构建你的第一款游戏。\n无需复杂的3D建模，即可将日常物品直接转化为互动的数字体验。从一个 Nano Banana 提示开始，在 Canvas 中将你的图像变成游戏，并优化你的愿景以获得最佳游戏体验。",
+      "source": "X：Gemini (@GeminiApp)",
+      "source_via": "AI HOT",
+      "published_at": "2026-05-19T20:09:57.000Z",
+      "category": "industry",
+      "category_secondary": null,
+      "tags": [
+        "Gemini"
+      ],
+      "recommendation": "游戏行业 AI 战略动向",
+      "source_type": "primary"
+    },
+    {
+      "title": "谷歌推出 Ask Play：连续对话 AI 筛选应用与游戏",
+      "url": "https://www.ithome.com/0/952/539.htm",
+      "summary": "谷歌在2026年I/O开发者大会上推出\"Ask Play\"功能，应用于Play应用商店。该功能将应用搜索转变为连续问答模式，用户可通过多轮对话逐步细化需求（如先找\"无广告科幻策略游戏\"，再补充\"支持离线\"），系统能综合上下文语义进行精准推荐。同时上线\"Ask Play highlights\"，在结果页顶部提供摘要，减少用户筛选时间。此外，谷歌正将Gemini大模型整合至应用推荐流程，未来几周内上线，使其能在Android和网页聊天界面中根据对话意图主动推荐相关应用。",
+      "source": "IT之家（RSS）",
+      "source_via": "AI HOT",
+      "published_at": "2026-05-19T19:40:37.000Z",
+      "category": "ops",
+      "category_secondary": null,
+      "tags": [
+        "Gemini",
+        "大模型"
+      ],
+      "recommendation": "AI 赋能游戏运营和商业化",
+      "source_type": "secondary",
+      "trace_note": "此条来自聚合/转载媒体，建议追溯原始来源后再展示"
+    },
+    {
+      "title": "Google掀桌子，AI游戏规则真的变了",
+      "url": "https://x.com/AYi_AInotes/status/2056804726772224382",
+      "summary": "Google在I/O大会发布的Gemini 3.5 Flash与Antigravity平台，标志着AI竞争从模型性能转向构建Agent基础设施。Flash以4倍于顶级模型的速度解决了复杂Agent的延迟瓶颈，使24/7自主Agent成为可能；Antigravity则提供桌面端、CLI、SDK等全栈开放底座，目标成为\"Agent时代的AWS\"。Google将这些能力全量开放，意在降低Agent开发门槛，争夺生态定价权。这宣告了AI行业正从聊天机器人时代，迈入构建数字劳动力生态的新阶段。",
+      "source": "X：阿易 AI Notes (@AYi_AInotes)",
+      "source_via": "AI HOT",
+      "published_at": "2026-05-19T18:30:35.000Z",
+      "category": "dev-tools",
+      "category_secondary": null,
+      "tags": [
+        "Gemini"
+      ],
+      "recommendation": "新产品/功能发布，可能影响行业格局",
+      "source_type": "primary"
+    },
+    {
+      "title": "Agora-1 将 N64 经典游戏《GoldenEye》转变为可供四人游玩的 AI 模拟",
+      "url": "https://the-decoder.com/agora-1-turns-the-n64-classic-goldeneye-into-a-playable-ai-simulation-for-four-players",
+      "summary": "Odyssey 公司发布了世界模型 Agora-1，该模型允许最多四名玩家同时在 AI 生成的虚拟世界中进行行动。该技术已在经典游戏《GoldenEye》上得到验证，其核心是使用两个独立的模型分别实时处理游戏状态模拟与画面渲染。开发团队认为，这项技术未来在协作机器人和 AI 智能体训练领域具有应用潜力。",
+      "source": "The Decoder：AI News（RSS）",
+      "source_via": "AI HOT",
+      "published_at": "2026-05-19T13:57:38.000Z",
+      "category": "in-game",
+      "category_secondary": null,
+      "tags": [
+        "世界模型"
+      ],
+      "recommendation": "新产品/功能发布，可能影响行业格局",
+      "source_type": "primary"
+    },
+    {
+      "title": "Far Far West publisher says \"We don't work with partners that are relying on generative AI\"",
+      "url": "https://www.gamesindustry.biz/far-far-west-publisher-says-we-dont-work-with-partners-that-are-relying-on-generative-ai",
+      "summary": "Fireshine Games, the publisher behind Steam hit Far Far West, has said it won't work with developers that use generative AI art. Read more",
+      "source": "GamesIndustry.biz",
+      "published_at": "2026-05-19T12:26:12Z",
+      "category": "creation",
+      "category_secondary": null,
+      "tags": [
+        "Steam"
+      ],
+      "recommendation": "关注 AI 如何改变游戏内容生产流程",
+      "source_type": "primary"
+    },
+    {
+      "title": "Agora-1：多智能体世界模型",
+      "url": "https://odyssey.ml/introducing-agora-1",
+      "summary": "Agora-1是一个新发布的多智能体世界模型，旨在为人工智能系统提供对复杂环境进行协同模拟与推理的能力。该模型聚焦于让多个AI智能体在共享的虚拟世界中互动、规划和协作，可能应用于机器人控制、游戏AI或复杂场景仿真等前沿领域。其发布标志着多智能体系统与环境建模技术融合的一个新进展。",
+      "source": "Hacker News 热门（buzzing.cc 中文翻译）",
+      "source_via": "AI HOT",
+      "published_at": "2026-05-19T06:28:07.851Z",
+      "category": "in-game",
+      "category_secondary": null,
+      "tags": [
+        "世界模型"
+      ],
+      "recommendation": "新产品/功能发布，可能影响行业格局",
+      "source_type": "primary"
+    },
+    {
+      "title": "LG 电子公布全球首款原生 1000Hz FHD 游戏显示器 25G590B",
+      "url": "https://www.ithome.com/0/952/161.htm",
+      "summary": "LG电子于5月19日发布了全球首款原生1000Hz刷新率的FHD游戏电竞显示器LG UltraGear 25G590B。该显示器配备24.5英寸IPS防眩光面板，支持MBRR增强型低运动模糊技术与端侧游戏AI功能。产品预计2025年下半年率先在部分市场上市，并计划后续推向更多地区。",
+      "source": "IT之家（RSS）",
+      "source_via": "AI HOT",
+      "published_at": "2026-05-19T02:42:56.000Z",
+      "category": "industry",
+      "category_secondary": null,
+      "tags": [],
+      "recommendation": "新产品/功能发布，可能影响行业格局",
+      "source_type": "secondary",
+      "trace_note": "此条来自聚合/转载媒体，建议追溯原始来源后再展示"
+    },
+    {
+      "title": "首个实时多agent世界模型发布，人类可与AI同屏互动",
+      "url": "https://x.com/berryxia/status/2056548546544124240",
+      "summary": "奥德赛实验室推出Agora-1，这是全球首个实时多agent世界模型，允许多人与AI同时在同一个模拟世界中实时互动并相互影响。该模型以经典游戏GoldenEye死亡竞赛为演示场景，提供可玩研究预览，用户现在即可体验与AI共同参与动态生成的模拟世界。这标志着从单人生成视频向多人共享\"活世界\"的转变，长期来看可能重塑游戏、模拟、教育、机器人及AI协作等领域，使人类从旁观者变为与AI共同生活的参与者。",
+      "source": "X：Berry Xia (@berryxia)",
+      "source_via": "AI HOT",
+      "published_at": "2026-05-19T01:32:36.000Z",
+      "category": "research",
+      "category_secondary": null,
+      "tags": [
+        "世界模型"
+      ],
+      "recommendation": "新产品/功能发布，可能影响行业格局",
+      "source_type": "primary"
+    },
+    {
+      "title": "Epic 喜加一：原价 62 元 AI 推理游戏《Vaudeville》免费领",
+      "url": "https://www.ithome.com/0/950/945.htm",
+      "summary": "推理冒险游戏《Vaudeville》在Epic游戏商城开启限时免费领取，国区原价62元。本次活动由开发团队Bumblebee Studios自行发起，持续至5月17日18：00。游戏最大特色是采用AI技术驱动NPC对话，所有回应均为实时生成，无固定剧本，每次游玩对话内容都可能不同。玩家需通过自然语言提问与角色互动，在充满欧洲风情的虚构城市中扮演侦探，调查一系列命案并挖掘线索。",
+      "source": "IT之家（RSS）",
+      "source_via": "AI HOT",
+      "published_at": "2026-05-15T07:00:53.000Z",
+      "category": "in-game",
+      "category_secondary": null,
+      "tags": [],
+      "recommendation": "AI 正在重塑玩家的游戏体验",
+      "source_type": "secondary",
+      "trace_note": "此条来自聚合/转载媒体，建议追溯原始来源后再展示"
+    },
+    {
+      "title": "自动化代码审查实现问题到修复全流程",
+      "url": "https://x.com/steipete/status/2055178254877700450",
+      "summary": "这改变了游戏规则。通过codex自动审查和crabbox，我现在几乎可以全自动化地从问题定位到修复。（是的，这会消耗大量token）\n\n【引用 @steipete】：编写了一个循环运行codex/review的技能，直到不再出现错误为止。\n\n注意事项：它不会为你修复系统架构，所以你仍然需要以BRAIN作为主模型。https：//github.com/steipete/agent-scripts/blob/main/skills/codex-review/SKILL.md",
+      "source": "X：Peter Steinberger (@steipete)",
+      "source_via": "AI HOT",
+      "published_at": "2026-05-15T06:47:33.000Z",
+      "category": "dev-tools",
+      "category_secondary": null,
+      "tags": [],
+      "recommendation": "开发效率提升工具，值得游戏开发者关注",
+      "source_type": "primary"
+    },
+    {
+      "title": "Announcing ADK for Kotlin and ADK for Android 0.1.0: Building AI Agents on Android and Beyond",
+      "url": "https://developers.googleblog.com/adk-kotlin-android-building-ai-agents/",
+      "summary": "ADK for Kotlin brings agentic workflows to your backend projects, while ADK for Android provides spe...",
+      "source": "Google Developers Blog",
+      "published_at": null,
+      "category": "dev-tools",
+      "category_secondary": null,
+      "tags": [],
+      "recommendation": "开发效率提升工具，值得游戏开发者关注",
+      "source_type": "primary"
+    },
+    {
+      "title": "An important update: Transitioning Gemini CLI to Antigravity CLI",
+      "url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+      "summary": "Google is unifying its AI terminal tools by transitioning the community-focused Gemini CLI into Antigravity CLI, a new agent-first platform built for complex, multi-agent workflows. This new Go-based tool offers faster execution, asynchronous processing, and a unified architecture that syncs with th",
+      "source": "Google Developers Blog",
+      "published_at": null,
+      "category": "dev-tools",
+      "category_secondary": null,
+      "tags": [
+        "Unity",
+        "Gemini"
+      ],
+      "recommendation": "开发效率提升工具，值得游戏开发者关注",
+      "source_type": "primary"
+    }
+  ],
+  "stats": {
+    "raw_count": 322,
+    "after_relevance_filter": 33,
+    "after_dedup": 25,
+    "after_classify_filter": 25,
+    "by_category": {
+      "in-game": 5,
+      "research": 3,
+      "dev-tools": 5,
+      "industry": 10,
+      "ops": 1,
+      "creation": 1
+    }
+  }
+}
