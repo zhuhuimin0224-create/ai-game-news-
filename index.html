@@ -141,15 +141,6 @@ async function loadWeek(weekId){
   }catch(e){return null;}
 }
 
-async function loadDaily(){
-  try{
-    const r=await fetch('data/latest.json');
-    if(!r.ok)return null;
-    dailyData=await r.json();
-    return dailyData;
-  }catch(e){return null;}
-}
-
 // ====== Render views ======
 async function renderWeekly(){
   $main.innerHTML='<div class="state"><div class="spinner"></div></div>';
@@ -279,8 +270,6 @@ function renderDailyCard(item){
     <div class="card-ft"><span>${esc(item.source||'')} | ${fmtDate(item.published_at)}</span>
       ${item.tags&&item.tags.length?`<div class="tags">${item.tags.map(t=>`<span>${esc(t)}</span>`).join('')}</div>`:''}
     </div>
-  </div>`;
-}
   </div>`;
 }
 
