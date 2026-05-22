@@ -1,0 +1,146 @@
+{
+  "week_start": "2026-05-12",
+  "week_end": "2026-05-18",
+  "title": "游戏 x AI 资讯周报 · 5.12 - 5.18",
+  "highlights": [
+    "米哈游宣布3年最多投1000亿做AI大模型，目标千人千面个性化游戏",
+    "索尼AI新专利：自动识别并剪辑玩家高光时刻，根据个人水平动态调整标准",
+    "荣耀手机推出\"AI脚步声增强\"硬件功能，AI进入游戏外设层",
+    "AMD申请游戏引擎专利：画草图AI生成游戏场景",
+    "GitHub官方演示用Copilot CLI从零写出完整Roguelike游戏"
+  ],
+  "items": [
+    {
+      "title": "【米哈游】刘伟：AI投入\"3年最多1000亿\"，没成算放一个大烟花",
+      "url": "https://www.ithome.com/0/951/364.htm",
+      "source": "IT之家 / 竞核",
+      "published_at": "2026-05-16",
+      "category": "industry",
+      "key_point": "米哈游创始人刘伟在内部AI校招分享会上透露，未来三年AI投入规模最多1000亿，目标做出千人千面的个性化游戏。",
+      "details": ["\"任何团队没有坚定地去搞算力、scale，是绝不可能把模型做到顶级的\"", "如果失败，\"也认了，算是做一个大的烟花\"", "场合：5月15日北京AI大模型技术分享会暨顶尖校招"],
+      "recommendation": "国内游戏厂商首次公开千亿级AI投入数字，把AI从辅助工具提升到主战略级别。",
+      "tags": ["米哈游", "大模型", "千人千面"]
+    },
+    {
+      "title": "【索尼】SIE总裁表态AI定位+恺英1亿砸AI漫剧",
+      "url": "https://www.youxituoluo.com/534491.html",
+      "source": "游戏陀螺",
+      "published_at": "2026-05-18",
+      "category": "industry",
+      "key_point": "索尼互娱总裁明确AI定位是增强工作室能力；恺英投入1亿布局AI漫剧。",
+      "details": ["索尼：\"AI的使命是增强能力边界，绝非取代\"", "恺英用AI做游戏之外的内容形态——AI能力外溢"],
+      "recommendation": "主机三巨头之一首次详细披露AI实战定位，恺英代表游戏公司把AI能力向内容产业延伸。",
+      "tags": ["索尼", "恺英", "AI漫剧"]
+    },
+    {
+      "title": "【索尼】AI新专利：自动记录/制作游戏高光时刻",
+      "url": "https://www.163.com/dy/article/KSG8IDD30511B8LM.html",
+      "source": "网易 / mp1st",
+      "published_at": "2026-05-08",
+      "category": "in-game",
+      "key_point": "索尼申请AI专利（US 12616902），系统自动识别玩家精彩操作并生成可分享剪辑，高光标准根据个人技能水平动态调整。",
+      "details": ["专利5月5日在USPTO公示", "解决痛点：想分享精彩瞬间但\"录屏→回看→剪辑→发布\"太费时", "关键特性：不是统一标准，而是根据每个玩家水平定义什么算\"高光\""],
+      "recommendation": "AI从帮开发者做游戏延伸到帮玩家\"记住\"精彩操作——以后每个玩家都自动有一个AI剪辑师。",
+      "tags": ["索尼", "专利", "高光时刻", "UGC"]
+    },
+    {
+      "title": "【Neowiz】《匹诺曹的谎言》开发商招聘AI创意设计师",
+      "url": "https://www.ithome.com/0/949/307.htm",
+      "source": "IT之家",
+      "published_at": "2026-05-12",
+      "category": "industry",
+      "key_point": "韩国一线工作室正式招聘\"AI创意设计师\"岗位，AI进入创意核心环节。",
+      "details": ["注意岗位不是做\"AI工程\"，而是\"创意设计师\"", "Neowiz凭《匹诺曹的谎言》获全球口碑后做出的布局决策"],
+      "recommendation": "一线工作室从\"AI做效率\"走向\"AI做创意\"，岗位命名本身就是行业风向标。",
+      "tags": ["Neowiz", "招聘", "AI创意"]
+    },
+    {
+      "title": "【荣耀】Magic8推出\"AI脚步声增强\"，适配9款FPS游戏",
+      "url": "https://www.ithome.com/0/950/025.htm",
+      "source": "IT之家",
+      "published_at": "2026-05-13",
+      "category": "in-game",
+      "key_point": "手机硬件级AI功能，实时增强FPS游戏中敌人脚步声，适配和平精英等9款游戏。",
+      "details": ["AI从\"游戏内NPC\"下沉到\"手机硬件辅助\"", "本质是AI音频分析+实时增强特定声音", "适配列表包含和平精英——腾讯系产品"],
+      "recommendation": "AI进入游戏的方式不只是内容生成，硬件厂商用AI重新定义了游戏体验的底层——以后\"游戏外设\"可能不再是手柄耳机，而是AI算法。",
+      "tags": ["荣耀", "硬件AI", "和平精英"]
+    },
+    {
+      "title": "【国产AI游戏】《历史模拟器：崇祯》\"词元收费\"引争议",
+      "url": "https://www.ithome.com/0/949/477.htm",
+      "source": "IT之家",
+      "published_at": "2026-05-12",
+      "category": "in-game",
+      "key_point": "国内首个公开采用\"本体买断+词元收费\"的AI游戏，玩家不买账后官方承诺开放自行接入模型。",
+      "details": ["玩家吐槽：买了游戏还要为AI对话额外付费", "官方妥协：开放玩家自行接入模型（用自己的API key）"],
+      "recommendation": "AI原生游戏商业模式第一次被市场检验，\"词元收费\"失败+\"开放接入\"折中方案，后来者定价时必看。",
+      "tags": ["商业模式", "AI原生游戏"]
+    },
+    {
+      "title": "【阿里云】AI角色实现记忆、共情与主动交互",
+      "url": "https://x.com/alibaba_cloud/status/2054653031472414864",
+      "source": "X: 阿里云",
+      "published_at": "2026-05-13",
+      "category": "in-game",
+      "key_point": "阿里云展示AI角色具备长期记忆、情感共情和主动发起互动的能力。",
+      "details": ["不只问答，AI会主动找玩家聊天", "跨对话记忆——记得之前说过什么"],
+      "recommendation": "解决AI NPC三大痛点（无记忆/无情感/被动），对游戏内AI伴侣有直接技术价值。",
+      "tags": ["阿里云", "NPC", "记忆"]
+    },
+    {
+      "title": "【AMD】游戏引擎专利：画草图AI帮你做游戏",
+      "url": "https://www.ithome.com/0/951/524.htm",
+      "source": "IT之家",
+      "published_at": "2026-05-17",
+      "category": "dev-tools",
+      "key_point": "AMD申请游戏引擎专利，描述通过简单草图输入由AI生成游戏场景。",
+      "details": ["从草图到游戏场景的AI生成pipeline", "硬件厂商开始往游戏开发工具链上游走"],
+      "recommendation": "如果实现，关卡设计门槛大幅降低——策划画个草图就能出场景原型，不再等美术排期。",
+      "tags": ["AMD", "专利", "场景生成"]
+    },
+    {
+      "title": "【GitHub】官方演示Copilot CLI从零构建完整Roguelike游戏",
+      "url": "https://github.blog/ai-and-ml/github-copilot/dungeons-desktops-building-a-procedurally-generated-roguelike-with-github-copilot-cli",
+      "source": "GitHub Blog",
+      "published_at": "2026-05-12",
+      "category": "dev-tools",
+      "key_point": "GitHub官方演示用Copilot CLI从零构建一款完整的程序化生成Roguelike。",
+      "details": ["不是demo片段，是完整可玩游戏", "标题\"Dungeons & Desktops\"，官方背书"],
+      "recommendation": "大厂官方的\"AI写完整游戏\"端到端案例，对独立开发者有直接参考价值。",
+      "tags": ["GitHub", "Copilot", "游戏开发"]
+    },
+    {
+      "title": "【阶跃星辰】Step 3.5 Flash助新手构建游戏循环",
+      "url": "https://x.com/StepFun_ai/status/2054687939540525174",
+      "source": "X: 阶跃星辰",
+      "published_at": "2026-05-13",
+      "category": "dev-tools",
+      "key_point": "国产大模型帮编程新手快速构建可玩游戏循环demo。",
+      "details": ["自然语言描述就能出可运行的游戏", "策划验证想法不再依赖开发排期"],
+      "recommendation": "门槛降到非程序员也能出游戏demo，快速验证玩法可行性的成本趋近于零。",
+      "tags": ["阶跃星辰", "游戏原型"]
+    },
+    {
+      "title": "【开源】单张图片构建可交互3D世界",
+      "url": "https://x.com/berryxia/status/2055086814009180316",
+      "source": "X: Berry Xia",
+      "published_at": "2026-05-15",
+      "category": "dev-tools",
+      "key_point": "开源项目，从一张图片快速生成可交互的3D环境。",
+      "details": ["完全开源，可直接clone试用", "对游戏场景快速原型搭建有直接价值"],
+      "recommendation": "开源可白嫖，场景美术和关卡设计师用来加速原型阶段。",
+      "tags": ["开源", "3D生成"]
+    },
+    {
+      "title": "【论文】ReactiveGWM：反应式游戏世界模型引导NPC",
+      "url": "https://arxiv.org/abs/2605.15256",
+      "source": "arXiv",
+      "published_at": "2026-05-14",
+      "category": "research",
+      "key_point": "论文提出在反应式游戏世界模型中引导NPC行为的新方法。",
+      "details": ["直接聚焦\"游戏世界模型+NPC引导\"核心课题", "世界模型是当前AI游戏研究最热方向"],
+      "recommendation": "世界模型成熟意味着AI可以自主运行游戏世界，不用手写每条规则——离落地最近的前沿方向之一。",
+      "tags": ["世界模型", "NPC", "论文"]
+    }
+  ]
+}

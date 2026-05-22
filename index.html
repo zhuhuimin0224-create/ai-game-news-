@@ -10,82 +10,49 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:14px;line-height:1.6;color:#c9d1d9;background:#0d1117;-webkit-font-smoothing:antialiased;overflow:hidden;height:100vh}
 a{color:#58a6ff;text-decoration:none}
-a:hover{text-decoration:underline}
-
+a:hover{color:#79c0ff}
 .app{display:flex;height:100vh}
 
 /* Sidebar */
-.sidebar{width:180px;background:#0d1117;border-right:1px solid #21262d;display:flex;flex-direction:column;padding:20px 0;flex-shrink:0;overflow-y:auto}
-.sidebar-brand{padding:0 20px 24px;font-size:18px;font-weight:700;color:#fff;letter-spacing:-0.5px}
-.sidebar-brand span{color:#00bfa5}
-.sidebar-nav{display:flex;flex-direction:column;gap:2px;padding:0 10px}
-.nav-item{display:flex;align-items:center;gap:10px;padding:9px 14px;border-radius:6px;font-size:13px;color:#8b949e;cursor:pointer;transition:all 0.15s;white-space:nowrap}
-.nav-item:hover{color:#c9d1d9;background:#161b22}
-.nav-item.active{color:#fff;background:#00bfa5;font-weight:500}
-.nav-item svg{width:16px;height:16px;flex-shrink:0;opacity:0.7}
-.nav-item.active svg{opacity:1}
-.nav-divider{height:1px;background:#21262d;margin:12px 14px}
+.sb{width:180px;background:#0d1117;border-right:1px solid #21262d;display:flex;flex-direction:column;padding:20px 0;flex-shrink:0;overflow-y:auto}
+.sb-brand{padding:0 20px 24px;font-size:18px;font-weight:700;color:#fff}
+.sb-brand span{color:#00bfa5}
+.sb-nav{display:flex;flex-direction:column;gap:2px;padding:0 10px}
+.ni{display:flex;align-items:center;gap:10px;padding:9px 14px;border-radius:6px;font-size:13px;color:#8b949e;cursor:pointer;transition:all 0.15s;white-space:nowrap}
+.ni:hover{color:#c9d1d9;background:#161b22}
+.ni.active{color:#fff;background:#00bfa5;font-weight:500}
+.ni .ic{width:16px;text-align:center;font-size:14px;flex-shrink:0}
+.sb-div{height:1px;background:#21262d;margin:12px 14px}
+.sb-label{padding:4px 24px;font-size:11px;color:#484f58;text-transform:uppercase;letter-spacing:1px}
 
 /* Main */
-.main{flex:1;overflow-y:auto;display:flex;flex-direction:column}
+.mn{flex:1;overflow-y:auto;padding:0 0 60px}
+.mn-hd{padding:28px 36px 20px;border-bottom:1px solid #21262d}
+.mn-title{font-size:22px;font-weight:700;color:#fff}
+.mn-sub{font-size:13px;color:#8b949e;margin-top:4px}
 
-/* Top bar with date + search */
-.topbar{display:flex;align-items:center;gap:12px;padding:16px 32px;border-bottom:1px solid #21262d;flex-shrink:0;flex-wrap:wrap}
-.topbar-left{display:flex;align-items:center;gap:8px}
-.date-nav-btn{width:26px;height:26px;border:1px solid #30363d;border-radius:4px;background:transparent;color:#8b949e;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:12px;transition:all 0.15s}
-.date-nav-btn:hover{border-color:#8b949e;color:#fff}
-.date-text{font-size:14px;font-weight:600;color:#e6edf3;min-width:80px;text-align:center}
-.topbar-right{margin-left:auto;display:flex;align-items:center;gap:8px}
-.search-input{width:200px;height:32px;padding:0 12px;border:1px solid #30363d;border-radius:6px;background:#0d1117;color:#c9d1d9;font-size:13px;outline:none;transition:border-color 0.15s}
-.search-input:focus{border-color:#00bfa5}
-.search-input::placeholder{color:#484f58}
-.search-btn{height:32px;padding:0 14px;border:none;border-radius:6px;background:#00bfa5;color:#fff;font-size:12px;font-weight:500;cursor:pointer}
-.search-btn:hover{opacity:0.85}
+/* Week selector */
+.wk-sel{display:flex;gap:8px;padding:16px 36px;border-bottom:1px solid #161b22;flex-wrap:wrap}
+.wk-btn{padding:5px 14px;border-radius:4px;font-size:12px;color:#8b949e;cursor:pointer;border:1px solid #21262d;background:transparent;transition:all 0.15s}
+.wk-btn:hover{border-color:#30363d;color:#c9d1d9}
+.wk-btn.active{background:#00bfa5;border-color:#00bfa5;color:#fff}
 
-/* Coverage stats banner */
-.coverage{padding:20px 32px;flex-shrink:0}
-.coverage-inner{display:flex;align-items:center;gap:24px;padding:14px 20px;background:#161b22;border:1px solid #21262d;border-radius:8px}
-.coverage-stat{display:flex;flex-direction:column;align-items:center}
-.coverage-stat .num{font-size:20px;font-weight:700;color:#00bfa5}
-.coverage-stat .label{font-size:11px;color:#8b949e;margin-top:2px}
-.coverage-divider{width:1px;height:28px;background:#21262d}
-.coverage-text{font-size:12px;color:#8b949e;flex:1}
-.coverage-text strong{color:#c9d1d9}
+/* Highlights (top 5) */
+.hl-section{padding:20px 36px;border-bottom:1px solid #21262d}
+.hl-label{font-size:12px;font-weight:600;color:#00bfa5;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+.hl-list{list-style:none;counter-reset:hl}
+.hl-item{counter-increment:hl;padding:8px 0;font-size:14px;color:#e6edf3;line-height:1.6;display:flex;gap:10px}
+.hl-item::before{content:counter(hl);flex-shrink:0;width:22px;height:22px;background:#21262d;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#00bfa5}
 
-/* Category tabs */
-.tabs-bar{padding:0 32px 16px;flex-shrink:0;display:flex;gap:4px;overflow-x:auto}
-.tab{padding:5px 14px;border-radius:4px;font-size:12px;color:#8b949e;cursor:pointer;transition:all 0.15s;border:1px solid transparent;white-space:nowrap}
-.tab:hover{color:#c9d1d9;background:#161b22}
-.tab.active{color:#fff;background:#00bfa5;border-color:#00bfa5}
-
-/* Feed */
-.feed{padding:0 32px 60px;flex:1}
-
-/* Headline card (top story) */
-.headline{background:#161b22;border:1px solid #21262d;border-radius:10px;padding:24px;margin-bottom:20px;border-left:4px solid #00bfa5}
-.headline .hl-badge{display:inline-block;font-size:11px;padding:3px 10px;border-radius:4px;background:rgba(0,191,165,0.15);color:#00bfa5;font-weight:600;margin-bottom:10px}
-.headline .hl-title{font-size:20px;font-weight:700;color:#fff;line-height:1.5;margin-bottom:8px}
-.headline .hl-title a{color:inherit}
-.headline .hl-title a:hover{color:#58a6ff}
-.headline .hl-reason{font-size:13px;color:#c9d1d9;line-height:1.8;margin-bottom:12px;padding:12px 14px;background:rgba(0,191,165,0.05);border:1px solid rgba(0,191,165,0.15);border-radius:8px}
-.headline .hl-reason .rl{color:#00bfa5;font-weight:600;margin-right:4px;white-space:nowrap}
-.headline .hl-reason .rv{color:#e6edf3}
-.headline .hl-reason .rd{color:#8b949e}
-.headline .hl-reason .row{display:flex;gap:0;margin-bottom:3px}
-.headline .hl-reason .row:last-child{margin-bottom:0}
-.headline .hl-summary{font-size:13px;color:#8b949e;line-height:1.7;margin-bottom:12px}
-.headline .hl-meta{display:flex;align-items:center;gap:12px;font-size:12px;color:#484f58}
-.headline .hl-tags{display:flex;gap:6px;margin-top:10px}
-.headline .hl-tags span{font-size:11px;padding:2px 8px;background:#21262d;border-radius:4px;color:#8b949e}
-
-/* Regular cards */
-.card{background:#161b22;border:1px solid #21262d;border-radius:8px;padding:18px 20px;margin-bottom:10px;transition:border-color 0.2s}
+/* Cards */
+.cards{padding:16px 36px}
+.card{background:#161b22;border:1px solid #21262d;border-radius:8px;padding:20px;margin-bottom:12px;transition:border-color 0.2s}
 .card:hover{border-color:#30363d}
-.card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:6px}
+.card-hd{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px}
 .card-title{font-size:15px;font-weight:600;color:#e6edf3;line-height:1.5;flex:1}
 .card-title a{color:inherit}
 .card-title a:hover{color:#58a6ff}
-.card-cat{flex-shrink:0;font-size:10px;padding:3px 8px;border-radius:3px;color:#fff;font-weight:500;white-space:nowrap}
+.card-cat{flex-shrink:0;font-size:10px;padding:3px 8px;border-radius:3px;color:#fff;font-weight:500}
 .cat-creation{background:#8b5cf6}
 .cat-in-game{background:#059669}
 .cat-dev-tools{background:#2563eb}
@@ -93,126 +60,61 @@ a:hover{text-decoration:underline}
 .cat-industry{background:#dc2626}
 .cat-research{background:#6366f1}
 
-.card-reason{font-size:12px;color:#c9d1d9;margin-bottom:10px;padding:10px 14px;background:rgba(0,191,165,0.04);border:1px solid rgba(0,191,165,0.12);border-radius:6px;line-height:1.8}
-.card-reason .rl{color:#00bfa5;font-weight:600;margin-right:4px;white-space:nowrap}
-.card-reason .rv{color:#c9d1d9}
-.card-reason .rd{color:#8b949e}
-.card-reason .row{display:flex;gap:0;margin-bottom:2px}
-.card-reason .row:last-child{margin-bottom:0}
-.card-summary{display:none}
-.card-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
-.card-meta{display:flex;align-items:center;gap:10px;font-size:12px;color:#484f58}
-.card-meta .source{color:#8b949e}
-.card-tags{display:flex;gap:5px;flex-wrap:wrap}
-.card-tags span{font-size:10px;padding:2px 7px;background:#21262d;border-radius:3px;color:#8b949e}
-.card-repost{font-size:11px;color:#484f58;margin-top:6px}
+.card-body{padding:10px 14px;background:rgba(0,191,165,0.03);border:1px solid #21262d;border-radius:6px;margin-bottom:10px}
+.card-row{display:flex;gap:0;margin-bottom:4px;font-size:13px;line-height:1.7}
+.card-row:last-child{margin-bottom:0}
+.card-row .lb{color:#00bfa5;font-weight:600;white-space:nowrap;margin-right:6px;flex-shrink:0}
+.card-row .vl{color:#c9d1d9}
+.card-row .dt{color:#8b949e}
+.card-details{margin-top:6px;padding-left:12px;border-left:2px solid #21262d}
+.card-details li{font-size:12px;color:#8b949e;line-height:1.7;margin-bottom:2px;list-style:none}
+.card-details li::before{content:"";display:inline-block;width:4px;height:4px;background:#30363d;border-radius:50%;margin-right:8px;vertical-align:middle}
+.card-rec{font-size:12px;color:#00bfa5;padding:8px 12px;background:rgba(0,191,165,0.05);border-radius:4px;margin-top:8px;line-height:1.6}
+.card-ft{display:flex;align-items:center;justify-content:space-between;margin-top:10px;font-size:11px;color:#484f58}
+.card-ft .tags{display:flex;gap:4px;flex-wrap:wrap}
+.card-ft .tags span{padding:2px 7px;background:#21262d;border-radius:3px;color:#8b949e;font-size:10px}
 
-/* Section divider */
-.section-label{font-size:12px;font-weight:600;color:#484f58;text-transform:uppercase;letter-spacing:1px;padding:20px 0 12px;border-top:1px solid #21262d;margin-top:12px}
+/* Search */
+.search-bar{padding:12px 36px;border-bottom:1px solid #21262d;display:flex;gap:8px}
+.search-input{flex:1;height:34px;padding:0 12px;border:1px solid #30363d;border-radius:6px;background:#0d1117;color:#c9d1d9;font-size:13px;outline:none}
+.search-input:focus{border-color:#00bfa5}
+.search-input::placeholder{color:#484f58}
+.search-btn{height:34px;padding:0 16px;border:none;border-radius:6px;background:#00bfa5;color:#fff;font-size:12px;font-weight:500;cursor:pointer}
 
-/* States */
-.loading-state{text-align:center;padding:60px 0;color:#8b949e}
+/* Loading / Empty */
+.state{text-align:center;padding:60px 36px;color:#8b949e;font-size:14px}
 .spinner{width:20px;height:20px;border:2px solid #21262d;border-top-color:#00bfa5;border-radius:50%;animation:spin 0.7s linear infinite;margin:0 auto 12px}
 @keyframes spin{to{transform:rotate(360deg)}}
-.empty-state{text-align:center;padding:60px 0;color:#484f58}
 
 /* Responsive */
 @media(max-width:768px){
-  .sidebar{display:none}
-  .topbar{padding:12px 16px}
-  .coverage{padding:12px 16px}
-  .tabs-bar{padding:0 16px 12px}
-  .feed{padding:0 16px 40px}
-  .headline{padding:16px}
-  .headline .hl-title{font-size:16px}
-  .search-input{width:120px}
-  .coverage-inner{flex-wrap:wrap;gap:12px}
+  .sb{display:none}
+  .mn-hd{padding:20px 16px 16px}
+  .wk-sel,.hl-section,.cards,.search-bar{padding-left:16px;padding-right:16px}
+  .card-title{font-size:14px}
 }
 </style>
 </head>
 <body>
 <div class="app">
 
-<!-- Sidebar -->
-<aside class="sidebar">
-  <div class="sidebar-brand">Game<span>AI</span></div>
-  <nav class="sidebar-nav">
-    <div class="nav-item active" data-nav="all">
-      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg>
-      全部精选
-    </div>
-    <div class="nav-divider"></div>
-    <div class="nav-item" data-nav="creation">
-      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M11.013 1.427a1.75 1.75 0 012.474 0l1.086 1.086a1.75 1.75 0 010 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 01-.927-.928l.929-3.25a1.75 1.75 0 01.445-.758l8.61-8.61z"/></svg>
-      AI 游戏生成
-    </div>
-    <div class="nav-item" data-nav="in-game">
-      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"/></svg>
-      游戏内 AI
-    </div>
-    <div class="nav-item" data-nav="dev-tools">
-      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M4.72 3.22a.75.75 0 011.06 1.06L2.06 8l3.72 3.72a.75.75 0 11-1.06 1.06l-4.25-4.25a.75.75 0 010-1.06l4.25-4.25zm6.56 0a.75.75 0 10-1.06 1.06L13.94 8l-3.72 3.72a.75.75 0 101.06 1.06l4.25-4.25a.75.75 0 000-1.06l-4.25-4.25z"/></svg>
-      开发工具
-    </div>
-    <div class="nav-item" data-nav="ops">
-      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"/></svg>
-      运营商业化
-    </div>
-    <div class="nav-item" data-nav="industry">
-      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M1.5 14.25c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25v12.5zM0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75z"/></svg>
-      行业动态
-    </div>
-    <div class="nav-item" data-nav="research">
-      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M0 1.75A.75.75 0 01.75 1h4.253c1.227 0 2.317.59 3 1.501A3.744 3.744 0 0111.006 1h4.245a.75.75 0 01.75.75v10.5a.75.75 0 01-.75.75h-4.507a2.25 2.25 0 00-1.591.659l-.622.621a.75.75 0 01-1.06 0l-.622-.621A2.25 2.25 0 005.258 13H.75a.75.75 0 01-.75-.75V1.75z"/></svg>
-      前沿研究
-    </div>
+<aside class="sb">
+  <div class="sb-brand">Game<span>AI</span></div>
+  <nav class="sb-nav">
+    <div class="ni active" data-view="weekly"><span class="ic">W</span>周报</div>
+    <div class="ni" data-view="daily"><span class="ic">D</span>每日全量</div>
+    <div class="sb-div"></div>
+    <div class="sb-label">按分类</div>
+    <div class="ni" data-view="cat" data-cat="in-game"><span class="ic" style="color:#059669">*</span>游戏内 AI</div>
+    <div class="ni" data-view="cat" data-cat="creation"><span class="ic" style="color:#8b5cf6">*</span>AI 游戏生成</div>
+    <div class="ni" data-view="cat" data-cat="dev-tools"><span class="ic" style="color:#2563eb">*</span>开发工具</div>
+    <div class="ni" data-view="cat" data-cat="ops"><span class="ic" style="color:#d97706">*</span>运营商业化</div>
+    <div class="ni" data-view="cat" data-cat="industry"><span class="ic" style="color:#dc2626">*</span>行业动态</div>
+    <div class="ni" data-view="cat" data-cat="research"><span class="ic" style="color:#6366f1">*</span>前沿研究</div>
   </nav>
 </aside>
 
-<!-- Main -->
-<div class="main" id="main-scroll">
-  <!-- Top bar -->
-  <div class="topbar">
-    <div class="topbar-left">
-      <button class="date-nav-btn" id="btn-prev">&larr;</button>
-      <span class="date-text" id="date-display">--</span>
-      <button class="date-nav-btn" id="btn-next">&rarr;</button>
-    </div>
-    <div class="topbar-right">
-      <input class="search-input" id="search" type="text" placeholder="搜索标题/摘要...">
-      <button class="search-btn" onclick="doSearch()">搜索</button>
-    </div>
-  </div>
-
-  <!-- Coverage stats -->
-  <div class="coverage">
-    <div class="coverage-inner">
-      <div class="coverage-stat"><span class="num" id="ct-total">--</span><span class="label">今日精选</span></div>
-      <div class="coverage-divider"></div>
-      <div class="coverage-stat"><span class="num" id="ct-primary">--</span><span class="label">一手信源</span></div>
-      <div class="coverage-divider"></div>
-      <div class="coverage-stat"><span class="num">174+</span><span class="label">扫描信源数</span></div>
-      <div class="coverage-divider"></div>
-      <div class="coverage-text">从 <strong>24 个游戏/AI 专业信源</strong> + <strong>150+ AI 热点信源</strong>中筛选，仅保留与游戏行业 AI 应用直接相关的内容。</div>
-    </div>
-  </div>
-
-  <!-- Tabs -->
-  <div class="tabs-bar" id="tabs">
-    <div class="tab active" data-tab="all">全部</div>
-    <div class="tab" data-tab="creation">生成与创作</div>
-    <div class="tab" data-tab="in-game">游戏内AI</div>
-    <div class="tab" data-tab="dev-tools">开发工具</div>
-    <div class="tab" data-tab="ops">运营商业化</div>
-    <div class="tab" data-tab="industry">行业动态</div>
-    <div class="tab" data-tab="research">前沿研究</div>
-  </div>
-
-  <!-- Feed -->
-  <div class="feed" id="feed">
-    <div class="loading-state" id="loading"><div class="spinner"></div>正在加载...</div>
-  </div>
-</div>
+<div class="mn" id="main"></div>
 
 </div>
 
@@ -220,333 +122,180 @@ a:hover{text-decoration:underline}
 (function(){
 'use strict';
 
-const CATS={creation:'AI 游戏生成与创作','in-game':'游戏内 AI 体验','dev-tools':'游戏开发 AI 工具',ops:'运营商业化',industry:'行业动态',research:'前沿研究'};
 const CAT_SHORT={creation:'生成与创作','in-game':'游戏内AI','dev-tools':'开发工具',ops:'运营商业化',industry:'行业动态',research:'前沿研究'};
+const WEEKS=['2026-05-19','2026-05-12','2026-05-05'];
 
-let data=null,currentDate=null,navFilter='all',tabFilter='all',query='';
+let weekData={},dailyData=null,currentView='weekly',currentWeek=WEEKS[0],currentCat='',query='';
+const $main=document.getElementById('main');
 
-const $feed=document.getElementById('feed');
-const $loading=document.getElementById('loading');
-const $dateDisplay=document.getElementById('date-display');
-const $search=document.getElementById('search');
-const $ctTotal=document.getElementById('ct-total');
-const $ctPrimary=document.getElementById('ct-primary');
-
-async function loadData(date){
-  $loading.style.display='block';
-  $feed.querySelectorAll('.headline,.card,.section-label,.empty-state').forEach(e=>e.remove());
-  const file=date?`data/${date}.json`:'data/latest.json';
+// ====== Load weekly data ======
+async function loadWeek(weekId){
   try{
-    const r=await fetch(file);
-    if(!r.ok)throw new Error(r.status===404?'暂无当日数据':'加载失败');
-    data=await r.json();
-    currentDate=data.date||date;
-    if(currentDate)history.replaceState(null,'','#'+currentDate);
-    $loading.style.display='none';
-    render();
-  }catch(e){
-    $loading.style.display='none';
-    $feed.innerHTML=`<div class="empty-state">${esc(e.message)}</div>`;
-  }
+    if(weekData[weekId])return weekData[weekId];
+    const r=await fetch(`data/week-${weekId}.json`);
+    if(!r.ok)return null;
+    const d=await r.json();
+    weekData[weekId]=d;
+    return d;
+  }catch(e){return null;}
 }
 
-function render(){
-  if(!data||!data.items)return;
-  // Date
-  const d=new Date(currentDate);
-  $dateDisplay.textContent=`${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日`;
-  // Stats
-  const primaryCount=data.items.filter(i=>i.source_type==='primary').length;
-  $ctTotal.textContent=data.items.length;
-  $ctPrimary.textContent=primaryCount;
-
-  // Get filtered items
-  const items=getItems();
-  if(items.length===0){
-    $feed.innerHTML='<div class="empty-state">暂无匹配内容</div>';
-    return;
-  }
-
-  // Split: headline (first primary) + rest
-  let headline=null;
-  let rest=[];
-  if(!query && tabFilter==='all' && navFilter==='all'){
-    const primaryItems=items.filter(i=>i.source_type==='primary');
-    if(primaryItems.length>0){
-      headline=primaryItems[0];
-      rest=items.filter(i=>i!==headline);
-    }else{
-      rest=items;
-    }
-  }else{
-    rest=items;
-  }
-
-  let html='';
-
-  // Headline card
-  if(headline){
-    const cat=headline.category||'industry';
-    const digest=makeDigest(headline);
-    const title=makeTitle(headline);
-    html+=`<div class="headline">
-      <span class="hl-badge">头条</span>
-      <div class="hl-title"><a href="${esc(headline.url||'#')}" target="_blank" rel="noopener">${title}</a></div>
-      <div class="hl-reason">${digest}</div>
-      <div class="hl-meta"><span class="source">${esc(headline.source||'')}</span><span>${fmtDate(headline.published_at)}</span><span class="card-cat cat-${cat}">${esc(CAT_SHORT[cat]||cat)}</span></div>
-      ${headline.tags&&headline.tags.length?`<div class="hl-tags">${headline.tags.map(t=>`<span>${esc(t)}</span>`).join('')}</div>`:''}
-    </div>`;
-  }
-
-  // Section: important (primary)
-  const important=rest.filter(i=>i.source_type==='primary');
-  const others=rest.filter(i=>i.source_type!=='primary');
-
-  if(important.length>0 && others.length>0){
-    html+=renderCards(important);
-    html+=`<div class="section-label">其他相关</div>`;
-    html+=renderCards(others);
-  }else{
-    html+=renderCards(rest);
-  }
-
-  $feed.innerHTML=html;
+async function loadDaily(){
+  try{
+    const r=await fetch('data/latest.json');
+    if(!r.ok)return null;
+    dailyData=await r.json();
+    return dailyData;
+  }catch(e){return null;}
 }
 
-function renderCards(items){
-  return items.map(item=>{
-    const cat=item.category||'industry';
-    const digest=makeDigest(item);
-    const title=makeTitle(item);
-    return `<div class="card">
-      <div class="card-head">
-        <div class="card-title"><a href="${esc(item.url||'#')}" target="_blank" rel="noopener">${title}</a></div>
-        <span class="card-cat cat-${cat}">${esc(CAT_SHORT[cat]||cat)}</span>
-      </div>
-      <div class="card-reason">${digest}</div>
-      <div class="card-bottom">
-        <div class="card-meta"><span class="source">${esc(item.source||'')}</span><span>${fmtDate(item.published_at)}</span></div>
-        ${item.tags&&item.tags.length?`<div class="card-tags">${item.tags.map(t=>`<span>${esc(t)}</span>`).join('')}</div>`:''}
-      </div>
-    </div>`;
-  }).join('');
-}
+// ====== Render views ======
+async function renderWeekly(){
+  $main.innerHTML='<div class="state"><div class="spinner"></div></div>';
+  const d=await loadWeek(currentWeek);
+  if(!d){$main.innerHTML='<div class="state">暂无数据</div>';return;}
 
-function getItems(){
-  if(!data||!data.items)return[];
-  let items=[...data.items];
-  items.sort((a,b)=>{
-    // Primary first, then by time
-    if(a.source_type==='primary'&&b.source_type!=='primary')return -1;
-    if(b.source_type==='primary'&&a.source_type!=='primary')return 1;
-    return (b.published_at?new Date(b.published_at).getTime():0)-(a.published_at?new Date(a.published_at).getTime():0);
+  let weekBtns=WEEKS.map(w=>`<button class="wk-btn ${w===currentWeek?'active':''}" data-week="${w}">${fmtWeekLabel(w)}</button>`).join('');
+
+  let highlights=d.highlights.map(h=>`<li class="hl-item">${esc(h)}</li>`).join('');
+
+  let cards=d.items.map(item=>renderCard(item)).join('');
+
+  $main.innerHTML=`
+    <div class="mn-hd"><h1 class="mn-title">${esc(d.title)}</h1><p class="mn-sub">每周精选最重要的游戏 x AI 动态</p></div>
+    <div class="wk-sel">${weekBtns}</div>
+    <div class="hl-section"><div class="hl-label">本周速递</div><ol class="hl-list">${highlights}</ol></div>
+    <div class="cards">${cards}</div>
+  `;
+
+  // Bind week buttons
+  $main.querySelectorAll('.wk-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{currentWeek=btn.dataset.week;renderWeekly();});
   });
-  if(navFilter!=='all')items=items.filter(i=>i.category===navFilter);
-  if(tabFilter!=='all')items=items.filter(i=>i.category===tabFilter);
-  if(query){
-    const q=query.toLowerCase();
-    items=items.filter(i=>(i.title&&i.title.toLowerCase().includes(q))||(i.summary&&i.summary.toLowerCase().includes(q)));
-  }
-  return items;
 }
 
-/**
- * makeTitle: 标题清晰化
- * 1. 英文标题 → 用source + 中文摘要第一句改写
- * 2. 中文标题不含公司名 → 前缀source
- */
+async function renderDaily(){
+  $main.innerHTML='<div class="state"><div class="spinner"></div></div>';
+  if(!dailyData)await loadDaily();
+  if(!dailyData){$main.innerHTML='<div class="state">暂无数据</div>';return;}
+
+  let items=dailyData.items||[];
+  items.sort((a,b)=>(a.source_type==='primary'?0:1)-(b.source_type==='primary'?0:1));
+
+  let cards=items.map(item=>renderDailyCard(item)).join('');
+
+  $main.innerHTML=`
+    <div class="mn-hd"><h1 class="mn-title">每日全量 - ${dailyData.date||''}</h1><p class="mn-sub">今日共 ${items.length} 条，来自 174+ 信源扫描筛选</p></div>
+    <div class="search-bar"><input class="search-input" id="search" placeholder="搜索标题..." onkeydown="if(event.key==='Enter')filterDaily()"><button class="search-btn" onclick="filterDaily()">搜索</button></div>
+    <div class="cards" id="daily-cards">${cards}</div>
+  `;
+}
+
+async function renderCategory(cat){
+  $main.innerHTML='<div class="state"><div class="spinner"></div></div>';
+  // Collect from all weeks
+  let allItems=[];
+  for(const w of WEEKS){
+    const d=await loadWeek(w);
+    if(d&&d.items)allItems.push(...d.items.filter(i=>i.category===cat));
+  }
+  if(allItems.length===0){$main.innerHTML='<div class="state">暂无该分类内容</div>';return;}
+
+  let cards=allItems.map(item=>renderCard(item)).join('');
+  $main.innerHTML=`
+    <div class="mn-hd"><h1 class="mn-title">${esc(CAT_SHORT[cat]||cat)}</h1><p class="mn-sub">过去三周该方向的所有动态</p></div>
+    <div class="cards">${cards}</div>
+  `;
+}
+
+// ====== Card renderer (weekly format) ======
+function renderCard(item){
+  const cat=item.category||'industry';
+  let detailsHtml='';
+  if(item.details&&item.details.length){
+    detailsHtml=`<ul class="card-details">${item.details.map(d=>`<li>${esc(d)}</li>`).join('')}</ul>`;
+  }
+  return `<div class="card">
+    <div class="card-hd">
+      <div class="card-title"><a href="${esc(item.url||'#')}" target="_blank" rel="noopener">${esc(item.title)}</a></div>
+      <span class="card-cat cat-${cat}">${esc(CAT_SHORT[cat]||cat)}</span>
+    </div>
+    <div class="card-body">
+      <div class="card-row"><span class="lb">核心:</span><span class="vl">${esc(item.key_point||'')}</span></div>
+      ${detailsHtml}
+    </div>
+    ${item.recommendation?`<div class="card-rec">${esc(item.recommendation)}</div>`:''}
+    <div class="card-ft">
+      <span>${esc(item.source||'')} | ${esc(item.published_at||'')}</span>
+      ${item.tags&&item.tags.length?`<div class="tags">${item.tags.map(t=>`<span>${esc(t)}</span>`).join('')}</div>`:''}
+    </div>
+  </div>`;
+}
+
+// Daily card (from raw JSON)
+function renderDailyCard(item){
+  const cat=item.category||'industry';
+  const summary=(item.summary||'').replace(/\n/g,' ').slice(0,150);
+  const title=makeTitle(item);
+  return `<div class="card" data-title="${esc(item.title)}">
+    <div class="card-hd">
+      <div class="card-title"><a href="${esc(item.url||'#')}" target="_blank" rel="noopener">${title}</a></div>
+      <span class="card-cat cat-${cat}">${esc(CAT_SHORT[cat]||cat)}</span>
+    </div>
+    <div class="card-body">
+      <div class="card-row"><span class="lb">核心:</span><span class="vl">${esc(summary)}</span></div>
+    </div>
+    <div class="card-ft"><span>${esc(item.source||'')} | ${fmtDate(item.published_at)}</span></div>
+  </div>`;
+}
+
 function makeTitle(item){
   const title=item.title||'';
   const source=item.source||'';
-  const summary=item.summary||'';
-
-  // Detect English title (>50% ASCII)
-  const asciiRatio=title.replace(/[^\x00-\x7F]/g,'').length/Math.max(title.length,1);
-  if(asciiRatio>0.5){
-    // English title: use Chinese summary first sentence as title
-    if(summary){
-      const firstSentence=summary.split(/[。！？\n]/)[0].replace(/^\s*\S+\s*\d+\s*月\s*\d+\s*日[消息，]*/, '').trim();
-      if(firstSentence.length>8 && firstSentence.length<80){
-        // Extract company from source
-        const company=extractCompany(source,summary,title);
-        return esc(company?`【${company}】${firstSentence}`:`【${source}】${firstSentence}`);
-      }
-    }
-    // Fallback: prefix source
-    const company=extractCompany(source,summary,title);
-    return esc(`【${company||source}】${title}`);
+  const ascii=title.replace(/[^\x00-\x7F]/g,'').length/Math.max(title.length,1);
+  if(ascii>0.5){
+    // English - prepend source
+    const summary=(item.summary||'').split(/[。\n]/)[0].replace(/^[^，]*[，,]\s*/,'').slice(0,60);
+    if(summary.length>10)return esc(`【${source.split(/[(/]/)[0].trim()}】${summary}`);
+    return esc(`【${source}】${title.slice(0,50)}`);
   }
-
-  // Chinese title: check if company name already present
-  const company=extractCompany(source,summary,title);
-  if(company && !title.includes(company) && title.length<60){
-    return esc(`【${company}】${title}`);
-  }
+  // Check if company already in title
+  const companies=['米哈游','索尼','育碧','腾讯','网易','百度','NVIDIA','Google','Epic','Xbox','AMD','GitHub','Unity','Take-Two'];
+  for(const c of companies){if(title.includes(c))return esc(title);}
+  // Prefix source
+  const short=source.split(/[(/（]/)[0].trim();
+  if(short&&short.length<8)return esc(`【${short}】${title}`);
   return esc(title);
 }
 
-/**
- * extractCompany: 从source/summary/title中提取核心公司/平台名
- */
-function extractCompany(source,summary,title){
-  // Known mappings
-  const known={'NVIDIA Blog':'NVIDIA','GamesIndustry.biz':'','TechCrunch':'','Unity Blog':'Unity','Unreal Engine Blog':'Epic/Unreal','DeepMind Blog':'Google DeepMind','Google Developers Blog':'Google','The Decoder':'','Hacker News':'','游戏陀螺':'','IT之家':'','IT之家（RSS）':'','游戏葡萄':'','36Kr':'','机器之心':''};
-  if(source in known && known[source])return known[source];
+// ====== Utils ======
+function esc(s){if(!s)return'';const d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+function fmtDate(iso){if(!iso)return'';try{const d=new Date(iso);return`${d.getMonth()+1}/${d.getDate()}`}catch(e){return''}}
+function fmtWeekLabel(w){const d=new Date(w);return`${d.getMonth()+1}.${d.getDate()} - ${d.getDate()+6}`;}
 
-  // Try to find company in title/summary
-  const companies=['Google','NVIDIA','Unity','Epic','育碧','腾讯','网易','米哈游','百度','微软','Xbox','PlayStation','Steam','Valve','EA','Take-Two','Riot','暴雪','任天堂','Nintendo','Meta','OpenAI','DeepSeek','Gemini'];
-  const combined=title+' '+summary.slice(0,200);
-  for(const c of companies){
-    if(combined.includes(c))return c;
-  }
+window.filterDaily=function(){
+  const q=document.getElementById('search').value.trim().toLowerCase();
+  document.querySelectorAll('#daily-cards .card').forEach(c=>{
+    const t=(c.dataset.title||'').toLowerCase();
+    c.style.display=(!q||t.includes(q))?'':'none';
+  });
+};
 
-  // Use source's main entity
-  if(source.startsWith('X：')){
-    const match=source.match(/X：(.+?)[\s(（@]/);
-    return match?match[1]:source.replace('X：','');
-  }
-  return '';
-}
-
-/**
- * makeDigest: 板块化推荐理由
- * - 核心：一句话说清楚发生了什么（最短的事实陈述）
- * - 关注：对微信游戏社区可能的价值/启示
- * - 数据：关键数字（如有）
- */
-function makeDigest(item){
-  const summary=(item.summary||'').replace(/\n+/g,' ').replace(/\s+/g,' ').trim();
-  if(!summary)return item.recommendation?`<div class="row"><span class="rl">核心：</span><span class="rv">${esc(item.recommendation)}</span></div>`:'';
-
-  // Extract first factual sentence (skip "IT之家X月X日消息" prefix)
-  let cleaned=summary.replace(/^(IT之家|IT之家了解到|据.*?报道)[^，。]*[，,]\s*/,'');
-  const sentences=cleaned.split(/(?<=[。！？])\s*/).filter(s=>s.length>6);
-
-  // Core fact: first sentence, trimmed
-  let core=sentences[0]||cleaned.slice(0,100);
-  core=core.replace(/[。！？]+$/,'');
-  if(core.length>80)core=core.slice(0,80)+'...';
-
-  // Key numbers/data
-  let dataPoint='';
-  const allText=summary;
-  const numMatches=allText.match(/\d[\d,.]*\s*[%％亿万美元倍人次条款个家]+/g);
-  if(numMatches&&numMatches.length>0){
-    dataPoint=numMatches.slice(0,3).join('、');
-  }
-
-  // Relevance to WeChat Game Community
-  const relevance=getRelevance(item);
-
-  let html=`<div class="row"><span class="rl">核心：</span><span class="rv">${esc(core)}</span></div>`;
-  if(relevance){
-    html+=`<div class="row"><span class="rl">关注：</span><span class="rd">${esc(relevance)}</span></div>`;
-  }
-  if(dataPoint){
-    html+=`<div class="row"><span class="rl">数据：</span><span class="rd">${esc(dataPoint)}</span></div>`;
-  }
-  return html;
-}
-
-/**
- * getRelevance: 根据分类和内容，生成对微信游戏社区的关联说明
- */
-function getRelevance(item){
-  const cat=item.category;
-  const text=(item.title+' '+(item.summary||'')).toLowerCase();
-
-  // Category-specific relevance
-  if(cat==='in-game'){
-    if(text.includes('npc'))return'智能NPC技术可提升社区内游戏讨论深度和UGC创作素材';
-    if(text.includes('ugc')||text.includes('创作'))return'玩家创作工具降低内容生产门槛，直接利好社区UGC生态';
-    if(text.includes('ai生成')||text.includes('世界模型'))return'AI生成游戏内容意味着更多可分享的独特体验，利好社区话题';
-    return'AI改变游戏体验方式，可能催生新的社区讨论热点和内容形态';
-  }
-  if(cat==='creation'){
-    if(text.includes('art')||text.includes('美术'))return'AI美术降本增效，关注是否影响社区原创内容价值判定';
-    return'AI创作工具迭代可能改变社区内容生产模式';
-  }
-  if(cat==='dev-tools'){
-    if(text.includes('dlss')||text.includes('画质'))return'画质技术影响玩家游戏体验，可作为社区科普/讨论内容方向';
-    if(text.includes('引擎')||text.includes('engine'))return'引擎能力升级意味着更多高质量游戏产出，间接影响社区内容供给';
-    return'开发工具进展影响游戏品质和产出效率';
-  }
-  if(cat==='ops'){
-    if(text.includes('推荐')||text.includes('分发'))return'AI分发逻辑直接影响社区内容曝光机制，值得参考';
-    if(text.includes('play')||text.includes('商店'))return'应用商店AI化改变用户发现游戏的路径，影响社区导流价值';
-    return'运营侧AI实践可为社区智能推荐和用户分层提供参考';
-  }
-  if(cat==='industry'){
-    if(text.includes('融资')||text.includes('invest'))return'资本动向预示行业未来重点方向';
-    if(text.includes('裁员')||text.includes('layoff'))return'行业人力结构变化反映AI对游戏生产模式的实质冲击';
-    if(text.includes('战略')||text.includes('strategy'))return'大厂AI战略调整可能影响合作生态和平台竞争格局';
-    return'行业格局变化可能影响社区生态和合作方向';
-  }
-  if(cat==='research'){
-    if(text.includes('图灵')||text.includes('turing')||text.includes('对话'))return'对话AI突破直接影响社区智能客服、AI陪伴等场景可行性';
-    if(text.includes('多智能体')||text.includes('multi-agent'))return'多智能体技术可能催生新型多人互动游戏形态，影响社区玩法';
-    return'前沿研究预示1-2年后可落地的社区/游戏能力';
-  }
-  return'';
-}
-
-function fmtDate(iso){
-  if(!iso)return'';
-  try{const d=new Date(iso);return`${d.getMonth()+1}/${d.getDate()} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`}catch(e){return''}
-}
-function esc(s){if(!s)return'';const d=document.createElement('div');d.textContent=s;return d.innerHTML}
-function toISO(d){return`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
-
-window.doSearch=function(){query=$search.value.trim();render()};
-$search.addEventListener('keydown',e=>{if(e.key==='Enter')doSearch()});
-
-// Date nav
-document.getElementById('btn-prev').addEventListener('click',()=>{
-  if(!currentDate)return;const d=new Date(currentDate);d.setDate(d.getDate()-1);loadData(toISO(d));
-});
-document.getElementById('btn-next').addEventListener('click',()=>{
-  if(!currentDate)return;const d=new Date(currentDate);d.setDate(d.getDate()+1);loadData(toISO(d));
-});
-
-// Tabs
-document.getElementById('tabs').addEventListener('click',e=>{
-  const tab=e.target.closest('.tab');
-  if(!tab)return;
-  tabFilter=tab.getAttribute('data-tab');
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  tab.classList.add('active');
-  render();
-});
-
-// Sidebar nav
-document.querySelectorAll('.nav-item[data-nav]').forEach(item=>{
+// ====== Navigation ======
+document.querySelectorAll('.ni').forEach(item=>{
   item.addEventListener('click',()=>{
-    document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+    document.querySelectorAll('.ni').forEach(n=>n.classList.remove('active'));
     item.classList.add('active');
-    navFilter=item.getAttribute('data-nav');
-    tabFilter='all';
-    document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.getAttribute('data-tab')==='all'));
-    render();
-    document.getElementById('main-scroll').scrollTop=0;
+    const view=item.dataset.view;
+    if(view==='weekly'){currentView='weekly';renderWeekly();}
+    else if(view==='daily'){currentView='daily';renderDaily();}
+    else if(view==='cat'){currentView='cat';currentCat=item.dataset.cat;renderCategory(currentCat);}
   });
 });
 
-// Keyboard
-document.addEventListener('keydown',e=>{
-  if(e.target.tagName==='INPUT')return;
-  if(e.key==='ArrowLeft')document.getElementById('btn-prev').click();
-  if(e.key==='ArrowRight')document.getElementById('btn-next').click();
-});
+// ====== Init: default weekly ======
+renderWeekly();
 
-// Hash
-window.addEventListener('hashchange',()=>{
-  const h=location.hash.slice(1);
-  if(/^\d{4}-\d{2}-\d{2}$/.test(h)&&h!==currentDate)loadData(h);
-});
-
-// Init
-const hash=location.hash.slice(1);
-loadData(/^\d{4}-\d{2}-\d{2}$/.test(hash)?hash:null);
 })();
 </script>
 </body>

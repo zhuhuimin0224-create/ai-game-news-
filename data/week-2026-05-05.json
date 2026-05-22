@@ -1,0 +1,146 @@
+{
+  "week_start": "2026-05-05",
+  "week_end": "2026-05-11",
+  "title": "游戏 x AI 资讯周报 · 5.5 - 5.11",
+  "highlights": [
+    "Google DeepMind入股EVE Online开发商，用MMO攻克AI长期规划问题",
+    "开源项目Claude Code Game Studios：48个AI智能体复刻完整游戏工作室流程",
+    "Sony公布PlayStation工作室AI工具使用路线图",
+    "Inworld AI发布新一代实时NPC语音模型Realtime TTS-2",
+    "Xbox叫停Copilot AI助手开发，大厂首个AI游戏助手踩坑案例"
+  ],
+  "items": [
+    {
+      "title": "【Google DeepMind】入股EVE Online开发商，用MMO攻克AI长期规划",
+      "url": "https://the-decoder.com/google-deepmind-takes-a-stake-in-eve-online-studio-to-test-ai-models",
+      "source": "The Decoder",
+      "published_at": "2026-05-06",
+      "category": "research",
+      "key_point": "DeepMind将EVE Online作为AI研究测试平台，研究复杂社会系统中的长期规划与多智能体协作。CEO Demis Hassabis亲自宣布。",
+      "details": ["继AlphaGo下围棋后，DeepMind瞄准MMO——更复杂的多智能体社会系统", "EVE Online是现存最复杂的虚拟经济体之一，玩家行为接近真实社会"],
+      "recommendation": "游戏作为AI训练场的价值被再次验证，而且从棋盘升级到了MMO社会模拟。",
+      "tags": ["DeepMind", "EVE Online", "多智能体"]
+    },
+    {
+      "title": "【Sony】公布PlayStation工作室AI工具使用路线图",
+      "url": "https://www.gamesindustry.biz/sony-maps-out-how-first-party-playstation-studios-are-utilising-ai-tools-during-development",
+      "source": "GamesIndustry.biz",
+      "published_at": "2026-05-11",
+      "category": "industry",
+      "key_point": "索尼详细规划AI如何整合进第一方工作室的游戏开发全流程。",
+      "details": ["主机三巨头之一首次系统性公开AI开发战略", "不是一句\"我们在用AI\"，是完整路线图"],
+      "recommendation": "索尼给出了\"大厂怎么把AI嵌入游戏开发pipeline\"的标准答案，对中型团队有直接参考价值。",
+      "tags": ["索尼", "开发流程", "路线图"]
+    },
+    {
+      "title": "【索尼】AI新专利：自动记录/制作游戏高光时刻+与万代南梦宫AI合作",
+      "url": "https://x.com/kimmonismus/status/2052881118395830326",
+      "source": "X: @kimmonismus",
+      "published_at": "2026-05-08",
+      "category": "in-game",
+      "key_point": "索尼两条AI动态——新专利让AI自动识别并剪辑玩家精彩操作；与万代南梦宫合作将AI引入开发流程。",
+      "details": ["AI从开发侧延伸到玩家体验侧，索尼两端同时布局", "\"高光时刻\"自动剪辑——解决了玩家\"打完就忘\"的痛点"],
+      "recommendation": "AI不只帮开发者做游戏，也开始帮玩家\"记住\"自己的精彩操作，体验侧的AI应用值得关注。",
+      "tags": ["索尼", "专利", "高光剪辑"]
+    },
+    {
+      "title": "【Epic】高管：AI不会取代游戏岗位，尽管刚裁员千人",
+      "url": "https://www.epicgames.com/site/news/todays-layoffs",
+      "source": "Epic Games官方",
+      "published_at": "2026-05-10",
+      "category": "industry",
+      "key_point": "CEO Tim Sweeney声明裁员与AI无关，同时透露85% QA工作已用AI工具完成。",
+      "details": ["\"裁员千人\"+\"AI不替人\"+\"85% QA已用AI\"——三个信息放在一起很矛盾", "官方口径是\"业务调整\"而非AI替代"],
+      "recommendation": "引擎巨头的官方说辞与现实的矛盾，是当前游戏行业AI焦虑的缩影。",
+      "tags": ["Epic", "裁员", "QA自动化"]
+    },
+    {
+      "title": "【Xbox】叫停Copilot AI助手开发",
+      "url": "https://www.dexerto.com/gaming/xbox-ceo-ends-copilot-ai-development-overhauls-leadership-3361353",
+      "source": "Dexerto",
+      "published_at": "2026-05-06",
+      "category": "industry",
+      "key_point": "微软游戏AI助手Copilot遇冷，Xbox新CEO重组管理层并叫停开发。",
+      "details": ["大厂AI游戏助手的首个\"踩坑\"案例", "用户不买账时该如何收场——直接砍掉"],
+      "recommendation": "证明\"给游戏加个AI助手\"不是万能公式，玩家不需要的AI功能做了也白做。",
+      "tags": ["Xbox", "微软", "AI助手"]
+    },
+    {
+      "title": "【Inworld AI】发布实时NPC语音模型Realtime TTS-2",
+      "url": "https://x.com/testingcatalog/status/2051705563403198511",
+      "source": "X: @testingcatalog",
+      "published_at": "2026-05-05",
+      "category": "in-game",
+      "key_point": "专为游戏NPC设计的实时语音合成新版本，延迟更低、情感表达更丰富。",
+      "details": ["AI NPC语音从\"能说话\"到\"说得像真人\"的关键进展", "专为游戏实时场景优化延迟"],
+      "recommendation": "NPC语音是AI在游戏中最直接的体验层应用，这个进展让AI NPC离\"自然对话\"又近了一步。",
+      "tags": ["Inworld", "NPC语音", "TTS"]
+    },
+    {
+      "title": "【暗黑地牢】制作人拒绝用AI复刻已故旁白演员",
+      "url": "https://80.lv/articles/darkest-dungeon-creator-won-t-replace-late-narrator-with-ai-despite-his-permission/",
+      "source": "80 Level",
+      "published_at": "2026-05-12",
+      "category": "in-game",
+      "key_point": "尽管已获已故旁白Wayne June生前许可，Red Hook Studios仍决定不用AI替代。",
+      "details": ["已有技术可行性+合法授权，但主动选择不做", "玩家社区普遍支持该决定"],
+      "recommendation": "这不是\"能不能\"的问题而是\"该不该\"——AI伦理边界的游戏行业首个标杆案例。",
+      "tags": ["AI伦理", "暗黑地牢"]
+    },
+    {
+      "title": "【开源】Claude Code Game Studios：48个AI智能体复刻完整游戏工作室",
+      "url": "https://x.com/AYi_AInotes/status/2053709074466824688",
+      "source": "X: @AYi_AInotes",
+      "published_at": "2026-05-11",
+      "category": "dev-tools",
+      "key_point": "MIT协议开源，适配Godot/Unity/Unreal三大引擎，GitHub 1.8万stars。所有AI只梳理方案，决策权归用户。",
+      "details": ["48个Agent分别扮演策划、美术、程序、QA等角色", "适配三大主流引擎", "关键设计：AI只提方案不做决策"],
+      "recommendation": "可直接clone试用，作为游戏团队AI辅助开发的参考架构，开源+1.8万stars说明社区认可度高。",
+      "tags": ["开源", "Claude Code", "多智能体"]
+    },
+    {
+      "title": "【MiniMax】启动\"10x Team\"计划，游戏引擎为首批落地方向",
+      "url": "https://www.ithome.com/0/949/029.htm",
+      "source": "IT之家",
+      "published_at": "2026-05-11",
+      "category": "dev-tools",
+      "key_point": "MiniMax提供无限Token和研发资源，面向全球垂直领域专家，游戏引擎已有合作验证。",
+      "details": ["\"无限Token\"——大模型厂拿真金白银补贴游戏方向", "游戏引擎是首批落地方向，不是\"未来计划\""],
+      "recommendation": "大模型厂主动找游戏引擎专家合作，说明这个方向被资本和技术方共同看好。",
+      "tags": ["MiniMax", "游戏引擎"]
+    },
+    {
+      "title": "【字节/豆包】Doubao-Seed-2.0-Lite集成AI电竞教练框架",
+      "url": "https://x.com/karminski3/status/2052156563029385600",
+      "source": "X: @karminski3",
+      "published_at": "2026-05-06",
+      "category": "dev-tools",
+      "key_point": "豆包模型轻量版接入电竞教练场景。",
+      "details": ["国内大模型厂切入游戏垂直场景", "字节在电竞方向先落子"],
+      "recommendation": "字节在游戏+AI的第一个公开落地场景，电竞教练是离变现最近的AI游戏应用之一。",
+      "tags": ["字节", "豆包", "电竞教练"]
+    },
+    {
+      "title": "【论文】LLM Agent的\"记忆诅咒\"——长历史削弱合作能力",
+      "url": "https://x.com/omarsar0/status/2053863994499408214",
+      "source": "X: @omarsar0 (DAIR.AI)",
+      "published_at": "2026-05-11",
+      "category": "research",
+      "key_point": "7个LLM和4个社会困境游戏的实验，28个模型-游戏组合中18个因长历史导致合作退化。通过LoRA适配器可零样本迁移修复。",
+      "details": ["核心发现：AI记忆越长，越倾向\"自私\"行为", "解决方案：LoRA微调可修复"],
+      "recommendation": "直接影响游戏中AI NPC的长期交互设计——如果不处理，AI NPC时间久了会变得不合作。",
+      "tags": ["论文", "记忆", "多智能体"]
+    },
+    {
+      "title": "【Astrocade】获5600万美元融资，AI游戏创作平台",
+      "url": "https://x.com/drfeifei/status/2051710871601356965",
+      "source": "X: 李飞飞",
+      "published_at": "2026-05-05",
+      "category": "industry",
+      "key_point": "斯坦福AI教授李飞飞转发关注，Astrocade获大额融资建设AI游戏创作平台。",
+      "details": ["5600万美元——AI游戏创作赛道单笔最大融资之一", "李飞飞关注说明学术界也在看这个方向"],
+      "recommendation": "资本持续涌入AI游戏创作，这个金额说明投资方认为这不是小赛道。",
+      "tags": ["融资", "Astrocade", "AI创作"]
+    }
+  ]
+}

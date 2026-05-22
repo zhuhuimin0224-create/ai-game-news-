@@ -1,0 +1,91 @@
+{
+  "week_start": "2026-05-19",
+  "week_end": "2026-05-22",
+  "title": "游戏 x AI 资讯周报 · 5.19 - 5.22",
+  "highlights": [
+    "百度AI开发者大会\"AI+游戏\"专场：AI已跨过单点工具阶段，开始重塑整条游戏产业链",
+    "育碧一年裁千人后全力拥抱AI，开发首个\"可游玩的生成式AI体验\"",
+    "Take-Two CEO Strauss Zelnick访谈：详谈GTA、AI与Roblox竞争策略",
+    "NVIDIA GTC台北：AI基础设施+游戏技术新进展（DLSS 4.5实装）",
+    "Odyssey发布Agora-1世界模型：4人同时在AI生成世界中游玩"
+  ],
+  "items": [
+    {
+      "title": "【百度】AI开发者大会\"AI+游戏\"专场：AI重新定义游戏工业化",
+      "url": "https://www.youxituoluo.com/534504.html",
+      "source": "游戏陀螺",
+      "published_at": "2026-05-22",
+      "category": "in-game",
+      "key_point": "5月14日Create 2026百度AI开发者大会释放明确信号——AI在游戏行业已跨过单点试错阶段，开始作为基础设施重塑整条研发管线。",
+      "details": ["行业痛点不再是\"有没有AI工具\"，而是\"如何让AI跑通完整pipeline\"", "从单点提效到全流程重塑的临界点"],
+      "recommendation": "对微信游戏社区而言，AI重塑研发管线意味着更多中小团队能产出高质量游戏内容，社区UGC和游戏供给都会增加。",
+      "tags": ["百度", "工业化", "研发管线"]
+    },
+    {
+      "title": "【育碧】一年裁千人后全力拥抱AI，开发首个\"可游玩的生成式AI体验\"",
+      "url": "https://www.ithome.com/0/953/705.htm",
+      "source": "IT之家（RSS）",
+      "published_at": "2026-05-22",
+      "category": "in-game",
+      "key_point": "育碧在过去一年裁员超过1000名开发人员后，全面转向AI优化研发流程，并正在开发首个\"可游玩的生成式AI体验\"。",
+      "details": ["推进自研\"育碧同伴\"生成式AI项目", "开发辅助质检、高智能NPC等工具", "计划到2029年推出新作阵容，当前重点《刺客信条：Hexe》"],
+      "recommendation": "大厂用裁员腾出的资源all-in AI研发，是\"AI替人\"最直接的行业案例。\"可游玩的生成式AI体验\"若上线将是里程碑。",
+      "tags": ["育碧", "裁员", "生成式AI"]
+    },
+    {
+      "title": "【Take-Two】CEO详谈GTA、AI与Roblox：构建全球最大娱乐公司",
+      "url": "https://www.gamesindustry.biz/the-big-strauss-zelnick-interview-gta-ai-roblox-and-building-the-biggest-entertainment-company-in-the-world",
+      "source": "GamesIndustry.biz",
+      "published_at": "2026-05-22",
+      "category": "industry",
+      "key_point": "Take-Two CEO Strauss Zelnick接受深度访谈，回应GTA VI进展、AI在R星工作室的定位、以及如何看待Roblox的竞争。",
+      "details": ["GTA系列母公司对AI的官方态度首次详细披露", "涉及AI在3A开发中的实际应用场景"],
+      "recommendation": "R星/Take-Two是全球收入最高的游戏公司，其AI策略直接影响3A游戏未来形态和玩家社区讨论方向。",
+      "tags": ["Take-Two", "GTA", "Roblox"]
+    },
+    {
+      "title": "【NVIDIA】GTC台北+DLSS 4.5实装《绝地潜兵2》《007》",
+      "url": "https://blogs.nvidia.com/blog/nvidia-gtc-taipei-computex-2026-news/",
+      "source": "NVIDIA Blog / IT之家",
+      "published_at": "2026-05-21",
+      "category": "dev-tools",
+      "key_point": "NVIDIA GTC台北大会展示AI基础设施最新进展；DLSS 4.5本周实装《绝地潜兵2》和《007》。",
+      "details": ["DLSS从画质技术升级为AI渲染基础设施", "《绝地潜兵2》5月27日实装，解决长期画面闪烁问题"],
+      "recommendation": "DLSS覆盖率持续扩大意味着AI渲染已成为游戏标配，玩家讨论\"画质对比\"将成为社区常驻话题。",
+      "tags": ["NVIDIA", "DLSS", "GTC"]
+    },
+    {
+      "title": "【Odyssey】Agora-1世界模型：4人同时在AI生成世界中游玩经典《GoldenEye》",
+      "url": "https://the-decoder.com",
+      "source": "The Decoder",
+      "published_at": "2026-05-22",
+      "category": "in-game",
+      "key_point": "Odyssey发布世界模型Agora-1，允许最多4名玩家同时在AI生成的虚拟世界中行动，已在经典《GoldenEye》上验证。",
+      "details": ["用两个独立模型分别处理游戏状态模拟与画面渲染", "多人AI世界是首次实现", "未来应用方向：协作机器人和AI智能体训练"],
+      "recommendation": "多人AI生成世界是\"AI原生游戏\"的关键里程碑——如果成熟，游戏不再需要手动设计关卡，社区玩法的想象空间极大。",
+      "tags": ["世界模型", "多人", "AI原生游戏"]
+    },
+    {
+      "title": "【Google】I/O大会：Gemini 3.5 Flash+AI Agent生态+Ask Play",
+      "url": "https://x.com/GeminiApp",
+      "source": "X: Gemini / TechCrunch",
+      "published_at": "2026-05-21",
+      "category": "ops",
+      "key_point": "Google I/O推出Gemini 3.5 Flash（4倍速度解决Agent延迟）、AI Agent消费生态、Ask Play对话式应用推荐。",
+      "details": ["Ask Play用多轮对话替代搜索来发现游戏", "Flash速度突破让24/7自主Agent成为可能"],
+      "recommendation": "Ask Play改变用户发现游戏的路径——从\"搜索/榜单\"变成\"对话推荐\"，直接影响游戏分发和社区导流逻辑。",
+      "tags": ["Google", "Gemini", "Ask Play"]
+    },
+    {
+      "title": "【GPT-4.5】图灵测试76年后首次被AI通过，15分钟对话难辨人机",
+      "url": "https://www.ithome.com/0/953/705.htm",
+      "source": "IT之家",
+      "published_at": "2026-05-22",
+      "category": "research",
+      "key_point": "加州大学实验证明GPT-4.5以73%判定率超越真人，首次在严格图灵测试框架下通过。发表于《美国国家科学院院刊》。",
+      "details": ["15分钟自由对话中人类无法稳定分辨AI与真人", "适当提示下LLM可完全模仿人类语气和逻辑"],
+      "recommendation": "图灵测试通过意味着AI对话质量已达\"以假乱真\"级别——游戏内AI NPC、社区AI客服的体验上限被彻底打开。",
+      "tags": ["GPT-4.5", "图灵测试", "对话AI"]
+    }
+  ]
+}
