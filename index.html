@@ -200,9 +200,16 @@ async function renderWeekly(){
 
   let weekBtns=WEEKS.map(w=>`<button class="wk-btn ${w===currentWeek?'active':''}" data-week="${w}">${fmtWeekLabel(w)}</button>`).join('');
 
-  // Link highlights to items by matching text
-  let highlights=d.highlights.map((h,i)=>{
-    const matchItem=d.items[i];
+  // Link highlights to items by matching text (fuzzy match on keywords)
+  let highlights=d.highlights.map((h)=>{
+    const matchItem=d.items.find(item=>{
+      const hLower=h.toLowerCase();
+      const tLower=(item.title||'').toLowerCase();
+      const kLower=(item.key_point||'').toLowerCase();
+      // Match if title keywords overlap with highlight text
+      const titleWords=tLower.replace(/[【】\[\]]/g,'').split(/[\s,，:：·]+/).filter(w=>w.length>2);
+      return titleWords.some(w=>hLower.includes(w))||hLower.includes(tLower.slice(0,8));
+    });
     const url=matchItem?matchItem.url:'#';
     return `<li class="hl-item"><a href="${esc(url)}" target="_blank" rel="noopener">${esc(h)}</a></li>`;
   }).join('');
