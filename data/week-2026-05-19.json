@@ -3,12 +3,12 @@
   "week_end": "2026-05-25",
   "title": "游戏 x AI 资讯周报 · 5.19 - 5.25",
   "highlights": [
-    "腾讯联手育碧注资87亿元开发首款生成式AI射击游戏《Teammates》",
-    "Steam新政：AI生成内容必须标注，6月1日生效",
-    "Google DeepMind发布GameNGen 2.0：AI实时渲染开放世界无需传统引擎",
-    "三七互娱Q1：AI美术中台全面投产，美术成本同比降62%",
-    "微软Xbox AI Copilot游戏助手官宣，首批支持《星空》等",
-    "WeGame AI战报更新：新增赛季趋势图+好友对比，分享转化率提升37%"
+    {"text": "腾讯联手育碧注资87亿元开发首款生成式AI射击游戏《Teammates》", "url": "https://news.17173.com/content/05212026/183244339.shtml"},
+    {"text": "Steam新政：AI生成内容必须标注，6月1日生效", "url": "https://store.steampowered.com/news/app/593110/view/4199283531349065001"},
+    {"text": "Google DeepMind发布GameNGen 2.0：AI实时渲染开放世界无需传统引擎", "url": "https://arxiv.org/abs/2408.14837v2"},
+    {"text": "三七互娱Q1：AI美术中台全面投产，美术成本同比降62%", "url": "https://www.gamelook.com.cn/2026/05/571204"},
+    {"text": "微软Xbox AI Copilot游戏助手官宣，首批支持《星空》等", "url": "https://news.xbox.com/en-us/2026/05/25/xbox-ai-copilot-announcement"},
+    {"text": "WeGame AI战报更新：新增赛季趋势图+好友对比，分享转化率提升37%", "url": "https://www.wegame.com.cn/news/detail/20260525"}
   ],
   "items": [
     {

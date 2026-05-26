@@ -200,22 +200,14 @@ async function renderWeekly(){
 
   let weekBtns=WEEKS.map(w=>`<button class="wk-btn ${w===currentWeek?'active':''}" data-week="${w}">${fmtWeekLabel(w)}</button>`).join('');
 
-  // Link highlights to items by best keyword overlap
-  let highlights=d.highlights.map((h)=>{
-    const hLower=h.toLowerCase();
-    const hWords=hLower.replace(/[【】\[\]""''《》]/g,'').split(/[\s,，:：;；·、\-\+]+/).filter(w=>w.length>1);
-    let bestItem=null,bestScore=0;
-    d.items.forEach(item=>{
-      const tLower=((item.title||'')+(item.key_point||'')).toLowerCase().replace(/[【】\[\]""''《》]/g,'');
-      let score=0;
-      hWords.forEach(w=>{if(tLower.includes(w))score++;});
-      if(score>bestScore){bestScore=score;bestItem=item;}
-    });
-    const url=(bestItem&&bestScore>=2)?bestItem.url:null;
+  // Link highlights: support both {text,url} objects and plain strings
+  let highlights=(d.highlights||[]).map((h)=>{
+    const text=typeof h==='string'?h:h.text;
+    const url=typeof h==='string'?null:h.url;
     if(url){
-      return `<li class="hl-item"><a href="${esc(url)}" target="_blank" rel="noopener">${esc(h)}</a></li>`;
+      return `<li class="hl-item"><a href="${esc(url)}" target="_blank" rel="noopener">${esc(text)}</a></li>`;
     }else{
-      return `<li class="hl-item"><span style="color:var(--text)">${esc(h)}</span></li>`;
+      return `<li class="hl-item"><span style="color:var(--text)">${esc(text)}</span></li>`;
     }
   }).join('');
 

@@ -3,11 +3,11 @@
   "week_end": "2026-05-11",
   "title": "游戏 x AI 资讯周报 · 5.5 - 5.11",
   "highlights": [
-    "Google DeepMind入股EVE Online开发商，用MMO攻克AI长期规划问题",
-    "开源项目Claude Code Game Studios：48个AI智能体复刻完整游戏工作室流程",
-    "Sony公布PlayStation工作室AI工具使用路线图",
-    "Inworld AI发布新一代实时NPC语音模型Realtime TTS-2",
-    "Xbox叫停Copilot AI助手开发，大厂首个AI游戏助手踩坑案例"
+    {"text": "Google DeepMind入股EVE Online开发商，用MMO攻克AI长期规划问题", "url": "https://the-decoder.com/google-deepmind-takes-a-stake-in-eve-online-studio-to-test-ai-models"},
+    {"text": "开源项目Claude Code Game Studios：48个AI智能体复刻完整游戏工作室流程", "url": "https://x.com/AYi_AInotes/status/2053709074466824688"},
+    {"text": "Sony公布PlayStation工作室AI工具使用路线图", "url": "https://www.gamesindustry.biz/sony-maps-out-how-first-party-studios-will-use-ai"},
+    {"text": "Inworld AI发布新一代实时NPC语音模型Realtime TTS-2", "url": "https://x.com/testingcatalog/status/2051705563403198511"},
+    {"text": "Xbox叫停Copilot AI助手开发，大厂首个AI游戏助手踩坑案例", "url": "https://www.dexerto.com/gaming/xbox-ceo-ends-copilot-ai-development"}
   ],
   "items": [
     {

@@ -3,11 +3,11 @@
   "week_end": "2026-05-18",
   "title": "游戏 x AI 资讯周报 · 5.12 - 5.18",
   "highlights": [
-    "米哈游宣布3年最多投1000亿做AI大模型，目标千人千面个性化游戏",
-    "索尼AI新专利：自动识别并剪辑玩家高光时刻，根据个人水平动态调整标准",
-    "荣耀手机推出\"AI脚步声增强\"硬件功能，AI进入游戏外设层",
-    "AMD申请游戏引擎专利：画草图AI生成游戏场景",
-    "GitHub官方演示用Copilot CLI从零写出完整Roguelike游戏"
+    {"text": "米哈游宣布3年最多投1000亿做AI大模型，目标千人千面个性化游戏", "url": "https://www.ithome.com/0/951/364.htm"},
+    {"text": "索尼AI新专利：自动识别并剪辑玩家高光时刻，根据个人水平动态调整标准", "url": "https://www.163.com/dy/article/KSG8IDD30511B8LM.html"},
+    {"text": "荣耀手机推出\"AI脚步声增强\"硬件功能，AI进入游戏外设层", "url": "https://www.ithome.com/0/950/025.htm"},
+    {"text": "AMD申请游戏引擎专利：画草图AI生成游戏场景", "url": "https://www.ithome.com/0/951/524.htm"},
+    {"text": "GitHub官方演示用Copilot CLI从零写出完整Roguelike游戏", "url": "https://github.blog/ai-and-ml/github-copilot/dungeons-desktops-building-a-procedurally-generated-roguelike-with-github-copilot-cli"}
   ],
   "items": [
     {
