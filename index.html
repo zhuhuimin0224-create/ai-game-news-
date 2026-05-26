@@ -200,18 +200,23 @@ async function renderWeekly(){
 
   let weekBtns=WEEKS.map(w=>`<button class="wk-btn ${w===currentWeek?'active':''}" data-week="${w}">${fmtWeekLabel(w)}</button>`).join('');
 
-  // Link highlights to items by matching text (fuzzy match on keywords)
+  // Link highlights to items by best keyword overlap
   let highlights=d.highlights.map((h)=>{
-    const matchItem=d.items.find(item=>{
-      const hLower=h.toLowerCase();
-      const tLower=(item.title||'').toLowerCase();
-      const kLower=(item.key_point||'').toLowerCase();
-      // Match if title keywords overlap with highlight text
-      const titleWords=tLower.replace(/[【】\[\]]/g,'').split(/[\s,，:：·]+/).filter(w=>w.length>2);
-      return titleWords.some(w=>hLower.includes(w))||hLower.includes(tLower.slice(0,8));
+    const hLower=h.toLowerCase();
+    const hWords=hLower.replace(/[【】\[\]""''《》]/g,'').split(/[\s,，:：;；·、\-\+]+/).filter(w=>w.length>1);
+    let bestItem=null,bestScore=0;
+    d.items.forEach(item=>{
+      const tLower=((item.title||'')+(item.key_point||'')).toLowerCase().replace(/[【】\[\]""''《》]/g,'');
+      let score=0;
+      hWords.forEach(w=>{if(tLower.includes(w))score++;});
+      if(score>bestScore){bestScore=score;bestItem=item;}
     });
-    const url=matchItem?matchItem.url:'#';
-    return `<li class="hl-item"><a href="${esc(url)}" target="_blank" rel="noopener">${esc(h)}</a></li>`;
+    const url=(bestItem&&bestScore>=2)?bestItem.url:null;
+    if(url){
+      return `<li class="hl-item"><a href="${esc(url)}" target="_blank" rel="noopener">${esc(h)}</a></li>`;
+    }else{
+      return `<li class="hl-item"><span style="color:var(--text)">${esc(h)}</span></li>`;
+    }
   }).join('');
 
   let cards=d.items.map(item=>renderCard(item)).join('');

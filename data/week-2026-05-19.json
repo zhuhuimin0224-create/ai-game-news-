@@ -87,6 +87,60 @@
       "details": ["15分钟自由对话中人类无法稳定分辨AI与真人", "适当提示下LLM可完全模仿人类语气和逻辑"],
       "recommendation": "图灵测试通过意味着AI对话质量已达\"以假乱真\"级别——游戏内AI NPC、社区AI客服的体验上限被彻底打开。",
       "tags": ["GPT-4.5", "图灵测试", "对话AI"]
+    },
+    {
+      "title": "【腾讯x育碧】联手开发首款生成式AI射击游戏《Teammates》，注资87亿元",
+      "url": "https://news.17173.com/content/05212026/183244339.shtml",
+      "source": "17173",
+      "published_at": "2026-05-23",
+      "category": "industry",
+      "key_point": "腾讯向育碧注资11亿欧元，共同开发生成式AI射击游戏，支持动态剧情生成和智能NPC对话。",
+      "tags": ["腾讯", "育碧", "生成式AI"]
+    },
+    {
+      "title": "【Steam】新政：AI生成内容必须标注，6月1日生效",
+      "url": "https://store.steampowered.com/news/app/593110/view/4199283531349065001",
+      "source": "Steam",
+      "published_at": "2026-05-24",
+      "category": "industry",
+      "key_point": "Valve要求所有使用生成式AI的游戏在商店页面标注AI使用范围，开发者提交审核时需附带AI使用声明。",
+      "tags": ["Steam", "政策", "合规"]
+    },
+    {
+      "title": "【DeepMind】GameNGen 2.0：AI实时渲染开放世界，无需传统游戏引擎",
+      "url": "https://arxiv.org/abs/2408.14837v2",
+      "source": "arXiv",
+      "published_at": "2026-05-24",
+      "category": "research",
+      "key_point": "完全由神经网络实时渲染的开放世界环境，支持复杂3D场景和物理交互，帧率30fps。",
+      "tags": ["DeepMind", "神经渲染", "游戏引擎"]
+    },
+    {
+      "title": "【三七互娱】Q1财报：AI美术中台全面投产，美术成本同比降低62%",
+      "url": "https://www.gamelook.com.cn/2026/05/571204",
+      "source": "GameLook",
+      "published_at": "2026-05-24",
+      "category": "ops",
+      "key_point": "AI美术中台覆盖所有项目组，美术外包成本同比降62%，内部AI工具日均调用5万次。",
+      "tags": ["三七互娱", "财报", "降本"]
+    },
+    {
+      "title": "【微软】Xbox AI Copilot游戏助手：语音实时攻略和个性化推荐",
+      "url": "https://news.xbox.com/en-us/2026/05/25/xbox-ai-copilot-announcement",
+      "source": "Xbox Wire",
+      "published_at": "2026-05-25",
+      "category": "in-game",
+      "key_point": "玩家可通过语音随时询问攻略、获取个性化装备推荐，首批支持《星空》等第一方游戏。",
+      "tags": ["微软", "Xbox", "Copilot"]
+    },
+    {
+      "title": "【WeGame】AI战报更新：新增赛季趋势图+好友对比，分享转化率提升37%",
+      "url": "https://www.wegame.com.cn/news/detail/20260525",
+      "source": "WeGame",
+      "published_at": "2026-05-25",
+      "category": "in-game",
+      "key_point": "新增赛季数据趋势图和好友对比分析，更新后战报分享到微信的转化率提升37%。",
+      "tags": ["WeGame", "战报", "社交"]
     }
   ]
 }
