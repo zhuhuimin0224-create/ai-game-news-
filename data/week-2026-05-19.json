@@ -1,13 +1,14 @@
 {
   "week_start": "2026-05-19",
-  "week_end": "2026-05-22",
-  "title": "游戏 x AI 资讯周报 · 5.19 - 5.22",
+  "week_end": "2026-05-25",
+  "title": "游戏 x AI 资讯周报 · 5.19 - 5.25",
   "highlights": [
-    "百度AI开发者大会\"AI+游戏\"专场：AI已跨过单点工具阶段，开始重塑整条游戏产业链",
-    "育碧一年裁千人后全力拥抱AI，开发首个\"可游玩的生成式AI体验\"",
-    "Take-Two CEO Strauss Zelnick访谈：详谈GTA、AI与Roblox竞争策略",
-    "NVIDIA GTC台北：AI基础设施+游戏技术新进展（DLSS 4.5实装）",
-    "Odyssey发布Agora-1世界模型：4人同时在AI生成世界中游玩"
+    "腾讯联手育碧注资87亿元开发首款生成式AI射击游戏《Teammates》",
+    "Steam新政：AI生成内容必须标注，6月1日生效",
+    "Google DeepMind发布GameNGen 2.0：AI实时渲染开放世界无需传统引擎",
+    "三七互娱Q1：AI美术中台全面投产，美术成本同比降62%",
+    "微软Xbox AI Copilot游戏助手官宣，首批支持《星空》等",
+    "WeGame AI战报更新：新增赛季趋势图+好友对比，分享转化率提升37%"
   ],
   "items": [
     {

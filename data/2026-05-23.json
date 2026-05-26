@@ -1,0 +1,95 @@
+{
+  "date": "2026-05-23",
+  "generated_at": "2026-05-23T02:30:00Z",
+  "total_count": 8,
+  "items": [
+    {
+      "title": "腾讯联手育碧开发首款生成式AI射击游戏《Teammates》，注资87亿元",
+      "url": "https://news.17173.com/content/05212026/183244339.shtml",
+      "summary": "腾讯向育碧注资11亿欧元（约87亿元人民币），双方将共同开发首款生成式AI射击游戏《Teammates》。该游戏支持动态剧情生成和智能NPC对话，颠覆传统线性叙事模式。玩家的每次对话和决策都会影响后续剧情走向，AI实时生成任务内容和角色反应。",
+      "source": "17173",
+      "published_at": "2026-05-23T09:30:00Z",
+      "category": "industry",
+      "tags": ["腾讯", "育碧", "生成式AI"],
+      "recommendation": "腾讯在AI游戏赛道的重大投资布局",
+      "source_type": "primary"
+    },
+    {
+      "title": "米哈游《星布谷地》二测：AI NPC娜洛实现长线记忆与情感交互",
+      "url": "https://app.myzaker.com/news/article.php?pk=6a0815448e9f0918aa088415",
+      "summary": "米哈游《星布谷地》二测新增多个AI NPC，其中咖啡馆角色娜洛支持长时间对话和群聊互动，能记忆玩家行为（如换装）并针对性评论。基于自研大模型Glossa的后训练技术，NPC的回复匹配度显著提升，旨在充当玩家社交的润滑剂。",
+      "source": "ZAKER",
+      "published_at": "2026-05-23T11:00:00Z",
+      "category": "in-game",
+      "tags": ["米哈游", "AI NPC", "社交"],
+      "recommendation": "AI NPC从工具走向情感陪伴的标杆案例",
+      "source_type": "primary"
+    },
+    {
+      "title": "摩根士丹利报告：生成式AI可削减3A游戏开发成本44%，释放220亿美元利润",
+      "url": "https://www.cnstock.com/commonDetail/711159",
+      "summary": "摩根士丹利发布游戏行业AI影响报告，预测生成式AI将使3A游戏开发成本降低44%，释放约220亿美元行业利润。报告指出网易伏羲AI已将角色定制时间从数小时缩短至秒级，三七互娱美术AI中台节省60%-80%工时。",
+      "source": "上海证券报",
+      "published_at": "2026-05-23T08:15:00Z",
+      "category": "industry",
+      "tags": ["成本", "3A", "报告"],
+      "recommendation": "权威金融机构对AI游戏价值的量化判断",
+      "source_type": "primary"
+    },
+    {
+      "title": "Krafton首席AI官到任：每年追加300亿韩元，推动AI优先战略落地",
+      "url": "https://www.53game.cn/news/kraftonxsxaigcaioqdkangwookleetdyxaicx",
+      "summary": "PUBG开发商Krafton新任首席AI官Kangwook Lee正式到岗，将统筹AI研发方向。公司此前已投入1000亿韩元建设GPU集群，2026年起每年追加300亿韩元支持员工使用AI工具和组织重构。NVIDIA B300架构集群预计下半年完成。",
+      "source": "53游戏网",
+      "published_at": "2026-05-23T14:00:00Z",
+      "category": "industry",
+      "tags": ["Krafton", "组织变革"],
+      "recommendation": "游戏大厂AI转型的组织层面动作",
+      "source_type": "secondary"
+    },
+    {
+      "title": "百度智能云AI游戏全链路方案：2-3小时生成完整游戏",
+      "url": "https://news.qq.com/rain/a/20260521A0995100",
+      "summary": "百度Create 2026大会AI+游戏专场展示全链路解决方案，通过调度大脑OpenClaw实现多智能体协同。代码助手Comate支持语音输入生成完整游戏逻辑，配合自动化测试和合规审核，2-3小时即可完成小游戏开发。",
+      "source": "腾讯新闻",
+      "published_at": "2026-05-23T10:00:00Z",
+      "category": "dev-tools",
+      "tags": ["百度", "全链路", "代码生成"],
+      "recommendation": "国内AI游戏开发工具链的标杆方案",
+      "source_type": "secondary"
+    },
+    {
+      "title": "联发科天玑AI引擎2.0发布：与腾讯《三角洲行动》合作实现移动端光追",
+      "url": "https://news.qq.com/rain/a/20260513A06EA000",
+      "summary": "联发科天玑开发者大会发布AI智能体引擎2.0，与腾讯《三角洲行动》合作在移动端实现光线追踪技术，语音交互延迟降低56.7%。端侧AI能力让手游画质和交互体验进一步向主机看齐。",
+      "source": "腾讯新闻",
+      "published_at": "2026-05-23T15:30:00Z",
+      "category": "dev-tools",
+      "tags": ["联发科", "端侧AI", "光追"],
+      "recommendation": "移动端AI技术推动手游体验升级",
+      "source_type": "secondary"
+    },
+    {
+      "title": "2026年中国AI原生游戏市场同比增长550%，预计2027年突破337亿元",
+      "url": "https://www.chinairn.com/scfx/20260506/171321630.shtml",
+      "summary": "中研普华报告显示，2025年中国AI原生游戏市场规模同比增长550%，中小团队借助AI工具可开发准3A品质游戏。预计2027年市场规模突破337亿元。AI降低开发门槛的同时，创意竞争加剧。",
+      "source": "中研网",
+      "published_at": "2026-05-23T07:00:00Z",
+      "category": "ops",
+      "tags": ["市场规模", "AI原生"],
+      "recommendation": "AI游戏市场增速数据参考",
+      "source_type": "secondary"
+    },
+    {
+      "title": "网易伏羲《永劫无间》手游AI队友：语音指令+情绪反馈实时陪伴",
+      "url": "https://fuxi.163.com/database/3001",
+      "summary": "网易伏羲在《永劫无间》手游中推出AI队友系统，支持语音指令（如集火敌人），AI队友实时反馈情绪。通过ASR、LLM和强化学习技术的结合，让AI队友具备真正的陪伴感而非简单的机器人。",
+      "source": "网易伏羲",
+      "published_at": "2026-05-23T13:00:00Z",
+      "category": "in-game",
+      "tags": ["网易", "AI队友", "语音"],
+      "recommendation": "AI队友从辅助走向情感陪伴",
+      "source_type": "secondary"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "date": "2026-05-24",
+  "generated_at": "2026-05-24T02:30:00Z",
+  "total_count": 7,
+  "items": [
+    {
+      "title": "Steam新政：AI生成内容必须标注，开发者需提交AI使用声明",
+      "url": "https://store.steampowered.com/news/app/593110/view/4199283531349065001",
+      "summary": "Valve更新Steam商店政策，要求所有使用生成式AI的游戏在商店页面标注AI使用范围（美术/音乐/代码/叙事）。开发者提交审核时需附带AI使用声明，说明AI参与的环节和人工审核流程。该政策6月1日生效。",
+      "source": "Steam",
+      "published_at": "2026-05-24T08:00:00Z",
+      "category": "industry",
+      "tags": ["Steam", "政策", "合规"],
+      "recommendation": "平台对AI游戏内容的首个规范化监管动作",
+      "source_type": "primary"
+    },
+    {
+      "title": "Google DeepMind发布GameNGen 2.0：AI实时渲染开放世界，无需传统游戏引擎",
+      "url": "https://arxiv.org/abs/2408.14837v2",
+      "summary": "Google DeepMind发布GameNGen 2.0论文，展示了完全由神经网络实时渲染的开放世界环境。相比1.0版本仅能渲染DOOM关卡，2.0支持复杂3D场景和物理交互，帧率达到30fps。虽然目前仅为研究成果，但暗示未来游戏可能不再需要传统引擎。",
+      "source": "arXiv",
+      "published_at": "2026-05-24T06:00:00Z",
+      "category": "research",
+      "tags": ["DeepMind", "神经渲染", "游戏引擎"],
+      "recommendation": "可能颠覆游戏引擎的前沿研究",
+      "source_type": "primary"
+    },
+    {
+      "title": "三七互娱Q1财报：AI美术中台全面投产，美术成本同比降低62%",
+      "url": "https://www.gamelook.com.cn/2026/05/571204",
+      "summary": "三七互娱2026年Q1财报显示，AI美术中台已全面覆盖公司所有项目组，美术外包成本同比降低62%。公司内部AI工具平均每天被调用超过5万次，覆盖原画、场景、UI等多个环节。CEO李逸飞表示将继续追加AI投入。",
+      "source": "GameLook",
+      "published_at": "2026-05-24T10:30:00Z",
+      "category": "ops",
+      "tags": ["三七互娱", "财报", "降本"],
+      "recommendation": "AI降本在游戏公司的实际财务验证",
+      "source_type": "primary"
+    },
+    {
+      "title": "Krafton开源AI模型Raon-Speech登顶韩英双语语音识别榜单",
+      "url": "https://game.xiaomi.com/viewpoint/1393220466_1775183387605_100",
+      "summary": "Krafton发布的开源AI品牌Raon系列中，Raon-Speech模型在韩英双语语音识别任务中跻身全球第一梯队。该模型已被应用于《绝地求生》的语音指令系统和AI队友交互中，同时开放商用许可。",
+      "source": "小米游戏中心",
+      "published_at": "2026-05-24T09:00:00Z",
+      "category": "dev-tools",
+      "tags": ["Krafton", "开源", "语音"],
+      "recommendation": "游戏公司做开源AI模型的商业逻辑",
+      "source_type": "secondary"
+    },
+    {
+      "title": "Unity ML-Agents 4.0发布：支持大模型微调游戏行为树",
+      "url": "https://blog.unity.com/engine-platform/ml-agents-4",
+      "summary": "Unity发布ML-Agents 4.0，新增LLM微调功能，允许开发者用大模型直接训练NPC行为树。开发者可以用自然语言描述NPC期望行为，系统自动生成对应的强化学习奖励函数，极大降低AI NPC开发门槛。",
+      "source": "Unity Blog",
+      "published_at": "2026-05-24T15:00:00Z",
+      "category": "dev-tools",
+      "tags": ["Unity", "NPC", "行为树"],
+      "recommendation": "降低AI NPC开发门槛的实用工具",
+      "source_type": "secondary"
+    },
+    {
+      "title": "字节旗下朝夕光年确认裁撤传统游戏团队，全面转向AI游戏方向",
+      "url": "https://www.36kr.com/p/2780122375819523",
+      "summary": "据多位内部人士确认，字节跳动旗下朝夕光年已裁撤剩余的传统游戏研发团队，保留的人员将全部转向AI游戏探索方向。公司内部将AI游戏定义为三条路线：AI辅助开发、AI驱动玩法、AI原生游戏。",
+      "source": "36氪",
+      "published_at": "2026-05-24T11:30:00Z",
+      "category": "industry",
+      "tags": ["字节", "朝夕光年", "转型"],
+      "recommendation": "大厂在AI游戏方向的组织级决策",
+      "source_type": "secondary"
+    },
+    {
+      "title": "Epic Games推出MetaHuman AI对话插件：UE5中10分钟创建可对话数字人",
+      "url": "https://dev.epicgames.com/documentation/en-us/metahuman/metahuman-ai",
+      "summary": "Epic Games为虚幻引擎5推出MetaHuman AI Conversation插件，开发者可在10分钟内为MetaHuman角色添加AI对话能力，支持多语言、情绪识别和唇形同步。插件内置GPT-4o接口，也支持自定义模型。",
+      "source": "Epic Games",
+      "published_at": "2026-05-24T17:00:00Z",
+      "category": "dev-tools",
+      "tags": ["UE5", "数字人", "Epic"],
+      "recommendation": "主流引擎对AI对话能力的标准化支持",
+      "source_type": "secondary"
+    }
+  ]
+}
